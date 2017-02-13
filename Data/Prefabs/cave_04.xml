@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prefab>
+    <property name="CopyAirBlocks" value="True" />
+    <property name="AllowTopSoilDecorations" value="True" />
+    <property name="YOffset" value="-3" />
+    <property name="StaticSpawner.Class" value="SpawnCave" />
+    <property name="StaticSpawner.Size" value="32,3,32" />
+    <property name="StaticSpawner.Trigger" value="160" />
+</prefab>
