@@ -15095,6 +15095,7 @@ which does not exist, yet. -->
 <item id="1878" name="RestReset">
 	<property name="CustomIcon" value="vitamins" />
     <property name="CustomIconTint" value="008000" />
+	<property name="IsDeveloper" value="true" />
     <property name="Meshfile" value="Items/Health/painkillersPrefab" />
     <property name="Material" value="organic" />
     <property name="HoldType" value="16" />

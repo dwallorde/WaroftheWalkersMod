@@ -279,12 +279,12 @@
 		<recipe name="mechanicalParts" unlock_level="3"/>
 	</perk>
 	
-	<perk name="Workbench" icon="resource" description_key="workbenchSkillDesc" title_key="workbench" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="15" group="tools">
+	<perk name="Workbench" icon="resource" description_key="workbenchSkillDesc" title_key="workbench" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="15" group="crafting">
 		<requirement skill_level="1" required_skill_name="Construction Tools" required_skill_level="20"/>
 		<recipe name="workbench" unlock_level="1"/>
 	</perk>
 	
-	<perk name="ChemStationPerk" icon="resource" description_key="chemStationPerkDesc" title_key="chemistryStation" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="15" group="tools">
+	<perk name="ChemStationPerk" icon="resource" description_key="chemStationPerkDesc" title_key="chemistryStation" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="15" group="crafting">
 		<requirement skill_level="1" required_skill_name="Construction Tools" required_skill_level="50"/>
 		<requirement skill_level="1" required_skill_name="Science" required_skill_level="15"/>
 		<recipe name="chemistryStation" unlock_level="1"/>
@@ -1827,18 +1827,18 @@
 	<recipe name="HDNailgun_Battery" unlock_level="1"/>
 </perk>
 
-<perk name="Tailors Workstation" icon="ui_game_symbol_workbench1" description_key="TailorsWorkstationDesc" max_level="1" skill_point_cost_per_level="10" group="tools">
+<perk name="Tailors Workstation" icon="ui_game_symbol_workbench1" description_key="TailorsWorkstationDesc" max_level="1" skill_point_cost_per_level="10" group="crafting">
 	<requirement skill_level="1" required_player_level="25"/>
 	<requirement skill_level="1" required_skill_name="Tailoring" required_skill_level="25"/>
 	<recipe name="TailorsWorkStation" unlock_level="1"/>
 </perk>
 
-<perk name="Armor Smithing Workstation" icon="ui_game_symbol_workbench1" description_key="ArmorSmithingWorkstationDesc" max_level="1" skill_point_cost_per_level="15" group="tools">
+<perk name="Armor Smithing Workstation" icon="ui_game_symbol_workbench1" description_key="ArmorSmithingWorkstationDesc" max_level="1" skill_point_cost_per_level="15" group="crafting">
 	<requirement skill_level="1" required_player_level="30"/>
 	<recipe name="ArmorSmithingWorkbench" unlock_level="1"/>
 </perk>
 
-<perk name="Advanced Tools Workstation" icon="ui_game_symbol_workbench1" description_key="AdvancedToolsWorkstationDesc" max_level="1" skill_point_cost_per_level="15" group="tools">
+<perk name="Advanced Tools Workstation" icon="ui_game_symbol_workbench1" description_key="AdvancedToolsWorkstationDesc" max_level="1" skill_point_cost_per_level="15" group="crafting">
 	<requirement skill_level="1" required_player_level="35"/>
 	<requirement skill_level="1" required_skill_name="Tool Smithing" required_skill_level="50"/>
 	<recipe name="AdvancedToolWorkbench" unlock_level="1"/>
@@ -1849,11 +1849,11 @@
 	<recipe name="MetalWorkingForge" unlock_level="1"/>
 </perk> -->
 
-<perk name="Wood Working Workstation" icon="ui_game_symbol_workbench1" description_key="WoodWorkingWorkstationDesc" max_level="1" skill_point_cost_per_level="15" group="tools">
+<perk name="Wood Working Workstation" icon="ui_game_symbol_workbench1" description_key="WoodWorkingWorkstationDesc" max_level="1" skill_point_cost_per_level="15" group="crafting">
 	<recipe name="WoodWorkingWorkbench" unlock_level="1"/>
 </perk>
 
-<perk name="Weapons Smithing workstation" icon="ui_game_symbol_forge" description_key="WeaponsSmithingWorkstationDesc" max_level="1" skill_point_cost_per_level="15" group="tools">
+<perk name="Weapons Smithing workstation" icon="ui_game_symbol_forge" description_key="WeaponsSmithingWorkstationDesc" max_level="1" skill_point_cost_per_level="15" group="crafting">
 	<requirement skill_level="1" required_player_level="50"/>
 	<requirement skill_level="1" required_skill_name="Light Gun Smithing" required_skill_level="10"/>
 	<requirement skill_level="1" required_skill_name="Gun Smithing" required_skill_level="10"/>
@@ -1861,7 +1861,7 @@
 	<recipe name="WeaponSmithStation" unlock_level="1"/>
 </perk>
 
-<perk name="Blueprint Workstation" icon="ui_game_symbol_workbench1" description_key="BlueprintWorkstationDesc" max_level="1" skill_point_cost_per_level="15" group="tools">
+<perk name="Blueprint Workstation" icon="ui_game_symbol_workbench1" description_key="BlueprintWorkstationDesc" max_level="1" skill_point_cost_per_level="15" group="crafting">
 	<requirement skill_level="1" required_player_level="75"/>
 	<requirement skill_level="1" required_skill_name="Science" required_skill_level="50"/>
 	<recipe name="BlueprintWorkStation" unlock_level="1"/>
@@ -2173,7 +2173,7 @@
 	<recipe name="ShovelTungsten" unlock_level="1"/>
 </perk>
 
-<perk name="Explosives" icon="ui_game_symbol_explosion" description_key="ExplosivesDesc" max_level="3" skill_point_cost_multiplier="1" skill_point_cost_per_level="5" group="crafting">
+<perk name="Explosives" icon="ui_game_symbol_explosion" description_key="ExplosivesDesc" max_level="3" skill_point_cost_multiplier="1" skill_point_cost_per_level="5" group="tools">
 	<requirement skill_level="1" required_player_level="20"/>
 	<requirement skill_level="1" required_skill_name="Weapon Smithing" required_skill_level="20"/>
 	<requirement skill_level="2" required_player_level="40"/>
@@ -2185,7 +2185,7 @@
 	<recipe name="tnt" unlock_level="3"/>
 </perk>
 
-<perk name="Mortar and Pestle" icon="ui_game_symbol_mortarandpestle" description_key="MortarandPestleSkillDesc" max_level="1" skill_point_cost_per_level="5" group="tools">
+<perk name="Mortar and Pestle" icon="ui_game_symbol_mortarandpestle" description_key="MortarandPestleSkillDesc" max_level="1" skill_point_cost_per_level="5" group="crafting">
 	<requirement skill_level="1" required_player_level="5"/>
 	<recipe name="MortarandPestle" unlock_level="1"/>
 </perk>
@@ -2232,7 +2232,7 @@
 	<recipe name="HDChainsaw_Blade" unlock_level="1"/>
 </perk>
 
-<perk name="Speed Trap Recipes" icon="ui_game_symbol_speed1" description_key="SpeedTrapRecipesDesc" max_level="3" skill_point_cost_per_level="10" group="crafting">
+<perk name="Speed Trap Recipes" icon="ui_game_symbol_speed1" description_key="SpeedTrapRecipesDesc" max_level="3" skill_point_cost_per_level="10" group="tools">
 	<requirement skill_level="1" required_player_level="20"/>
 	<requirement skill_level="2" required_player_level="40"/>
 	<requirement skill_level="3" required_player_level="60"/>

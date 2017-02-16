@@ -497,22 +497,22 @@ actions="increment(@wellness, 0.125, 100, 0, 0)" stack="extend" icon="Immunizati
 	<modify id="0" stat="speedmodifier" mulValue="0.4"/>
 </buff>
 
-<buff id="sleepingBagTrigger" duration="1" actions="setvar(CTRbedroll, 10)" />
-<buff id="sleepingBagEffect" duration="0" buffif="CTRbedroll greater 0" debuffif="CTRbedroll less 1" actions="increment(CTRbedroll, -3, 2, 0, 0)"
+<buff id="sleepingBagTrigger" duration="1" actions="setvar(CTRbedroll, 12)" />
+<buff id="sleepingBagEffect" duration="0" buffif="CTRbedroll greater 0" debuffif="CTRbedroll less 1" actions="increment(CTRbedroll, -4, 1, 0, 0)"
 	icon="SleepingBagTriggerIcon" name_key="sleepingAwesome" description_key="sleepingAwesomeDesc" tooltip_key="sleepingAwesomeTooltip">
 	<modify id="0" stat="health" amount="1" rate="30" />
 	<modify id="0" stat="stamina" amount="1" rate="3" />
 </buff>
 
-<buff id="sleepingBedTrigger" duration="1" actions="setvar(CTRbed, 10)" />
-<buff id="sleepingBedEffect" duration="0" buffif="CTRbed greater 0" debuffif="CTRbed less 1" actions="increment(CTRbed, -3, 2, 0, 0)"
+<buff id="sleepingBedTrigger" duration="1" actions="setvar(CTRbed, 12)" />
+<buff id="sleepingBedEffect" duration="0" buffif="CTRbed greater 0" debuffif="CTRbed less 1" actions="increment(CTRbed, -4, 1, 0, 0)"
 	name_key="sleepingAwesome" description_key="sleepingAwesomeDesc" tooltip_key="sleepingAwesomeTooltip" icon="SleepingBedTriggerIcon">
 	<modify id="0" stat="health" amount="1" rate="15" />
 	<modify id="0" stat="stamina" amount="1" rate="3" />
 </buff>
 
-<buff id="sleepingBigBedTrigger" duration="1" actions="setvar(CTRbigbed, 10)" />
-<buff id="sleepingBigBedEffect" duration="0" buffif="CTRbigbed greater 0" debuffif="CTRbigbed less 1" actions="increment(CTRbigbed, -3, 2, 0, 0)"
+<buff id="sleepingBigBedTrigger" duration="1" actions="setvar(CTRbigbed, 12)" />
+<buff id="sleepingBigBedEffect" duration="0" buffif="CTRbigbed greater 0" debuffif="CTRbigbed less 1" actions="increment(CTRbigbed, -4, 1, 0, 0)"
 	name_key="sleepingAwesome" description_key="sleepingAwesomeDesc" tooltip_key="sleepingAwesomeTooltip" icon="SleepingBedTriggerIcon">
 	<modify id="0" stat="health" amount="1" rate="5" />
 	<modify id="0" stat="stamina" amount="1" rate="3" />
@@ -623,9 +623,9 @@ snowberryPlant feeds you for 90 sec. -->
 
 <buff id="GainRest" buffif="CTRbed greater 0;CTRbedroll greater 0;CTRbigbed greater 0" debuffif="CTRbed less 1;CTRbedroll less 1;CTRbigbed less 1" duration="0" actions="increment(rest, 2, 1t, 0, 0);max(rest, 100)" type="speedmodifier"/>
 
-<buff id="RestSet" buffif="rest equals 0" debuffif="rest gequal 1" duration="0" actions="setvar(rest, 100)" type="speedmodifier"/>
+<buff id="RestSet" duration="1" actions="setvar(rest, 100)" type="speedmodifier"/>
 
-<buff id="MetabolizeRest" mutex="GainRest" buffif="rest greater 0" debuffif="rest equals 1;rest equals 0" actions="increment(rest, -1, 100t, 0, 0);min(rest, 1)" type="speedmodifier"/>
+<buff id="MetabolizeRest" mutex="GainRest" buffif="rest greater 0" debuffif="rest equals 1;rest equals 0" actions="increment(rest, -3, 100t, 0, 0);min(rest, 1)" type="speedmodifier"/>
 
 <buff id="HungerExhaustion" mutex="GainRest,HungerExhaustion2" buffif="+starve > 1" debuffif="+full > 1" actions="increment(rest, -1, 100t, 0, 0);min(rest, 1)" type="speedmodifier"/>
 
@@ -639,7 +639,7 @@ snowberryPlant feeds you for 90 sec. -->
 
 <buff id="StaminaExhaustion2" buffif="stamina lequal 0.25" debuffif="stamina > 0.3;stamina lequal 0.16" actions="increment(rest, -1, 10, 0, 0);min(rest, 1)" type="speedmodifier"/> -->
 
-<buff id="RestReset" duration="0" actions="setvar(rest, 1)" type="speedmodifier"/>
+<buff id="RestReset" duration="1" actions="setvar(rest, 1)" type="speedmodifier"/>
 
 <buff id="Rested" mutex="WellRested" buffif="rest greater 50" debuffif="rest less 51;rest greater 74" actions="increment(@wellness, 0.5, 100t, 0, 1)"
 	icon="RestedIcon" type="speedmodifier" name_key="Rested" description_key="You are Rested" tooltip_key="You are Rested">

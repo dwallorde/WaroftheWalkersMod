@@ -9746,6 +9746,7 @@ kind of free
 	<drop event="Destroy" name="paper" count="2,8" />
 </block>
 
+<!-- WOTW MOD -->
 <!-- BANDIT LOOT CORPSES -->
 <block id="1184" name="MeleeBanditCorpse">
 	<property name="CustomIcon" value="GoreBlock1Prefab" />
@@ -10648,6 +10649,7 @@ kind of free
 	<property name="Texture" value="446,445,446,446,446,446" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1286" name="SteelDoor">
     <property name="CustomIcon" value="commercialDoor4_v1"/>
 	<property name="CustomIconTint" value="776256"/>
@@ -11071,6 +11073,7 @@ kind of free
 	<property class="RepairItems"> <property name="wood" value="10" /> </property>
 </block>
 
+<!-- WOTW MOD -->
 <block id="1332" name="PlayerStarterCrate">
 	<property name="CustomIcon" value="cntSupplyCrateShotgunMessiah" />
 	<property name="Material" value="wood" />
@@ -13822,6 +13825,7 @@ kind of free
 	<drop event="Harvest" name="electronicParts" count="3" prob=".2" tool_category="Disassemble" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1655" name="cntAutomotiveStoreLoot">
 	<property name="Material" value="wood" />
 	<property name="Texture" value="423" />
