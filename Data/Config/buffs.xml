@@ -625,7 +625,7 @@ snowberryPlant feeds you for 90 sec. -->
 
 <buff id="RestSet" duration="1" actions="setvar(rest, 100)" type="speedmodifier"/>
 
-<buff id="MetabolizeRest" mutex="GainRest" buffif="rest greater 0" debuffif="rest equals 1;rest equals 0" actions="increment(rest, -3, 100t, 0, 0);min(rest, 1)" type="speedmodifier"/>
+<buff id="MetabolizeRest" mutex="GainRest" buffif="rest greater 0" debuffif="rest equals 1;rest equals 0" actions="increment(rest, -2, 100t, 0, 0);min(rest, 1)" type="speedmodifier"/>
 
 <buff id="HungerExhaustion" mutex="GainRest,HungerExhaustion2" buffif="+starve > 1" debuffif="+full > 1" actions="increment(rest, -1, 100t, 0, 0);min(rest, 1)" type="speedmodifier"/>
 

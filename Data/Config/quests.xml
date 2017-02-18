@@ -1417,7 +1417,7 @@
 	category_key="challenge"
 	difficulty="easy">
 		<objective type="FetchKeep" id="wood" value="25" />
-		<objective type="FetchKeep" id="forgedTungsten" value="25" />
+		<objective type="FetchKeep" id="ForgedTungsten" value="25" />
 		<objective type="Craft" id="ClubTungsten" value="1" />
 		<reward type="Quest" id="challenge_tungstenclub2" />
 	</quest>
