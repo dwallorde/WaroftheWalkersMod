@@ -15530,7 +15530,7 @@ kind of free
 	<property name="CraftTimeMultiplier" value="0.5,1"/>
 	<property class="Workstation">
 		<property name="Modules" value="output"/>
-		<property name="CraftingAreaRecipes" value="TailorsWorkStation"/>
+		<property name="CraftingAreaRecipes" value="ClothingWorkStation"/>
 	</property>
 	<property class="RepairItems">
 		<property name="forgedIron" value="15" />
