@@ -621,29 +621,29 @@ snowberryPlant feeds you for 90 sec. -->
 
 <!-- Rest System -->
 
-<buff id="GainRest" buffif="CTRbed greater 0;CTRbedroll greater 0;CTRbigbed greater 0" debuffif="CTRbed less 1;CTRbedroll less 1;CTRbigbed less 1" duration="0" actions="increment(rest, 2, 1t, 0, 0);max(rest, 100)" type="speedmodifier"/>
+<!-- <buff id="GainRest" buffif="CTRbed greater 0;CTRbedroll greater 0;CTRbigbed greater 0" debuffif="CTRbed less 1;CTRbedroll less 1;CTRbigbed less 1" duration="0" actions="increment(rest, 2, 1t, 0, 0);max(rest, 100)" type="speedmodifier"/>
 
 <buff id="RestSet" duration="1" actions="setvar(rest, 100)" type="speedmodifier"/>
 
-<buff id="MetabolizeRest" mutex="GainRest" buffif="rest greater 0" debuffif="rest equals 1;rest equals 0" actions="increment(rest, -2, 100t, 0, 0);min(rest, 1)" type="speedmodifier"/>
+<buff id="MetabolizeRest" mutex="GainRest" buffif="rest greater 0" debuffif="rest equals 1;rest equals 0" actions="increment(rest, -2, 100t, 0, 0);min(rest, 1)" type="speedmodifier"/> -->
 
 <buff id="RestFix" buffif="rest greater 100" debuffif="rest lequal 100" actions="setvar(rest, 99)" type="speedmodifier"/>
 
-<buff id="HungerExhaustion" mutex="GainRest,HungerExhaustion2" buffif="+starve > 1" debuffif="+full > 1" actions="increment(rest, -1, 100t, 0, 0);min(rest, 1)" type="speedmodifier"/>
+<!-- <buff id="HungerExhaustion" mutex="GainRest,HungerExhaustion2" buffif="+starve > 1" debuffif="+full > 1" actions="increment(rest, -1, 100t, 0, 0);min(rest, 1)" type="speedmodifier"/>
 
 <buff id="HungerExhaustion2" mutex="GainRest" buffif="+starve > 1200" debuffif="+full > 1" actions="increment(rest, -2, 100t, 0, 0);min(rest, 1);debuff(HungerExhaustion)" type="speedmodifier"/>
 
 <buff id="ThirstExhaustion" mutex="GainRest,ThirstExhaustion2" buffif="+thirst > 1" debuffif="+hydrated > 5" actions="increment(rest, -1, 100t, 0, 0);min(rest, 1)" type="speedmodifier"/>
 
-<buff id="ThirstExhaustion2" mutex="GainRest" buffif="+thirst > 600" debuffif="+hydrated > 5" actions="increment(rest, -1, 100t, 0, 0);min(rest, 1);debuff(ThirstExhaustion)" type="speedmodifier"/>
+<buff id="ThirstExhaustion2" mutex="GainRest" buffif="+thirst > 600" debuffif="+hydrated > 5" actions="increment(rest, -1, 100t, 0, 0);min(rest, 1);debuff(ThirstExhaustion)" type="speedmodifier"/> -->
 
 <!--<buff id="StaminaExhaustion" buffif="stamina lequal 0.15" debuffif="stamina > 0.2" actions="increment(rest, -1, 10, 0, 0);min(rest, 1);debuff(StaminaExhaustion2)" type="speedmodifier"/>
 
 <buff id="StaminaExhaustion2" buffif="stamina lequal 0.25" debuffif="stamina > 0.3;stamina lequal 0.16" actions="increment(rest, -1, 10, 0, 0);min(rest, 1)" type="speedmodifier"/> -->
 
-<buff id="RestReset" duration="1" actions="setvar(rest, 1)" type="speedmodifier"/>
+<!-- <buff id="RestReset" duration="1" actions="setvar(rest, 1)" type="speedmodifier"/> -->
 
-<buff id="Rested" mutex="WellRested" buffif="rest greater 50" debuffif="rest less 51;rest greater 74" actions="increment(@wellness, 0.5, 100t, 0, 1)"
+<!-- <buff id="Rested" mutex="WellRested" buffif="rest greater 50" debuffif="rest less 51;rest greater 74" actions="increment(@wellness, 0.5, 100t, 0, 1)"
 	icon="RestedIcon" type="speedmodifier" name_key="Rested" description_key="You are Rested" tooltip_key="You are Rested">
 	<modify id="0" stat="stamina" amount="1" rate="1"/>
 	<modify id="0" stat="speedmodifier" setValue="1.1"/>
@@ -687,7 +687,79 @@ snowberryPlant feeds you for 90 sec. -->
 <buff id="showrestlevel18" buffif="rest gequal 85" debuffif="rest less 85" name_key="Rest Level 17" icon="zzzRestIconL17" description_key="Your Rest Level is 17" duration="0" overrides="showrestlevel17" type="speedmodifier"/>
 <buff id="showrestlevel19" buffif="rest gequal 90" debuffif="rest less 90" name_key="Rest Level 18" icon="zzzRestIconL18" description_key="Your Rest Level is 18" duration="0" overrides="showrestlevel18" type="speedmodifier"/>
 <buff id="showrestlevel20" buffif="rest gequal 95" debuffif="rest less 95" name_key="Rest Level 19" icon="zzzRestIconL19" description_key="Your Rest Level is 19" duration="0" overrides="showrestlevel19" type="speedmodifier"/>
-<buff id="showrestlevel21" buffif="rest gequal 100" debuffif="rest less 100" name_key="Rest Level 20" icon="zzzRestIconL20" description_key="Your Rest Level is 20" duration="0" tooltip_key="Rest Level 20 Reached" overrides="showrestlevel20" type="speedmodifier"/>
+<buff id="showrestlevel21" buffif="rest gequal 100" debuffif="rest less 100" name_key="Rest Level 20" icon="zzzRestIconL20" description_key="Your Rest Level is 20" duration="0" tooltip_key="Rest Level 20 Reached" overrides="showrestlevel20" type="speedmodifier"/> -->
+
+<buff id="GainRest" buffif="CTRbed greater 0;CTRbedroll greater 0;CTRbigbed greater 0" debuffif="CTRbed less 6;CTRbedroll less 6;CTRbigbed less 6" duration="0" actions="increment(rest, 2, 1t, 0, 50);max(rest, 100)" type="speedmodifier"/>
+
+<buff id="RestSet" duration="1" actions="setvar(rest, 100)" type="speedmodifier"/>
+
+<buff id="RestReset" duration="1" actions="setvar(rest, 1)" type="speedmodifier"/>
+
+<buff id="Rested" mutex="WellRested" buffif="rest greater 50" debuffif="rest less 51;rest greater 75" actions="increment(@wellness, 0.5, 100t, 0, 1)"
+	icon="RestedIcon" type="speedmodifier" name_key="Rested" description_key="You are Rested" tooltip_key="You are Rested">
+	<modify id="0" stat="stamina" amount="1" rate="1"/>
+	<modify id="0" stat="speedmodifier" setValue="1.1"/>
+</buff>
+
+<buff id="WellRested" buffif="rest greater 75" debuffif="rest less 76" actions="increment(@wellness, 1, 100t, 0 , 2)"
+	icon="WellRestedIcon" type="speedmodifier" name_key="WellRested" description_key="You are Well Rested and Ready to Roll" tooltip_key="You are Well Rested">
+	<modify id="0" stat="stamina" amount="1" rate="1"/>
+	<modify id="0" stat="speedmodifier" setValue="1.2"/>
+</buff>
+
+<buff id="Tired" buffif="rest less 20" debuffif="rest lequal 11;rest greater 25" actions="increment(@wellness, -0.5, 200t, 0, 1)"
+	icon="TiredIcon" type="speedmodifier" name_key="Tired" description_key="You are getting tired, Get some rest" tooltip_key="You are getting Tired">
+	<modify id="0" stat="stamina" amount="-1" rate="2"/>
+	<modify id="0" stat="speedmodifier" setValue="0.95"/>
+</buff>
+
+<buff id="Exhausted" buffif="rest less 10" debuffif="rest greater 10" actions="increment(@wellness, -1, 100t, 0, 1)"
+	icon="ExhaustedIcon" type="speedmodifier" name_key="Exhausted" description_key="You are Exhausted, Get some rest!" tooltip_key="You are Exhausted">
+	<modify id="0" stat="stamina" amount="-1" rate="1"/>
+	<modify id="0" stat="speedmodifier" setValue="0.85"/>
+</buff>
+
+<buff id="showrestlevel1" buffif="rest gequal 1" name_key="Rest Level 0" icon="zzzRestIconL0" description_key="Your Rest Level is 0" duration="100t" tooltip_key="Rest Level 0 Reached" type="speedmodifier" actions="setvar(rest, 1)"/>
+
+<buff id="showrestlevel2" buffif="rest gequal 5" debuffif="rest lequal 4" name_key="Rest Level 1" icon="zzzRestIconL1" description_key="Your Rest Level is 1" duration="100t" overrides="showrestlevel1" type="speedmodifier" onexpired="showrestlevel1" actions="setvar(rest, 5)"/>
+
+<buff id="showrestlevel3" buffif="rest gequal 10" debuffif="rest lequal 9" name_key="Rest Level 2" icon="zzzRestIconL2" description_key="Your Rest Level is 2" duration="100t" tooltip_key="Rest Level 2 Reached" overrides="showrestlevel2" type="speedmodifier" onexpired="showrestlevel2" actions="setvar(rest, 10)"/>
+
+<buff id="showrestlevel4" buffif="rest gequal 15" debuffif="rest lequal 14" name_key="Rest Level 3" icon="zzzRestIconL3" description_key="Your Rest Level is 3" duration="100t" overrides="showrestlevel3" type="speedmodifier" onexpired="showrestlevel3" actions="setvar(rest, 15)"/>
+
+<buff id="showrestlevel5" buffif="rest gequal 20" debuffif="rest lequal 19" name_key="Rest Level 4" icon="zzzRestIconL4" description_key="Your Rest Level is 4" duration="100t" overrides="showrestlevel4" type="speedmodifier" onexpired="showrestlevel4" actions="setvar(rest, 20)"/>
+
+<buff id="showrestlevel6" buffif="rest gequal 25" debuffif="rest lequal 24" name_key="Rest Level 5" icon="zzzRestIconL5" description_key="Your Rest Level is 5" duration="100t" tooltip_key="Rest Level 5 Reached" overrides="showrestlevel5" type="speedmodifier" onexpired="showrestlevel5" actions="setvar(rest, 25)"/>
+
+<buff id="showrestlevel7" buffif="rest gequal 30" debuffif="rest lequal 29" name_key="Rest Level 6" icon="zzzRestIconL6" description_key="Your Rest Level is 6" duration="100t" overrides="showrestlevel6" type="speedmodifier" onexpired="showrestlevel6" actions="setvar(rest, 30)"/>
+
+<buff id="showrestlevel8" buffif="rest gequal 35" debuffif="rest lequal 34" name_key="Rest Level 7" icon="zzzRestIconL7" description_key="Your Rest Level is 7" duration="100t" overrides="showrestlevel7" type="speedmodifier" onexpired="showrestlevel7" actions="setvar(rest, 35)"/>
+
+<buff id="showrestlevel9" buffif="rest gequal 40" debuffif="rest lequal 39" name_key="Rest Level 8" icon="zzzRestIconL8" description_key="Your Rest Level is 8" duration="100t" overrides="showrestlevel8" type="speedmodifier" onexpired="showrestlevel8" actions="setvar(rest, 40)"/>
+
+<buff id="showrestlevel10" buffif="rest gequal 45" debuffif="rest lequal 44" name_key="Rest Level 9" icon="zzzRestIconL9" description_key="Your Rest Level is 9" duration="100t" overrides="showrestlevel9" type="speedmodifier" onexpired="showrestlevel9" actions="setvar(rest, 45);debuff(Rested)"/>
+
+<buff id="showrestlevel11" buffif="rest gequal 50" debuffif="rest lequal 49" name_key="Rest Level 10" icon="zzzRestIconL10" description_key="Your Rest Level is 10" duration="100t" tooltip_key="Rest Level 10 Reached" overrides="showrestlevel10" type="speedmodifier" onexpired="showrestlevel10" actions="setvar(rest, 50)"/>
+
+<buff id="showrestlevel12" buffif="rest gequal 55" debuffif="rest lequal 54" name_key="Rest Level 11" icon="zzzRestIconL11" description_key="Your Rest Level is 11" duration="100t" overrides="showrestlevel11" type="speedmodifier" onexpired="showrestlevel11" actions="setvar(rest, 55)"/>
+
+<buff id="showrestlevel13" buffif="rest gequal 60" debuffif="rest lequal 59" name_key="Rest Level 12" icon="zzzRestIconL12" description_key="Your Rest Level is 12" duration="100t" overrides="showrestlevel12" type="speedmodifier" onexpired="showrestlevel12" actions="setvar(rest, 60)"/>
+
+<buff id="showrestlevel14" buffif="rest gequal 65" debuffif="rest lequal 64" name_key="Rest Level 13" icon="zzzRestIconL13" description_key="Your Rest Level is 13" duration="100t" overrides="showrestlevel13" type="speedmodifier" onexpired="showrestlevel13" actions="setvar(rest, 65)"/>
+
+<buff id="showrestlevel15" buffif="rest gequal 70" debuffif="rest lequal 69" name_key="Rest Level 14" icon="zzzRestIconL14" description_key="Your Rest Level is 14" duration="100t" overrides="showrestlevel14" type="speedmodifier" onexpired="showrestlevel14" actions="setvar(rest, 70)"/>
+
+<buff id="showrestlevel16" buffif="rest gequal 75" debuffif="rest lequal 74" name_key="Rest Level 15" icon="zzzRestIconL15" description_key="Your Rest Level is 15" duration="100t" tooltip_key="Rest Level 15 Reached" overrides="showrestlevel15" type="speedmodifier" onexpired="showrestlevel15" actions="setvar(rest, 75)"/>
+
+<buff id="showrestlevel17" buffif="rest gequal 80" debuffif="rest lequal 79" name_key="Rest Level 16" icon="zzzRestIconL16" description_key="Your Rest Level is 16" duration="100t" overrides="showrestlevel16" type="speedmodifier" onexpired="showrestlevel16" actions="setvar(rest, 80)"/>
+
+<buff id="showrestlevel18" buffif="rest gequal 85" debuffif="rest lequal 84" name_key="Rest Level 17" icon="zzzRestIconL17" description_key="Your Rest Level is 17" duration="100t" overrides="showrestlevel17" type="speedmodifier" onexpired="showrestlevel17" actions="setvar(rest, 85)"/>
+
+<buff id="showrestlevel19" buffif="rest gequal 90" debuffif="rest lequal 89" name_key="Rest Level 18" icon="zzzRestIconL18" description_key="Your Rest Level is 18" duration="100t" overrides="showrestlevel18" type="speedmodifier" onexpired="showrestlevel18" actions="setvar(rest, 90)"/>
+
+<buff id="showrestlevel20" buffif="rest gequal 95" debuffif="rest lequal 94" name_key="Rest Level 19" icon="zzzRestIconL19" description_key="Your Rest Level is 19" duration="100t" overrides="showrestlevel19" type="speedmodifier" onexpired="showrestlevel19" actions="setvar(rest, 95)"/>
+
+<buff id="showrestlevel21" buffif="rest gequal 100" debuffif="rest lequal 99" name_key="Rest Level 20" icon="zzzRestIconL20" description_key="Your Rest Level is 20" duration="100t" tooltip_key="Rest Level 20 Reached" overrides="showrestlevel20" type="speedmodifier" onexpired="showrestlevel20" actions="setvar(rest, 100)"/>
 <!--
 This requires a 50+ food bar:
 <buff id="eatFood_1_Trigger" mutex="notFullBlockerBuff" duration="1" debuffif="food > 0.5" actions="increment(CTRfood, 1, 0, 0, 1)"/>

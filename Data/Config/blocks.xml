@@ -12607,6 +12607,7 @@ kind of free
 <block id="1493" name="TungstenFrameBlock">
 	<property name="Extends" value="scrapIronFrameMaster" />
 	<property name="CustomIcon" value="scrapIronFrameBlock" />
+	<property name="Material" value="tungsten" />
 	<property name="Group" value="Building" />
 	<property name="CanPickup" value="true" />
 	<property class="UpgradeBlock">
