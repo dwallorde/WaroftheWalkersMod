@@ -566,7 +566,7 @@
 	group_name="DwallsQuest1"
 	subtitle="Base Defenses"
 	offer="Nice Shack!  Now you should craft some Defenses.  Just build some wood log spikes and spikes.  Then through in some land mines for some fun"
-	description="Your walls won't hold off those zombies for too long.  Its best if you build some defenses to slow those buggers down.\nCraft some Log Spikes and Upgrade them twice.  Then Craft some Wood Log Spikes and place them around your base.  Next would be to craft some Scrap Iron Mines and place them around, Just be careful not to walk over them after :)\n\nDwall"
+	description="Your walls won't hold off those zombies for too long.  Its best if you build some defenses to slow those buggers down.\nCraft some Log Spikes and some Wood Log Spikes.  Next would be to craft some Scrap Iron Mines, Just be careful not to walk over them after placing them. :)\n\nDwall"
 	icon="ui_game_symbol_defense"
 	repeatable="true"
 	category_key="Quest"
@@ -576,13 +576,8 @@
 		<objective type="FetchKeep" id="gunPowder" value="12" />
 		<objective type="FetchKeep" id="ductTape" value="4" />
 		<objective type="Craft" id="woodLogSpike1" value="4" />
-		<objective type="BlockPlace" id="woodLogSpike1" value="4" />
-		<objective type="BlockUpgrade" id="woodLogSpike1" value="4" />
-		<objective type="BlockUpgrade" id="rWoodLogSpike2" value="4" />
 		<objective type="Craft" id="trapSpikesNew" value="10" />
-		<objective type="BlockPlace" id="trapSpikesNew" value="10" />
 		<objective type="Craft" id="rScrapIronPlateMine" value="4" />
-		<objective type="BlockPlace" id="rScrapIronPlateMine" value="4" />
 		<reward type="SkillPoints" value="10" />
 		<reward type="Level" value="1" />
 	</quest>

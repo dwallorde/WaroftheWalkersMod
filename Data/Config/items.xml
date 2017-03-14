@@ -2088,7 +2088,7 @@ which does not exist, yet. -->
 		<property name="EntityDamage" value="10,25" />
 		<property name="BlockDamage" value="5.4,13.5" />
 	</property>
-	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="CraftingSkillGroup" value="Ammo Crafting"/>
 	<property name="Group" value="Ammo/Weapons" />
 </item>
 
@@ -2133,7 +2133,7 @@ which does not exist, yet. -->
 		<property name="EntityDamage" value="100,150" />
 		<property name="BlockDamage" value="100,150" />
 	</property>
-	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="CraftingSkillGroup" value="Ammo Crafting"/>
 	<property name="Group" value="Ammo/Weapons" />
 </item>
 
@@ -4012,6 +4012,13 @@ which does not exist, yet. -->
 <item id="403" name="heavyBanditGasmask"> <!-- banditArmor -->
 	<property name="Extends" value="heavyBanditGloves" />
 	<property name="EquipSlot" value="Face" />
+	<property class="Attributes">
+		<property name="ConcussiveProtection" value="0.22,0.5" />
+		<property name="PunctureProtection" value="0.2,0.4" />
+		<property name="FireProtection" value="0.15,0.45" />
+		<property name="RadiationProtection" value="0.16,0.4" />
+		<property name="DegradationMax" value="320,800" />
+	</property>
 	<property class="UMA">
 		<property name="Mesh" value="armor_heavy_bandit_gasmask" />
 		<property name="Overlay0" value="bandit_armor" />
@@ -5668,6 +5675,13 @@ which does not exist, yet. -->
 	<property name="FuelValue" value="6" />
 	<property name="EconomicValue" value="40" />
 	<property name="EquipSlot" value="Legs" />
+	<property class="Attributes">
+		<property name="ConcussiveProtection" value="0.119,0.29" />
+		<property name="PunctureProtection" value="0.11,0.22" />
+		<property name="FireProtection" value="0.11,0.25" />
+		<property name="RadiationProtection" value="0.05,0.09" />
+		<property name="DegradationMax" value="180,450" />
+	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_overalls" />
 		<property name="Overlay0" value="unisex_clothes_overalls" />
