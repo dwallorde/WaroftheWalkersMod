@@ -36,7 +36,6 @@
 		<entity name="zombieMoeCrawler" prob="0.1" />
 		<entity name="zombieJoeCrawler" prob="0.1" />
 		<entity name="zombieBoeCrawler" prob="0.1" />
-		<entity name="Survivor" prob="0.05" />
 		<entity name="SurvivorBob" prob="0.05" />
 		<entity name="SurvivorBill" prob="0.05" />
 		<entity name="SurvivorSheela" prob="0.05" />
@@ -336,7 +335,6 @@
 		<entity name="snowzombie" />
 		<entity name="SnowZombieLarry" />
 		<entity name="SnowZombieSarah" />
-		<entity name="Survivor" prob="0.05" />
 		<entity name="SurvivorBob" prob="0.05" />
 		<entity name="SurvivorBill" prob="0.05" />
 		<entity name="SurvivorSheela" prob="0.05" />

@@ -2,7 +2,7 @@
 
 <window name="WOTWVERSION">
 		<texture name="War of the Walkers" depth="0" size="100,50" texture="@http://i.imgur.com/uJJPd6b.png" material="Materials/Transparent Colored" pos="-300,-6" />
-		<label name="ServerInfo" depth="0" size="100,50" text="V4.3.7(Stable) R3/13/2017" font_size="18" effect="outline" color="[red]" justify="center" pos="-200,-15" overflow="resizeheight" />
+		<label name="ServerInfo" depth="0" size="100,50" text="V4.3.8(Stable) R3/16/2017" font_size="18" effect="outline" color="[red]" justify="center" pos="-200,-15" overflow="resizeheight" />
 
 	</window>
 	<window name="HUDLeftStatBars">
