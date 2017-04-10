@@ -110,27 +110,25 @@
 		
 		<reward type="SkillPoints" value="1" />
 		<reward type="Exp" value="500" />
+		<reward type="Item" id="PlayerStarterCrate" value="1" />
 		<reward type="ShowTip" value="skillPointTip" stage="aftercomplete" />
-		<reward type="Quest" id="quest_whiteRiverCitizen1" stage="aftercomplete" />
+		<reward type="Quest" id="quest_wotwmodstarter" stage="aftercomplete" />
     </quest>
 	
-	<!-- Basic Survival 9 - Mod Info #1 /> -->	
-	<!-- <quest id="quest_BasicSurvival9" group_name_key="quest_BasicSurvival" icon="ui_game_symbol_campfire" category_key="Quest">
-		<action type="ShowTip" value="WotWModIntro_01Tip" />
-		<reward type="Quest" id="quest_BasicSurvival10" stage="aftercomplete" />
-    </quest> -->
-	
-	<!-- Basic Survival 10 - Mod Info #2 /> -->	
-	<!-- <quest id="quest_BasicSurvival10" group_name_key="quest_BasicSurvival" icon="ui_game_symbol_campfire" category_key="Quest">
-		<action type="ShowTip" value="WotWModIntro_02Tip" />
-		<reward type="Quest" id="quest_BasicSurvival11" stage="aftercomplete" />
-    </quest> -->
-	
-	<!-- Basic Survival 11 - Mod Info #3 /> -->	
-	<!-- <quest id="quest_BasicSurvival11" group_name_key="quest_BasicSurvival" icon="ui_game_symbol_campfire" category_key="Quest">
-		<action type="ShowTip" value="WotWModIntro_03Tip" />
+	<!-- WOTW MOD - Intro Quest -->
+	<quest id="quest_wotwmodstarter"
+	name_key="quest_wotwmodstarter"
+	subtitle_key="quest_wotwmodstarter_subtitle"
+	description_key="quest_wotwmodstarter_description"
+	icon="wotwmodlogo"
+	category_key="Quest">
+		<objective type="BlockPlace" id="PlayerStarterCrate" value="1" />
+		<reward type="Exp" value="500" />
+		<reward type="SkillPoints" value="1" />
+		<reward type="Item" id="ScrapIronAxe" value="50" />
+		<reward type="Item" id="ScrapIronShovel" value="50" />
 		<reward type="Quest" id="quest_whiteRiverCitizen1" stage="aftercomplete" />
-    </quest> -->
+	</quest>
 	
 	<!-- White River Citizen 1 - Journey to Settlement -->
 	<quest id="quest_whiteRiverCitizen1" group_name_key="quest_WhiteRiverCitizen" name_key="quest_WhiteRiverCitizen1" subtitle_key="quest_WhiteRiverCitizen1_subtitle" description_key="quest_WhiteRiverCitizen1_description" icon="ui_game_symbol_map_trader" category_key="Quest">
@@ -1583,11 +1581,11 @@
 	category_key="challenge"
 	difficulty="easy">
 		<objective type="ZombieKill" id="zombieSteveCrawler" value="1" />
-		<!-- <objective type="ZombieKill" id="zombieDarleneCrawler" value="1" />
+		<objective type="ZombieKill" id="zombieDarleneCrawler" value="1" />
 		<objective type="ZombieKill" id="zombieArleneCrawler" value="1" />
 		<objective type="ZombieKill" id="zombieMoeCrawler" value="1" />
 		<objective type="ZombieKill" id="zombieJoeCrawler" value="1" />
-		<objective type="ZombieKill" id="zombieBoeCrawler" value="1" /> -->
+		<objective type="ZombieKill" id="zombieBoeCrawler" value="1" />
 		<reward type="Exp" value="500" />
 		<reward type="Item" id="splint" value="5" />
 		<reward type="SkillPoints" value="1" />
@@ -1603,11 +1601,11 @@
 	category_key="challenge"
 	difficulty="insane">
 		<objective type="ZombieKill" id="zombieSteveCrawler" value="2" />
-		<!-- <objective type="ZombieKill" id="zombieDarleneCrawler" value="2" />
+		<objective type="ZombieKill" id="zombieDarleneCrawler" value="2" />
 		<objective type="ZombieKill" id="zombieArleneCrawler" value="2" />
 		<objective type="ZombieKill" id="zombieMoeCrawler" value="2" />
 		<objective type="ZombieKill" id="zombieJoeCrawler" value="2" />
-		<objective type="ZombieKill" id="zombieBoeCrawler" value="2" /> -->
+		<objective type="ZombieKill" id="zombieBoeCrawler" value="2" />
 			<requirement type="Group" id="MeleeGroup" value="OR">
 				<requirement type="Holding" id="clubWood" />
 				<requirement type="Holding" id="clubIron" />
@@ -1770,5 +1768,637 @@
 		<reward type="Skill" id="Light Gun Smithing" value="5" />
 		<reward type="Exp" value="1250" />
 	</quest>
+	
+	<!-- Class Quests -->
+	<!-- Builder Class Training Level 1 -->
+	<quest id="classtrainingbuilder1"
+	name_key="classtrainingbuilder1"
+	group_name="BuilderClassTraining"
+	subtitle_key="classtrainingbuilder1_subtitle"
+	offer_key="classtrainingbuilder1_offer"
+	description_key="classtrainingbuilder1_description"
+	icon="classBuilderLevel1Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="Craft" id="woodFrameBlock" value="50" />
+		<objective type="Craft" id="secureDoorWooden" value="1" />
+		<objective type="Craft" id="window03Wood" value="2" />
+		<reward type="Exp" value="1500" />
+		<reward type="SkillPoints" value="1" />
+		<reward type="Recipe" id="clawHammer" />
+		<reward type="Recipe" id="window02" />
+		<reward type="Item" id="clawHammer" value="250" />
+		<reward type="Item" id="HouseDoorSchematic" value="1" />
+		<reward type="Item" id="SteelDoorSchematic" value="1" />
+		<reward type="Item" id="TungstenDoorSchematic" value="1" />
+		<reward type="Skill" id="Advanced Wood Construction" value="1" />
+		<reward type="Skill" id="Construction" value="10" />
+		<reward type="Skill" id="BuilderClassLevel1" value="1" />
+		<reward type="Quest" id="classtrainingbuilder2" />
+	</quest>
+	
+	<!-- Builder Class Training Level 2 -->
+	<quest id="classtrainingbuilder2"
+	name_key="classtrainingbuilder2"
+	group_name="BuilderClassTraining"
+	subtitle_key="classtrainingbuilder2_subtitle"
+	description_key="classtrainingbuilder2_description"
+	icon="classBuilderLevel2Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="FetchKeep" id="forgedIron" value="20" />
+		<objective type="FetchKeep" id="electricParts" value="2" />
+		<objective type="FetchKeep" id="shortMetalPipe" value="4" />
+		<objective type="FetchKeep" id="wood" value="50" />
+		<objective type="FetchKeep" id="clawHammer" value="1" />
+		<reward type="Exp" value="2000" />
+		<reward type="SkillPoints" value="2" />
+		<reward type="Recipe" id="WoodWorkingWorkbench" />
+		<reward type="Item" id="ironBlocksSchematic" value="1" />
+		<reward type="Item" id="tungstenBlocksSchematic" value="1" />
+		<reward type="Item" id="WoodWorkingWorkbench" value="1" />
+		<reward type="Skill" id="Construction" value="15" />
+		<reward type="Skill" id="CobblestoneConstruction" value="1" />
+		<reward type="Skill" id="BuilderClassLevel2" value="1" />
+		<reward type="Quest" id="classtrainingbuilder3" />
+	</quest>
+	
+	<!-- Builder Class Training Level 3 -->
+	<quest id="classtrainingbuilder3"
+	name_key="classtrainingbuilder3"
+	group_name="BuilderClassTraining"
+	subtitle_key="classtrainingbuilder3_subtitle"
+	description_key="classtrainingbuilder3_description"
+	icon="classBuilderLevel3Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="Craft" id="cobblestoneFrameBlock" value="50" />
+		<objective type="Craft" id="cobblestoneFrameRamp" value="10" />
+		<objective type="Craft" id="cobblestones" value="100" />
+		<reward type="Exp" value="2500" />
+		<reward type="SkillPoints" value="3" />
+		<reward type="Skill" id="Construction" value="20" />
+		<reward type="Skill" id="BuilderClassLevel3" value="1" />
+		<reward type="Item" id="nailgunSchematic" value="1" />
+		<reward type="Item" id="HDNailgunSchematic" value="1" />
+		<reward type="Item" id="ClassCrateBuilder" value="1" />
+		<reward type="Quest" id="classtrainingbuilder4" />
+	</quest>
+	
+	<quest id="classtrainingbuilder4"
+	name_key="classtrainingbuilder_completion"
+	offer_key="classtrainingbuilder_completion_info"
+	description_key="classtrainingbuilder_completion_info"
+	icon="classBuilderLevel3Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<reward type="Exp" value="100" />
+		<reward type="Recipe" id="classKey" />
+	</quest>
+	
+	<quest id="classtrainingsurvivalist1"
+	name_key="classtrainingsurvivalist1"
+	group_name="SurvivalistClassTraining"
+	subtitle_key="classtrainingsurvivalist1_subtitle"
+	offer_key="classtrainingsurvivalist1_offer"
+	description_key="classtrainingsurvivalist1_description"
+	icon="classSurvivalistLevel1Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="FetchKeep" id="cottonPlant" value="40" />
+		<objective type="FetchKeep" id="wood" value="10" />
+		<objective type="Craft" id="bandage" value="5" />
+		<objective type="Craft" id="splint" value="5" />
+		<reward type="Exp" value="1500" />
+		<reward type="SkillPoints" value="1" />
+		<reward type="Recipe" id="Longbow" />
+		<reward type="Recipe" id="AdvancedSplint" />
+		<reward type="Item" id="Longbow" value="250" />
+		<reward type="Item" id="ironArrow" value="150" />
+		<reward type="Skill" id="Athletics" value="10" />
+		<reward type="Skill" id="SurvivalistClassLevel1" value="1" />
+		<reward type="Quest" id="classtrainingsurvivalist2" />
+	</quest>
+	
+	<quest id="classtrainingsurvivalist2"
+	name_key="classtrainingsurvivalist2"
+	group_name="SurvivalistClassTraining"
+	subtitle_key="classtrainingsurvivalist2_subtitle"
+	description_key="classtrainingsurvivalist2_description"
+	icon="classSurvivalistLevel2Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="FetchKeep" id="PorkRaw" value="5" />
+		<objective type="Craft" id="PorkGrilled" value="5" />
+		<reward type="Exp" value="2000" />
+		<reward type="SkillPoints" value="2" />
+		<reward type="Recipe" id="TraumaFirstAidBandage" />
+		<reward type="Item" id="herbalAntibioticsRecipe" value="1" />
+		<reward type="Item" id="herbalAntibiotics" value="5" />
+		<reward type="Skill" id="Athletics" value="15" />
+		<reward type="Skill" id="SurvivalistClassLevel2" value="1" />
+		<reward type="Quest" id="classtrainingsurvivalist3" />
+	</quest>
+	
+	<quest id="classtrainingsurvivalist3"
+	name_key="classtrainingsurvivalist3"
+	group_name="SurvivalistClassTraining"
+	subtitle_key="classtrainingsurvivalist3_subtitle"
+	description_key="classtrainingsurvivalist3_description"
+	icon="classSurvivalistLevel3Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="AnimalKill" value="3" />
+		<objective type="ZombieKill" value="5" />
+		<reward type="Exp" value="2500" />
+		<reward type="SkillPoints" value="3" />
+		<reward type="Recipe" id="TraumaFirstAidKit" />
+		<reward type="Item" id="ClassCrateSurvivalist" value="1" />
+		<reward type="Skill" id="Pistol Recipe" value="1" />
+		<reward type="Skill" id="9mm Round Crafting" value="1" />
+		<reward type="Skill" id="Athletics" value="20" />
+		<reward type="Skill" id="SurvivalistClassLevel3" value="1" />
+		<reward type="Quest" id="classtrainingsurvivalist4" />
+	</quest>
+	
+	<quest id="classtrainingsurvivalist4"
+	name_key="classtrainingsurvivalist_completion"
+	offer_key="classtrainingsurvivalist_completion_info"
+	description_key="classtrainingsurvivalist_completion_info"
+	icon="classSurvivalistLevel3Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<reward type="Exp" value="100" />
+		<reward type="Recipe" id="classKey" />
+	</quest>
+	
+	<quest id="classtrainingscholar1"
+	name_key="classtrainingscholar1"
+	group_name="ScholarClassTraining"
+	subtitle_key="classtrainingscholar1_subtitle"
+	offer_key="classtrainingscholar1_offer"
+	description_key="classtrainingscholar1_description"
+	icon="classScholarLevel1Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="Craft" id="MortarandPestle" value="1" />
+		<objective type="BlockPlace" id="MortarandPestle" value="1" />
+		<reward type="Exp" value="1500" />
+		<reward type="SkillPoints" value="1" />
+		<reward type="Item" id="ApplePieRecipe" value="1" />
+		<reward type="Item" id="AppleJuiceRecipe" value="1" />
+		<reward type="Skill" id="Farming" value="1" />
+		<reward type="Skill" id="ScholarFarming" value="1" />
+		<reward type="Skill" id="Science" value="10" />
+		<reward type="Skill" id="ScholarClassLevel1" value="1" />
+		<reward type="Quest" id="classtrainingscholar2" />
+	</quest>
+	
+	<quest id="classtrainingscholar2"
+	name_key="classtrainingscholar2"
+	group_name="ScholarClassTraining"
+	subtitle_key="classtrainingscholar2_subtitle"
+	description_key="classtrainingscholar2_description"
+	icon="classScholarLevel2Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="FetchKeep" id="cottonPlant" value="5" />
+		<objective type="FetchKeep" id="goldenrodPlant" value="5" />
+		<objective type="FetchKeep" id="chrysanthemumPlant" value="5" />
+		<objective type="Craft" id="cottonSeed" value="5" />
+		<objective type="Craft" id="goldenrodSeed" value="5" />
+		<objective type="Craft" id="chrysanthemumSeed" value="5" />
+		<reward type="Exp" value="2000" />
+		<reward type="SkillPoints" value="2" />
+		<reward type="Skill" id="Quicker Crafting" value="1" />
+		<reward type="Skill" id="Science" value="15" />
+		<reward type="Skill" id="ScholarClassLevel2" value="1" />
+		<reward type="Quest" id="classtrainingscholar3" />
+	</quest>
+	
+	<quest id="classtrainingscholar3"
+	name_key="classtrainingscholar3"
+	group_name="ScholarClassTraining"
+	subtitle_key="classtrainingscholar3_subtitle"
+	description_key="classtrainingscholar3_description"
+	icon="classScholarLevel3Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="BlockPlace" id="plantedCotton1" value="5" />
+		<objective type="BlockPlace" id="plantedGoldenrod1" value="5" />
+		<objective type="BlockPlace" id="plantedChrysanthemum1" value="5" />
+		<reward type="Exp" value="2500" />
+		<reward type="SkillPoints" value="3" />
+		<reward type="Item" id="ClassCrateScholar" value="1" />
+		<reward type="Recipe" id="BlueprintWorkStation" />
+		<reward type="Skill" id="Secret Stash" value="1" />
+		<reward type="Skill" id="scholartreasurehunting" value="1" />
+		<reward type="Skill" id="Science" value="20" />
+		<reward type="Skill" id="ScholarClassLevel3" value="1" />
+		<reward type="Quest" id="classtrainingscholar4" />
+	</quest>
+	
+	<quest id="classtrainingscholar4"
+	name_key="classtrainingscholar_completion"
+	offer_key="classtrainingscholar_completion_info"
+	description_key="classtrainingscholar_completion_info"
+	icon="classScholarLevel3Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<reward type="Exp" value="100" />
+		<reward type="Recipe" id="classKey" />
+	</quest>
+	
+	<quest id="classtrainingmarksman1"
+	name_key="classtrainingmarksman1"
+	group_name="MarksmanClassTraining"
+	subtitle_key="classtrainingmarksman1_subtitle"
+	offer_key="classtrainingmarksman1_offer"
+	description_key="classtrainingmarksman1_description"
+	icon="classMarksmanLevel1Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="AnimalKill" value="5" />
+			<requirement type="Holding" id="woodenBow" />
+		<reward type="Exp" value="1500" />
+		<reward type="SkillPoints" value="1" />
+		<reward type="Skill" id="Hunting Rifle Recipe" value="1" />
+		<reward type="Skill" id="762mm Round Crafting" value="1" />
+		<reward type="Skill" id="Remington8 Recipe" value="1" />
+		<reward type="Skill" id="32mm Bullet Crafting" value="1" />
+		<reward type="Item" id="gunHuntingRifle" value="250" />
+		<reward type="Item" id="762mmBullet" value="100" />
+		<reward type="Skill" id="Light Gun Smithing" value="10" />
+		<reward type="Skill" id="MarksmanClassLevel1" value="1" />
+		<reward type="Quest" id="classtrainingmarksman2" />
+	</quest>
+	
+	<quest id="classtrainingmarksman2"
+	name_key="classtrainingmarksman2"
+	group_name="MarksmanClassTraining"
+	subtitle_key="classtrainingmarksman2_subtitle"
+	description_key="classtrainingmarksman2_description"
+	icon="classMarksmanLevel2Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="ZombieKill" value="10" />
+			<requirement type="Holding" id="gunHuntingRifle" />
+		<reward type="Exp" value="2000" />
+		<reward type="SkillPoints" value="2" />
+		<reward type="Skill" id="Desert Eagle Recipe" value="1" />
+		<reward type="Skill" id="FAMAS Recipe" value="1" />
+		<reward type="Skill" id="556mm Bullet Crafting" value="1" />
+		<reward type="Skill" id="The Outlaw" value="1" />
+		<reward type="Skill" id="Better Lead Than Dead" value="1" />
+		<reward type="Skill" id="Dead Shot" value="1" />
+		<reward type="Item" id="Remington8" value="250" />
+		<reward type="Item" id="32mmBullet" value="100" />
+		<reward type="Skill" id="Light Gun Smithing" value="15" />
+		<reward type="Skill" id="Gun Smithing" value="10" />
+		<reward type="Skill" id="MarksmanClassLevel2" value="1" />
+		<reward type="Quest" id="classtrainingmarksman3" />
+	</quest>
+	
+	<quest id="classtrainingmarksman3"
+	name_key="classtrainingmarksman3"
+	group_name="MarksmanClassTraining"
+	subtitle_key="classtrainingmarksman3_subtitle"
+	description_key="classtrainingmarksman3_description"
+	icon="classMarksmanLevel3Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="ZombieKill" value="25" />
+			<requirement type="Holding" id="Remington8" />
+		<reward type="Exp" value="2500" />
+		<reward type="SkillPoints" value="3" />
+		<reward type="Skill" id="Baretta Shotgun Recipe" value="1" />
+		<reward type="Skill" id="Splatter Gun" value="1" />
+		<reward type="Skill" id="Boom Stick" value="1" />
+		<reward type="Recipe" id="WeaponSmithStation" />
+		<reward type="Item" id="BarettaShotgun" value="250" />
+		<reward type="Skill" id="Gun Smithing" value="15" />
+		<reward type="Skill" id="Heavy Gun Smithing" value="15" />
+		<reward type="Skill" id="MarksmanClassLevel3" value="1" />
+		<reward type="Quest" id="classtrainingmarksman4" />
+	</quest>
+	
+	<quest id="classtrainingmarksman4"
+	name_key="classtrainingmarksman_completion"
+	offer_key="classtrainingmarksman_completion_info"
+	description_key="classtrainingmarksman_completion_info"
+	icon="classMarksmanLevel3Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<reward type="Exp" value="100" />
+		<reward type="Recipe" id="classKey" />
+	</quest>
+	
+	<quest id="classtrainingfighter1"
+	name_key="classtrainingfighter1"
+	group_name="FighterClassTraining"
+	subtitle_key="classtrainingfighter1_subtitle"
+	offer_key="classtrainingfighter1_offer"
+	description_key="classtrainingfighter1_description"
+	icon="classFighterLevel1Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="FetchKeep" id="scrapIron" value="100" />
+		<objective type="FetchKeep" id="wood" value="20" />
+		<reward type="Exp" value="1500" />
+		<reward type="SkillPoints" value="1" />
+		<reward type="Recipe" id="huntingKnife" />
+		<reward type="Recipe" id="clubSpiked" />
+		<reward type="Item" id="huntingKnife" value="250" />
+		<reward type="Skill" id="Club Crafting" value="1" />
+		<reward type="Skill" id="Weapon Smithing" value="10" />
+		<reward type="Skill" id="Blade Weapons" value="10" />
+		<reward type="Skill" id="Blunt Weapons" value="10" />
+		<reward type="Skill" id="FighterClassLevel1" value="1" />
+		<reward type="Quest" id="classtrainingfighter2" />
+	</quest>
+	
+	<quest id="classtrainingfighter2"
+	name_key="classtrainingfighter2"
+	group_name="FighterClassTraining"
+	subtitle_key="classtrainingfighter2_subtitle"
+	description_key="classtrainingfighter2_description"
+	icon="classFighterLevel2Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="Craft" id="clubIron" value="1" />
+		<reward type="Exp" value="2000" />
+		<reward type="SkillPoints" value="2" />
+		<reward type="Recipe" id="ClubTungsten" />
+		<reward type="Recipe" id="TungstenMachete" />
+		<reward type="Item" id="clubBarbed" value="250" />
+		<reward type="Skill" id="Club Crafting" value="1" />
+		<reward type="Skill" id="Weapon Smithing" value="15" />
+		<reward type="Skill" id="Blade Weapons" value="15" />
+		<reward type="Skill" id="Blunt Weapons" value="15" />
+		<reward type="Skill" id="FighterClassLevel2" value="1" />
+		<reward type="Quest" id="classtrainingfighter3" />
+	</quest>
+	
+	<quest id="classtrainingfighter3"
+	name_key="classtrainingfighter3"
+	group_name="FighterClassTraining"
+	subtitle_key="classtrainingfighter3_subtitle"
+	description_key="classtrainingfighter3_description"
+	icon="classFighterLevel3Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="ZombieKill" value="15" />
+			<requirement type="Group" value="OR">
+				<requirement type="Holding" id="clubIron" />
+				<requirement type="Holding" id="clubBarbed" />
+				<requirement type="Holding" id="clubSpiked" />
+				<requirement type="Holding" id="clubWood" />
+			</requirement>
+		<reward type="Exp" value="2500" />
+		<reward type="SkillPoints" value="3" />
+		<reward type="Recipe" id="GoldTippedKnife" />
+		<reward type="Recipe" id="GoldTippedMachete" />
+		<reward type="Item" id="GoldTippedKnife" value="250" />
+		<reward type="Item" id="GoldTippedMachete" value="250" />
+		<reward type="Item" id="casinoCoin" value="2000" />
+		<reward type="Skill" id="Weapon Smithing" value="20" />
+		<reward type="Skill" id="Blade Weapons" value="20" />
+		<reward type="Skill" id="Blunt Weapons" value="20" />
+		<reward type="Skill" id="FighterClassLevel3" value="1" />
+		<reward type="Quest" id="classtrainingfighter4" />
+	</quest>
+	
+	<quest id="classtrainingfighter4"
+	name_key="classtrainingfighter_completion"
+	offer_key="classtrainingfighter_completion_info"
+	description_key="classtrainingfighter_completion_info"
+	icon="classFighterLevel3Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<reward type="Exp" value="100" />
+		<reward type="Recipe" id="classKey" />
+	</quest>
+	
+	<quest id="classtrainingtradesman1"
+	name_key="classtrainingtradesman1"
+	group_name="TradesmanClassTraining"
+	subtitle_key="classtrainingtradesman1_subtitle"
+	offer_key="classtrainingtradesman1_offer"
+	description_key="classtrainingtradesman1_description"
+	icon="classTradesmanLevel1Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="FetchKeep" id="scrapIron" value="75" />
+		<objective type="FetchKeep" id="yuccaFibers" value="11" />
+		<objective type="FetchKeep" id="wood" value="11" />
+		<objective type="Craft" id="scrapIronAxe" value="1" />
+		<objective type="Craft" id="scrapIronShovel" value="1" />
+		<reward type="Exp" value="1500" />
+		<reward type="SkillPoints" value="1" />
+		<reward type="Skill" id="Iron Tool Crafting" value="1" />
+		<reward type="Recipe" id="wrench" />
+		<reward type="Item" id="wrench" value="250" />
+		<reward type="Skill" id="Tool Smithing" value="10" />
+		<reward type="Skill" id="Construction Tools" value="10" />
+		<reward type="Skill" id="Barter" value="10" />
+		<reward type="Skill" id="TradesmanClassLevel1" value="1" />
+		<reward type="Quest" id="classtrainingtradesman2" />
+	</quest>
+	
+	<quest id="classtrainingtradesman2"
+	name_key="classtrainingtradesman2"
+	group_name="TradesmanClassTraining"
+	subtitle_key="classtrainingtradesman2_subtitle"
+	description_key="classtrainingtradesman2_description"
+	icon="classTradesmanLevel2Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="Repair" id="wrench" value="1" />
+		<objective type="Scrap" id="scrapIronAxe" value="1" />
+		<objective type="Scrap" id="scrapIronShovel" value="1" />
+		<reward type="Exp" value="2000" />
+		<reward type="SkillPoints" value="2" />
+		<reward type="Skill" id="The Fixer" value="1" />
+		<reward type="Recipe" id="AdvancedToolWorkbench" />
+		<reward type="Recipe" id="HDWrench" />
+		<reward type="Item" id="sledgehammerSchematic" value="1" />
+		<reward type="Item" id="sledgehammer" value="250" />
+		<reward type="Skill" id="Tool Smithing" value="15" />
+		<reward type="Skill" id="Advanced Tool Smithing" value="10" />
+		<reward type="Skill" id="Construction Tools" value="25" />
+		<reward type="Skill" id="Barter" value="15" />
+		<reward type="Skill" id="TradesmanClassLevel2" value="1" />
+		<reward type="Quest" id="classtrainingtradesman3" />
+	</quest>
+	
+	<quest id="classtrainingtradesman3"
+	name_key="classtrainingtradesman3"
+	group_name="TradesmanClassTraining"
+	subtitle_key="classtrainingtradesman3_subtitle"
+	description_key="classtrainingtradesman3_description"
+	icon="classTradesmanLevel3Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="FetchKeep" id="forgedIron" value="40" />
+		<objective type="FetchKeep" id="wood" value="40" />
+		<objective type="Craft" id="fireaxeIron" value="1" />
+		<objective type="Craft" id="pickaxeIron" value="1" />
+		<reward type="Exp" value="2500" />
+		<reward type="SkillPoints" value="3" />
+		<reward type="Skill" id="Steel Smithing" value="1" />
+		<reward type="Skill" id="Secret Stash" value="1" />
+		<reward type="Recipe" id="FireaxeDiamondTipped" />
+		<reward type="Recipe" id="PickaxeDiamondTipped" />
+		<reward type="Item" id="ClassCrateTradesman" value="1" />
+		<reward type="Item" id="HDWrench" value="250" />
+		<reward type="Item" id="FireaxeDiamondTipped" value="250" />
+		<reward type="Item" id="PickaxeDiamondTipped" value="250" />
+		<reward type="Skill" id="Advanced Tool Smithing" value="15" />
+		<reward type="Skill" id="Mechanic" value="20" />
+		<reward type="Skill" id="Barter" value="20" />
+		<reward type="Skill" id="TradesmanClassLevel3" value="1" />
+		<reward type="Quest" id="classtrainingtradesman4" />
+	</quest>
+	
+	<quest id="classtrainingtradesman4"
+	name_key="classtrainingtradesman_completion"
+	offer_key="classtrainingtradesman_completion_info"
+	description_key="classtrainingtradesman_completion_info"
+	icon="classTradesmanLevel3Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<reward type="Exp" value="100" />
+		<reward type="Recipe" id="classKey" />
+	</quest>
+	
+	<quest id="classtrainingprotection1"
+	name_key="classtrainingprotection1"
+	group_name="ProtectionClassTraining"
+	subtitle_key="classtrainingprotection1_subtitle"
+	offer_key="classtrainingprotection1_offer"
+	description_key="classtrainingprotection1_description"
+	icon="classProtectionLevel1Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="FetchKeep" id="cottonPlant" value="56" />
+		<objective type="Craft" id="cloth" value="28" />
+		<reward type="Exp" value="1500" />
+		<reward type="SkillPoints" value="1" />
+		<reward type="Skill" id="Cloth Armor" value="1" />
+		<reward type="Recipe" id="leather" />
+		<reward type="Recipe" id="TailorsWorkStation" />
+		<reward type="Skill" id="Light Armor" value="10" />
+		<reward type="Skill" id="Tailoring" value="10" />
+		<reward type="Skill" id="ProtectionClassLevel1" value="1" />
+		<reward type="Quest" id="classtrainingprotection2" />
+	</quest>
+	
+	<quest id="classtrainingprotection2"
+	name_key="classtrainingprotection2"
+	group_name="ProtectionClassTraining"
+	subtitle_key="classtrainingprotection2_subtitle"
+	description_key="classtrainingprotection2_description"
+	icon="classProtectionLevel2Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="Craft" id="clothHat" value="1" />
+		<objective type="Craft" id="clothJacket" value="1" />
+		<objective type="Craft" id="clothGloves" value="1" />
+		<objective type="Craft" id="clothPants" value="1" />
+		<objective type="Craft" id="clothBoots" value="1" />
+		<reward type="Exp" value="2000" />
+		<reward type="SkillPoints" value="2" />
+		<reward type="Recipe" id="Kevlar" />
+		<reward type="Item" id="leather" value="35" />
+		<reward type="Skill" id="Light Armor" value="20" />
+		<reward type="Skill" id="Medium Armor" value="15" />
+		<reward type="Skill" id="Tailoring" value="20" />
+		<reward type="Skill" id="Leatherworking" value="15" />
+		<reward type="Skill" id="ProtectionClassLevel2" value="1" />
+		<reward type="Quest" id="classtrainingprotection3" />
+	</quest>
+	
+	<quest id="classtrainingprotection3"
+	name_key="classtrainingprotection3"
+	group_name="ProtectionClassTraining"
+	subtitle_key="classtrainingprotection3_subtitle"
+	description_key="classtrainingprotection3_description"
+	icon="classProtectionLevel3Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<objective type="Wear" id="clothHat" />
+		<objective type="Wear" id="clothJacket" />
+		<objective type="Wear" id="clothGloves" />
+		<objective type="Wear" id="clothPants" />
+		<objective type="Wear" id="clothBoots" />
+		<reward type="Exp" value="2500" />
+		<reward type="SkillPoints" value="3" />
+		<reward type="Recipe" id="ArmorSmithingWorkbench" />
+		<reward type="Item" id="KevlarHelmet" value="250" />
+		<reward type="Item" id="KevlarVest" value="250" />
+		<reward type="Item" id="KevlarGloves" value="250" />
+		<reward type="Item" id="KevlarLegArmor" value="250" />
+		<reward type="Item" id="KevlarBoots" value="250" />
+		<reward type="Item" id="ClassCrateProtection" value="1" />
+		<reward type="Skill" id="Medium Armor" value="20" />
+		<reward type="Skill" id="Heavy Armor" value="20" />
+		<reward type="Skill" id="Leatherworking" value="20" />
+		<reward type="Skill" id="Armor Smithing" value="15" />
+		<reward type="Skill" id="Heavy Armor Smithing" value="15" />
+		<reward type="Skill" id="ProtectionClassLevel3" />
+		<reward type="Quest" id="classtrainingprotection3" />
+	</quest>
+	
+	<quest id="classtrainingprotection4"
+	name_key="classtrainingprotection_completion"
+	offer_key="classtrainingprotection_completion_info"
+	description_key="classtrainingprotection_completion_info"
+	icon="classProtectionLevel3Icon"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		<reward type="Exp" value="100" />
+		<reward type="Recipe" id="classKey" />
+	</quest>
+	
+	<!-- <quest id=""
+	name=""
+	group_name=""
+	subtitle=""
+	offer=""
+	description="Derp"
+	icon="ui_game_symbol_clawhammer"
+	repeatable="false"
+	category_key="Quest"
+	difficulty="easy">
+		
+	</quest> -->
 	
 </quests>

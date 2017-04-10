@@ -107,7 +107,7 @@ Mesh files no longer used:
 	<property name="EconomicValue" value="192" />
 	<property class="Action0"> <!-- AttackAction -->
 		<property name="Delay" value="1.15" />
-		<property name="Buff" value="bleeding,criticalBlunt" />
+		<property name="Buff" value="gainInjury_mediumattack_Trigger,criticalBlunt" />
 		<property name="Buff_chance" value=".3,.3" />
 		<property name="DamageBonus.head" value="5" />
 	</property>
@@ -128,7 +128,7 @@ Mesh files no longer used:
 	<property name="RepairTools" value="forgedIron" />
 	<property name="EconomicValue" value="300" />
 	<property class="Action0"> <!-- AttackAction -->
-		<property name="Buff" value="bleeding,criticalBlunt" />
+		<property name="Buff" value="gainInjury_heavyattack_Trigger,criticalBlunt" />
 		<property name="Buff_chance" value=".5,.4" />
 		<property name="DamageBonus.head" value="6" />
 	</property>
@@ -208,7 +208,7 @@ Mesh files no longer used:
 	<property class="Action1"> <!-- UseAction -->
 		<property name="Class" value="PlaceAsBlock" />
 		<property name="Delay" value="0.5" />
-		<property name="Blockname" value="wallTorch" />
+		<property name="Blockname" value="wallTorchStation" />
 	</property>
 	<property name="Group" value="Basics,Decor/Miscellaneous" />
 	<property name="DescriptionKey" value="torchDesc"/>
@@ -1054,7 +1054,7 @@ Mesh files no longer used:
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_stamina" value="5" />
 		<property name="Gain_food" value="0" />
@@ -1087,8 +1087,8 @@ Mesh files no longer used:
 	<property class="Action0"> <!-- AttackAction -->
 		<property name="DamageEntity" value="10" />
 		<property name="DamageBlock" value="20" />
-		<property name="Buff" value="bleeding,infection,stunned" />
-		<property name="Buff_chance" value="0.04,0.04,0.5" />
+		<property name="Buff" value="gainInjury_smallattack_Trigger,infection,stunned,biteMark" />
+		<property name="Buff_chance" value="0.8,0.05,0.5,0.5" />
 	</property>
 </item>
 
@@ -1098,8 +1098,8 @@ Mesh files no longer used:
 	<property name="HoldType" value="24" />
 	<property class="Action0">
 		<property name="Delay" value="2.0" />
-		<property name="Buff" value="sprainedLeg,infection" />
-		<property name="Buff_chance" value="0.2,0.025" />
+		<property name="Buff" value="gainInjury_smallattack_Trigger,sprainedLeg,infection,biteMark" />
+		<property name="Buff_chance" value="0.8,0.2,0.05,0.5" />
 	</property>
 </item>
 
@@ -1111,8 +1111,8 @@ Mesh files no longer used:
 		<property name="Sphere" value="0.4" />
 		<property name="DamageEntity" value="12" />
 		<property name="DamageBlock" value="2" />
-		<property name="Buff" value="burningSmall,infection,stunned" />
-		<property name="Buff_chance" value="0.5,0.07,0.4" />
+		<property name="Buff" value="gainInjury_mediumattack_Trigger,burningSmall,infection,stunned,biteMark" />
+		<property name="Buff_chance" value="0.7,0.5,0.05,0.5,0.5" />
 	</property>
 </item>
 
@@ -1124,8 +1124,8 @@ Mesh files no longer used:
 		<property name="Range" value="1.75" />
 		<property name="DamageEntity" value="20" />
 		<property name="DamageBlock" value="250" />
-		<property name="Buff" value="bleeding,infection,stunned" />
-		<property name="Buff_chance" value="0.2,0.2,0.4" />
+		<property name="Buff" value="gainInjury_heavyattack_Trigger,infection,stunned" />
+		<property name="Buff_chance" value="0.8,0.1,0.5" />
 	</property>
 	<property class="Action1"> <!-- UseAction -->
 		<property name="Class" value="Vomit" />
@@ -1144,8 +1144,8 @@ Mesh files no longer used:
 		<property name="Sound_end" value="" />
 		<property name="Sound_empty" value="" />
 		<property name="Sound_reload" value="" />
-		<property name="Buff" value="infection" />
-		<property name="Buff_chance" value="0.2" />
+		<property name="Buff" value="gainInjury_heavyattack_Trigger,infection,biteMark" />
+		<property name="Buff_chance" value="0.6,0.2,0.55" />
 	</property>
 </item>
 
@@ -1192,8 +1192,8 @@ Mesh files no longer used:
 		<property name="Delay" value="0.7" />
 		<property name="DamageEntity" value="18" />
 		<property name="DamageBlock" value="18" />
-		<property name="Buff" value="bleeding,infection" />
-		<property name="Buff_chance" value="0.3,0.2" />
+		<property name="Buff" value="gainInjury_mediumattack_Trigger,infection,biteMark" />
+		<property name="Buff_chance" value="0.7,0.05,0.6" />
 		<property name="DamageBonus.earth" value="4" />
 	</property>
 </item>
@@ -1204,8 +1204,8 @@ Mesh files no longer used:
 	<property class="Action0">
 		<property name="DamageEntity" value="20" />
 		<property name="DamageBlock" value="50" />
-		<property name="Buff" value="bleeding,infection,stunned" />
-		<property name="Buff_chance" value="0.2,0.2,0.4" />
+		<property name="Buff" value="gainInjury_mediumattack_Trigger,infection,stunned,biteMark" />
+		<property name="Buff_chance" value="0.8,0.1,0.5,0.6" />
 	</property>
 </item>
 
@@ -1219,8 +1219,8 @@ Mesh files no longer used:
 		<property name="Sphere" value="0.4" />
 		<property name="DamageEntity" value="30" />
 		<property name="DamageBlock" value="50" />
-		<property name="Buff" value="bleeding,stunned" />
-		<property name="Buff_chance" value="0.2,0.3" />
+		<property name="Buff" value="gainInjury_heavyattack_Trigger,stunned,biteMark" />
+		<property name="Buff_chance" value="0.75,0.3,0.6" />
 	</property>
 </item>
 
@@ -1231,8 +1231,8 @@ Mesh files no longer used:
 		<property name="Range" value="2.75" />
 		<property name="DamageEntity" value="50" />
 		<property name="DamageBlock" value="100" />
-		<property name="Buff" value="bleeding,stunned,infection" />
-		<property name="Buff_chance" value="0.3,0.4,0.4" />
+		<property name="Buff" value="gainInjury_heavyattack_Trigger,stunned,infection,biteMark" />
+		<property name="Buff_chance" value="0.8,0.35,0.2,0.7" />
 	</property>
 </item>
 
@@ -1241,8 +1241,8 @@ Mesh files no longer used:
 	<property name="IsDeveloper" value="true" />
 	<property name="HoldType" value="24" />
 	<property class="Action0">
-		<property name="Buff" value="bleeding,infection1,stunned" />
-		<property name="Buff_chance" value="0.04,.25,0.5" />
+		<property name="Buff" value="gainInjury_mediumattack_Trigger,infection1,stunned,biteMark" />
+		<property name="Buff_chance" value="0.75,.1,0.5,0.5" />
 	</property>
 </item>
 
@@ -1252,6 +1252,8 @@ Mesh files no longer used:
 	<property name="HoldType" value="24" />
 	<property class="Action0">
 		<property name="DamageBlock" value="150" />
+		<property name="Buff" value="gainInjury_mediumattack_Trigger,infection,stunned,biteMark" />
+		<property name="Buff_chance" value="0.8,0.05,0.5,0.5" />
 	</property>
 </item>
 
@@ -1260,8 +1262,8 @@ Mesh files no longer used:
 	<property name="IsDeveloper" value="true" />
 	<property name="HoldType" value="24" />
 	<property class="Action0">
-		<property name="Buff" value="bleeding,infection,stunned" />
-		<property name="Buff_chance" value="0.04,0.04,0.6" />
+		<property name="Buff" value="gainInjury_heavyattack_Trigger,infection,stunned,biteMark" />
+		<property name="Buff_chance" value="0.8,0.05,0.6,0.6" />
 	</property>
 </item>
 
@@ -1270,8 +1272,8 @@ Mesh files no longer used:
 	<property name="IsDeveloper" value="true" />
 	<property class="Action0"> <!-- AttackAction -->
 		<property name="DamageEntity" value="8" />
-		<property name="Buff" value="bleeding,infection,stunned" />
-		<property name="Buff_chance" value="0.02,0.2,0.1" />
+		<property name="Buff" value="gainInjury_smallattack_Trigger,infection,stunned,biteMark" />
+		<property name="Buff_chance" value="0.8,0.05,0.1,0.5" />
 	</property>
 </item>
 
@@ -5701,7 +5703,7 @@ which does not exist, yet. -->
 	<property class="Action0">
 		<property name="Class" value="UseOther" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
@@ -5711,7 +5713,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
@@ -5733,20 +5735,22 @@ which does not exist, yet. -->
 	<property class="Action0">
 		<property name="Class" value="UseOther" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="10" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Sound_start" value="UseActions/player_ointment" />
+		<property name="Buff" value="gainImmunity_xsmall_Trigger" />
 	</property>
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="10" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Sound_start" value="UseActions/player_ointment" />
+		<property name="Buff" value="gainImmunity_xsmall_Trigger" />
 	</property>
 	<property name="Group" value="Medicine" />
 	<property name="ActionSkillGroup" value="Medicine"/>
@@ -5766,22 +5770,24 @@ which does not exist, yet. -->
 	<property class="Action0">
 		<property name="Class" value="UseOther" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Sound_start" value="UseActions/player_bandage" />
-		<property name="Debuff" value="bleeding,arrowCriticalBleedout" />
+		<property name="Buff" value="lossInjuryBuff" />
+		<property name="Debuff" value="bleeding,bleeding2,bleeding3,bleeding4,arrowCriticalBleedout" />
 	</property>
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Sound_start" value="UseActions/player_bandage" />
-		<property name="Debuff" value="bleeding,arrowCriticalBleedout" />
+		<property name="Buff" value="lossInjuryBuff" />
+		<property name="Debuff" value="bleeding,bleeding2,bleeding3,bleeding4,arrowCriticalBleedout" />
 	</property>
 	<property name="Group" value="Medicine,Basics" />
 	<property name="DescriptionKey" value="bandageDesc"/>
@@ -5795,10 +5801,12 @@ which does not exist, yet. -->
 	<property name="Extends" value="bandage" />
 	<property name="EconomicValue" value="15" />
 	<property class="Action0">
-		<property name="Buff" value="firstAid" />
+		<property name="Buff" value="firstAid,gainImmunity_xsmall_Trigger,lossInjuryBuff" />
+		<property name="Debuff" value="bleeding,bleeding2,bleeding3,bleeding4,arrowCriticalBleedout,biteMark" />
 	</property>
 	<property class="Action1">
-		<property name="Buff" value="firstAid" />
+		<property name="Buff" value="firstAid,gainImmunity_xsmall_Trigger,lossInjuryBuff" />
+		<property name="Debuff" value="bleeding,bleeding2,bleeding3,bleeding4,arrowCriticalBleedout,biteMark" />
 	</property>
 	<property name="DescriptionKey" value="firstAidBandageDesc"/>
 	<property name="CraftingSkillGroup" value="Science"/>
@@ -5810,12 +5818,14 @@ which does not exist, yet. -->
 	<property class="Action0">
 		<property name="Gain_health" value="40" />
 		<property name="Sound_start" value="UseActions/player_firstAidKit" />
-		<property name="Buff" value="firstAidLarge" />
+		<property name="Buff" value="firstAidLarge,gainImmunity_xsmall_Trigger,lossInjuryBuff" />
+		<property name="Debuff" value="bleeding,bleeding2,bleeding3,bleeding4,arrowCriticalBleedout,biteMark" />
 	</property>
 	<property class="Action1">
 		<property name="Gain_health" value="50" />
 		<property name="Sound_start" value="UseActions/player_firstAidKit" />
-		<property name="Buff" value="firstAidLarge" />
+		<property name="Buff" value="firstAidLarge,gainImmunity_xsmall_Trigger,lossInjuryBuff" />
+		<property name="Debuff" value="bleeding,bleeding2,bleeding3,bleeding4,arrowCriticalBleedout,biteMark" />
 	</property>
 	<property name="DescriptionKey" value="firstAidKitDesc"/>
 	<property name="CraftingSkillGroup" value="Science"/>
@@ -5831,12 +5841,12 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="-20" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Sound_start" value="UseActions/player_blooddraw" />
-		<property name="Buff" value="bloodDrawTrigger" />
+		<property name="Buff" value="bloodDrawTrigger,lossImmunity_small_Trigger" />
 		<property name="Consume" value="true" />
 		<property name="Create_item" value="bloodBag" />
 	</property>
@@ -5858,7 +5868,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="UseOther" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="5" />
 		<property name="Gain_food" value="5" />
 		<property name="Gain_water" value="5" />
@@ -5867,7 +5877,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="5" />
 		<property name="Gain_food" value="5" />
 		<property name="Gain_water" value="5" />
@@ -5895,13 +5905,14 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_wellness" value="0.5" />
 		<property name="Sound_start" value="UseActions/player_painkillers" />
-		<property name="Debuff" value="dysentery" />
+		<property name="Buff" value="gainImmunity_small_Trigger" />
+		<property name="Debuff" value="dysentery,gainImmunity_small_Trigger" />
 	</property>
 	<property name="ActionSkillGroup" value="Medicine"/>
 	<property name="CraftingSkillGroup" value="Science"/>
@@ -5918,17 +5929,17 @@ which does not exist, yet. -->
 	<property class="Action0">
 		<property name="Class" value="UseOther" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="-20" />
 		<property name="Sound_start" value="UseActions/player_painkillers" />
-		<property name="Buff" value="painkillerBuff" />
+		<property name="Buff" value="painkillerBuff,lossImmunity_xsmall_Trigger" />
 	</property>
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="-20" />
@@ -5943,8 +5954,7 @@ which does not exist, yet. -->
 
 <item id="667" name="herbalAntibiotics">
 	<property name="Meshfile" value="Items/Health/painkillersPrefab" />
-	<property name="CustomIcon" value="painkillers" />
-	<property name="CustomIconTint" value="b0ffb0" />
+	<property name="CustomIcon" value="herbalAntibiotics" />
 	<property name="Material" value="organic" />
 	<property name="EconomicValue" value="70" />
 	<property name="HoldType" value="16" />
@@ -5952,24 +5962,26 @@ which does not exist, yet. -->
 	<property class="Action0">
 		<property name="Class" value="UseOther" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_wellness" value="0" />
 		<property name="Sound_start" value="UseActions/player_painkillers" />
-		<property name="Debuff" value="infection,dysentery,dysentery2" />
+		<property name="Buff" value="gainImmunity_medium_Trigger" />
+		<property name="Debuff" value="infection,dysentery,dysentery2,infection0" />
 	</property>
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_wellness" value="0" />
 		<property name="Sound_start" value="UseActions/player_painkillers" />
-		<property name="Debuff" value="infection,dysentery,dysentery2" />
+		<property name="Buff" value="gainImmunity_medium_Trigger" />
+		<property name="Debuff" value="infection,dysentery,dysentery2,infection0" />
 	</property>
 	<property name="ActionSkillGroup" value="Medicine"/>
 	<property name="CraftingSkillGroup" value="Science"/>
@@ -5986,26 +5998,26 @@ which does not exist, yet. -->
 	<property class="Action0">
 		<property name="Class" value="UseOther" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_wellness" value="0" />
 		<property name="Sound_start" value="UseActions/player_painkillers" />
-		<property name="Buff" value="cured" />
-		<property name="Debuff" value="infection,infection1,infection2,infection3,dysentery,dysentery2" />
+		<property name="Buff" value="cured,gainImmunity_small_Trigger" />
+		<property name="Debuff" value="infection,infection1,infection2,infection3,dysentery,dysentery2,infection0" />
 	</property>
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_wellness" value="0" />
 		<property name="Sound_start" value="UseActions/player_painkillers" />
-		<property name="Buff" value="cured" />
-		<property name="Debuff" value="infection,infection1,infection2,infection3,dysentery,dysentery2" />
+		<property name="Buff" value="cured,gainImmunity_small_Trigger" />
+		<property name="Debuff" value="infection,infection1,infection2,infection3,dysentery,dysentery2,infection0" />
 	</property>
 	<property name="ActionSkillGroup" value="Medicine"/>
 	<property name="CraftingSkillGroup" value="Science"/>
@@ -6041,13 +6053,13 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="0" />
 		<property name="Gain_health" value="-10" />
 		<property name="Sound_start" value="UseActions/player_eating" />
-		<property name="Buff" value="internalBleeding" />
+		<property name="Buff" value="internalBleeding,lossImmunity_xlarge_Trigger" />
 	</property>
 	<property name="Group" value="Resources" />
 </item>
@@ -6061,15 +6073,15 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="5" />
-		<property name="Buff" value="eatFood_4_Trigger" />
+		<property name="Buff" value="eatFood_4_Trigger,gainImmunity_small_Trigger" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="40" />
 		<property name="Gain_wellness" value="0.4" />
 		<property name="Sound_start" value="UseActions/player_drinking" />
-		<property name="Debuff" value="infection" />
+		<property name="Debuff" value="infection,infection0" />
 		<property name="Create_item" value="emptyJar" />
 	</property>
 	<property name="Group" value="Food/Cooking" />
@@ -6086,10 +6098,10 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="3" />
-		<property name="Buff" value="eatFood_2_Trigger" />
+		<property name="Buff" value="eatFood_2_Trigger,gainImmunity_xsmall_Trigger" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="10" />
 		<property name="Sound_start" value="UseActions/player_eating" />
@@ -6107,14 +6119,14 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_water" value="15" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_stamina" value="30" />
 		<property name="Gain_wellness" value="0.1" />
 		<property name="Sound_start" value="UseActions/player_drinking" />
-		<property name="Buff" value="yuccaJuiceCooling" />
+		<property name="Buff" value="yuccaJuiceCooling,gainImmunity_xsmall_Trigger" />
 		<property name="Create_item" value="emptyJar" />
 	</property>
 	<property name="Group" value="Food/Cooking" />
@@ -6130,7 +6142,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="15" />
 		<property name="Buff" value="eatFood_8_Trigger" />
@@ -6158,9 +6170,9 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="2.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="5" />
-		<property name="Buff" value="eatFood_3_Trigger" />
+		<property name="Buff" value="eatFood_3_Trigger,lossImmunity_small_Trigger" />
 		<property name="Gain_water" value="-2" />
 		<property name="Gain_gas" value="0" />
 		<property name="Sound_start" value="UseActions/player_eating" />
@@ -6174,7 +6186,7 @@ which does not exist, yet. -->
 	<property name="Meshfile" value="Items/Food/can_dogfoodPrefab" />
 	<property class="Action1">
 		<property name="Gain_food" value="5" />
-		<property name="Buff" value="eatFood_3_Trigger" />
+		<property name="Buff" value="eatFood_3_Trigger,lossImmunity_small_Trigger" />
 		<property name="Gain_water" value="-2" />
 		<property name="Gain_gas" value="0" />
 	</property>
@@ -6217,7 +6229,7 @@ which does not exist, yet. -->
 	<property name="Meshfile" value="Items/Food/can_peasPrefab" />
 	<property class="Action1">
 		<property name="Gain_food" value="5" />
-		<property name="Buff" value="eatFood_3_Trigger" />
+		<property name="Buff" value="eatFood_3_Trigger,gainImmunity_xsmall_Trigger" />
 		<property name="Gain_water" value="0" />
 	</property>
 </item>
@@ -6227,7 +6239,7 @@ which does not exist, yet. -->
 	<property name="Meshfile" value="Items/Food/can_pearsPrefab" />
 	<property class="Action1">
 		<property name="Gain_food" value="5" />
-		<property name="Buff" value="eatFood_3_Trigger" />
+		<property name="Buff" value="eatFood_3_Trigger,gainImmunity_xsmall_Trigger" />
 		<property name="Gain_water" value="10" />
 	</property>
 </item>
@@ -6272,7 +6284,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="2.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="7" />
 		<property name="Buff" value="eatFood_4_Trigger" />
@@ -6288,7 +6300,7 @@ which does not exist, yet. -->
 	<property name="Meshfile" value="Items/Food/can_salmonPrefab" />
 	<property class="Action1">
 		<property name="Gain_food" value="5" />
-		<property name="Buff" value="eatFood_3_Trigger" />
+		<property name="Buff" value="eatFood_3_Trigger,gainImmunity_small_Trigger" />
 	</property>
 </item>
 
@@ -6303,7 +6315,7 @@ which does not exist, yet. -->
 		<property name="Gain_health" value="-10" />
 		<property name="Gain_stamina" value="-20" />
 		<property name="Gain_wellness" value="-1" />
-		<property name="Buff" value="eatSnowberryExtractTrigger" />
+		<property name="Buff" value="eatSnowberryExtractTrigger,gainImmunity_small_Trigger" />
 	</property>
 	<property name="Group" value="Medicine" />
 </item>
@@ -6319,7 +6331,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="1" />
 		<property name="Buff" value="eatFood_1_Trigger" />
@@ -6340,10 +6352,10 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="3" />
-		<property name="Buff" value="eatFood_2_Trigger" />
+		<property name="Buff" value="eatFood_2_Trigger,gainImmunity_xsmall_Trigger" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="2" />
 		<property name="Gain_wellness" value="0.08" />
@@ -6364,7 +6376,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="2" />
 		<property name="Buff" value="eatFood_1_Trigger" />
@@ -6384,7 +6396,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="5" />
 		<property name="Buff" value="eatFood_3_Trigger" />
@@ -6409,11 +6421,11 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="10" />
-		<property name="Buff" value="foodPoisoning,eatFood_3_Trigger" />
-		<property name="Buff_chance" value="0.3,1" />
+		<property name="Buff" value="foodPoisoning,eatFood_3_Trigger,lossImmunity_medium_Trigger" />
+		<property name="Buff_chance" value="0.3,1,1" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_sickness" value="30" />
 		<property name="Sound_start" value="UseActions/player_eating" />
@@ -6434,11 +6446,11 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="15" />
-		<property name="Buff" value="foodPoisoning,eatFood_4_Trigger" />
-		<property name="Buff_chance" value="0.25,1" />
+		<property name="Buff" value="foodPoisoning,eatFood_4_Trigger,lossImmunity_small_Trigger" />
+		<property name="Buff_chance" value="0.25,1,1" />
 		<property name="Sound_start" value="UseActions/player_eating" />
 	</property>
 	<property name="Group" value="Food/Cooking" />
@@ -6454,7 +6466,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="10" />
 		<property name="Buff" value="foodPoisoning,eatFood_3_Trigger" />
@@ -6479,11 +6491,11 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="10" />
-		<property name="Buff" value="foodPoisoning" />
-		<property name="Buff_chance" value="0.4" />
+		<property name="Buff" value="foodPoisoning,lossImmunity_large_Trigger" />
+		<property name="Buff_chance" value="0.4,1" />
 		<property name="Gain_water" value="-5" />
 		<property name="Gain_stamina" value="-20" />
 		<property name="Gain_sickness" value="30" />
@@ -6504,7 +6516,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="2.1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="10" />
 		<property name="Buff" value="eatFood_9_Trigger" />
@@ -6526,7 +6538,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="2.1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="10" />
 		<property name="Buff" value="eatFood_9_Trigger" />
@@ -6548,7 +6560,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="2.1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="10" />
 		<property name="Buff" value="eatFood_9_Trigger" />
@@ -6571,7 +6583,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="20" />
 		<property name="Gain_water" value="0" />
@@ -6597,7 +6609,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="2" />
 		<property name="Buff" value="eatFood_1_Trigger" />
@@ -6619,10 +6631,10 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="1" />
-		<property name="Buff" value="eatFood_1_Trigger" />
+		<property name="Buff" value="eatFood_1_Trigger,gainImmunity_xsmall_Trigger" />
 		<property name="Gain_water" value="1" />
 		<property name="Gain_wellness" value="0" />
 		<property name="Sound_start" value="UseActions/player_eating" />
@@ -6640,7 +6652,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="3" />
 		<property name="Buff" value="foodPoisoning,eatFood_1_Trigger" />
@@ -6662,10 +6674,10 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="2.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="4" />
-		<property name="Buff" value="eatFood_3_Trigger" />
+		<property name="Buff" value="eatFood_3_Trigger,gainImmunity_xsmall_Trigger" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="0" />
 		<property name="Gain_wellness" value="0.32" />
@@ -6684,10 +6696,10 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="10" />
-		<property name="Buff" value="eatFood_9_Trigger" />
+		<property name="Buff" value="eatFood_9_Trigger,gainImmunity_medium_Trigger" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_wellness" value="0.8" />
 		<property name="Sound_start" value="UseActions/player_eating" />
@@ -6706,10 +6718,10 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="4" />
-		<property name="Buff" value="eatFood_2_Trigger" />
+		<property name="Buff" value="eatFood_2_Trigger,gainImmunity_xsmall_Trigger" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_wellness" value="0" />
 		<property name="Sound_start" value="UseActions/player_eating" />
@@ -6727,10 +6739,10 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="2.1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="15" />
-		<property name="Buff" value="eatFood_15_Trigger" />
+		<property name="Buff" value="eatFood_15_Trigger,gainImmunity_small_Trigger" />
 		<property name="Gain_wellness" value="1" />
 		<property name="Sound_start" value="UseActions/player_eating" />
 	</property>
@@ -6750,10 +6762,10 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="5" />
-		<property name="Buff" value="eatFood_3_Trigger" />
+		<property name="Buff" value="eatFood_3_Trigger,gainImmunity_small_Trigger" />
 		<property name="Gain_water" value="1" />
 		<property name="Gain_wellness" value="0" />
 		<property name="Sound_start" value="UseActions/player_eating" />
@@ -6771,13 +6783,13 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="7" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_wellness" value="0.1" />
 		<property name="Sound_start" value="UseActions/player_drinking" />
-		<property name="Buff" value="stewWarming,eatFood_4_Trigger" />
+		<property name="Buff" value="stewWarming,eatFood_4_Trigger,gainImmunity_medium_Trigger" />
 		<!-- jar from cooking food <property name="Create_item" value="emptyJar" /> -->
 	</property>
 	<property name="Group" value="Food/Cooking" />
@@ -6796,7 +6808,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_stamina" value="5" />
 		<property name="Gain_food" value="0" />
@@ -6804,8 +6816,8 @@ which does not exist, yet. -->
 		<property name="Gain_sickness" value="15" />
 		<property name="Gain_wellness" value="-0.1" />
 		<property name="Sound_start" value="UseActions/player_drinking" />
-		<property name="Buff" value="dysentery" />
-		<property name="Buff_chance" value="0.5" />
+		<property name="Buff" value="dysentery,lossImmunity_medium_Trigger" />
+		<property name="Buff_chance" value="0.5,1" />
 		<property name="Debuff" value="burningSmall,burning" />
 		<property name="Create_item" value="canEmpty" />
 	</property>
@@ -6823,7 +6835,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_stamina" value="20" />
 		<property name="Gain_food" value="0" />
@@ -6848,7 +6860,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_stamina" value="5" />
 		<property name="Gain_food" value="0" />
@@ -6856,8 +6868,8 @@ which does not exist, yet. -->
 		<property name="Gain_sickness" value="15" />
 		<property name="Gain_wellness" value="-0.1" />
 		<property name="Sound_start" value="UseActions/player_drinking" />
-		<property name="Buff" value="dysentery" />
-		<property name="Buff_chance" value="0.5" />
+		<property name="Buff" value="dysentery,lossImmunity_medium_Trigger" />
+		<property name="Buff_chance" value="0.5,1" />
 		<property name="Debuff" value="burningSmall,burning" />
 		<property name="Create_item" value="emptyJar" />
 	</property>
@@ -6875,7 +6887,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_stamina" value="20" />
 		<property name="Gain_food" value="0" />
@@ -6898,7 +6910,7 @@ which does not exist, yet. -->
 		<property name="Gain_stamina" value="10" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="10" />
-		<property name="Buff" value="eatsnowberryJuiceTrigger" />
+		<property name="Buff" value="eatsnowberryJuiceTrigger,gainImmunity_small_Trigger" />
 		<property name="Debuff" value="burningSmall,burning" />
 	</property>
 	<property name="Group" value="Medicine" />
@@ -6914,7 +6926,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="20" />
 		<property name="Gain_stamina" value="40" />
@@ -6936,13 +6948,13 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="20" />
 		<property name="Gain_stamina" value="40" />
 		<property name="Gain_wellness" value="0.2" />
 		<property name="Sound_start" value="UseActions/player_drinking" />
-		<property name="Buff" value="redTeaCooling" />
+		<property name="Buff" value="redTeaCooling,gainImmunity_xsmall_Trigger" />
 		<property name="Debuff" value="dysentery,burningSmall,burning" />
 		<property name="Create_item" value="emptyJar" />
 	</property>
@@ -6979,14 +6991,14 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="-10" />
 		<property name="Gain_stamina" value="100" />
 		<property name="Gain_wellness" value="-0.1" />
 		<property name="Sound_start" value="UseActions/player_drinking" />
-		<property name="Buff" value="CoffeeStaminaBoost" />
+		<property name="Buff" value="CoffeeStaminaBoost,gainImmunity_xsmall_Trigger" />
 		<property name="Create_item" value="emptyJar" />
 	</property>
 	<property name="Group" value="Food/Cooking" />
@@ -7002,13 +7014,13 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="2" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_stamina" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Sound_start" value="UseActions/player_drinking" />
-		<property name="Buff" value="DrinkBeer" />
+		<property name="Buff" value="DrinkBeer,ColdBeer,lossImmunity_xsmall_Trigger" />
 		<property name="Create_item" value="emptyJar" />
 	</property>
 	<property name="Group" value="Food/Cooking" />
@@ -7024,14 +7036,14 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_stamina" value="10" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="-5" />
 		<property name="Gain_wellness" value="-0.5" />
 		<property name="Sound_start" value="UseActions/player_drinking" />
-		<property name="Buff" value="DrinkGrainAlcohol" />
+		<property name="Buff" value="DrinkGrainAlcohol,lossImmunity_large_Trigger" />
 		<property name="Create_item" value="emptyJar" />
 	</property>
 	<property name="Group" value="Chemicals" />
@@ -7055,6 +7067,7 @@ which does not exist, yet. -->
 		<property name="Skills_to_gain" value="Gun Smithing,9mm Round Crafting" />
 		-->
 		<property name="Delay" value="1" />
+		<property name="Use_time" value="0" />
 		<property name="ActionExp" value="0"/>
 		<property name="ActionExpBonusMultiplier" value="0"/> <!-- When first learned the multiplier is applied. After that only the action exp is applied but it's applied for EACH item in the book. -->
 		<property name="Sound_start" value="Misc/recipe_unlocked" />
@@ -7118,8 +7131,8 @@ which does not exist, yet. -->
 <item id="921" name="pistolBook">
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="gunPistol,PistolExtendedMag,PistolSilenced,PistolExtendedMagSilenced,partsPistol_parts,partsPistol_barrel,partsPistol_receiver,partsPistol_grip" />
-		<property name="Skills_to_gain" value="Light Gun Smithing,Pistol Recipe,Pistol Parts Recipe,Pistol Attachments Recipes" />
+		<property name="Recipes_to_learn" value="gunPistol" />
+		<property name="Skills_to_gain" value="Light Gun Smithing,Pistol Recipe" />
 	</property>
 </item>
 
@@ -7127,24 +7140,24 @@ which does not exist, yet. -->
 	<property name="Extends" value="schematicMaster" />
 	<property name="EconomicValue" value="500" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="gun44Magnum,parts44Magnum_frame,parts44Magnum_cylinder,parts44Magnum_parts,parts44Magnum_grip" />
-		<property name="Skills_to_gain" value="Gun Smithing,44 Magnum Recipe, 44 Magnum Parts Recipe" />
+		<property name="Recipes_to_learn" value="gun44Magnum" />
+		<property name="Skills_to_gain" value="Gun Smithing,44 Magnum Recipe" />
 	</property>
 </item>
 
 <item id="923" name="sawedoffPumpShotgunSchematic">
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="gunSawedOffPumpShotgun,partsPumpShotgun_barrelShort,partsPumpShotgun_receiver,partsPumpShotgun_parts,partsPumpShotgun_stockShort" />
-		<property name="Skills_to_gain" value="Light Gun Smithing,SawedOff Pump Shotgun Recipe, SawedOff Pump Shotgun Parts Recipe" />
+		<property name="Recipes_to_learn" value="gunSawedOffPumpShotgun" />
+		<property name="Skills_to_gain" value="Light Gun Smithing,SawedOff Pump Shotgun Recipe" />
 	</property>
 </item>
 
 <item id="924" name="pumpShotgunSchematic">
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="gunPumpShotgun,partsPumpShotgun_barrel,partsPumpShotgun_receiver,partsPumpShotgun_parts,partsPumpShotgun_stock" />
-		<property name="Skills_to_gain" value="Light Gun Smithing,Pump Shotgun Recipe, Pump Shotgun Parts Recipe" />
+		<property name="Recipes_to_learn" value="gunPumpShotgun" />
+		<property name="Skills_to_gain" value="Light Gun Smithing,Pump Shotgun Recipe" />
 	</property>
 </item>
 
@@ -7152,8 +7165,8 @@ which does not exist, yet. -->
 	<property name="Extends" value="schematicMaster" />
 	<property name="EconomicValue" value="500" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="gunMP5,partsMP5_stock,partsMP5_receiver,partsMP5_barrel,partsMP5_parts" />
-		<property name="Skills_to_gain" value="Gun Smithing,MP5 Recipe,MP5 Parts Recipe" />
+		<property name="Recipes_to_learn" value="gunMP5" />
+		<property name="Skills_to_gain" value="Gun Smithing,MP5 Recipe" />
 	</property>
 </item>
 
@@ -7161,16 +7174,16 @@ which does not exist, yet. -->
 	<property name="Extends" value="schematicMaster" />
 	<property name="EconomicValue" value="500" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="gunAK47,AK47ExtendedMag,AK47Scoped,AK47ExtendedMagScoped,partsAK47_stock,partsAK47_receiver,partsAK47_barrel,partsAK47_parts" />
-		<property name="Skills_to_gain" value="Heavy Gun Smithing,AK47 Recipe,AK47 Parts Recipe,AK47 Attachments Recipes" />
+		<property name="Recipes_to_learn" value="gunAK47" />
+		<property name="Skills_to_gain" value="Heavy Gun Smithing,AK47 Recipe" />
 	</property>
 </item>
 
 <item id="931" name="huntingRifleSchematic">
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="gunHuntingRifle,partsHuntingRifle_barrel,partsHuntingRifle_stock,partsHuntingRifle_receiver,partsHuntingRifle_parts" />
-		<property name="Skills_to_gain" value="Light Gun Smithing,Hunting Rifle Recipe,Hunting Rifle Parts Recipe" />
+		<property name="Recipes_to_learn" value="gunHuntingRifle" />
+		<property name="Skills_to_gain" value="Light Gun Smithing,Hunting Rifle Recipe" />
 	</property>
 </item>
 
@@ -7178,8 +7191,8 @@ which does not exist, yet. -->
 	<property name="Extends" value="schematicMaster" />
 	<property name="EconomicValue" value="500" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="gunSniperRifle,SniperRifleLongScoped,SniperRifleSilenced,partsSniperRifle_barrel,partsSniperRifle_receiver,partsSniperRifle_stock,partsSniperRifle_parts" />
-		<property name="Skills_to_gain" value="Heavy Gun Smithing,Sniper Rifle Recipe,Sniper Rifle Parts Recipe,Sniper Rifle Attachments Recipes" />
+		<property name="Recipes_to_learn" value="gunSniperRifle" />
+		<property name="Skills_to_gain" value="Heavy Gun Smithing,Sniper Rifle Recipe" />
 	</property>
 </item>
 
@@ -7187,8 +7200,8 @@ which does not exist, yet. -->
 	<property name="Extends" value="schematicMaster" />
 	<property name="EconomicValue" value="500" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="gunRocketLauncher,rocket,rocketCasing,rocketTip,partsRocketLauncher_stock,partsRocketLauncher_receiver,partsRocketLauncher_parts,partsRocketLauncher_barrel" />
-		<property name="Skills_to_gain" value="Heavy Gun Smithing,Rocket Launcher Recipe,Rocket Launcher Parts Recipe, Rocket Recipe" />
+		<property name="Recipes_to_learn" value="gunRocketLauncher,rocket,rocketCasing,rocketTip" />
+		<property name="Skills_to_gain" value="Heavy Gun Smithing,Rocket Launcher Recipe, Rocket Recipe" />
 	</property>
 </item>
 
@@ -7266,7 +7279,7 @@ which does not exist, yet. -->
 
 <item id="970" name="wrenchSchematic">
 	<property name="Extends" value="schematicMaster" />
-	<property name="CustomIcon" value="schematicMaster" />
+	<property name="CustomIcon" value="wrenchSchematic" />
 	<property class="Action1">
 		<property name="Recipes_to_learn" value="wrench" />
 		<property name="Skills_to_gain" value="Tool Smithing,Wrench Recipe" />
@@ -7274,7 +7287,7 @@ which does not exist, yet. -->
 </item>
 <item id="971" name="clawHammerSchematic">
 	<property name="Extends" value="schematicMaster" />
-	<property name="CustomIcon" value="schematicMaster" />
+	<property name="CustomIcon" value="clawHammerSchematic" />
 	<property class="Action1">
 		<property name="Recipes_to_learn" value="clawHammer" />
 		<property name="Skills_to_gain" value="Tool Smithing,Hammer Recipe" />
@@ -7319,7 +7332,7 @@ which does not exist, yet. -->
 <item id="991" name="herbalAntibioticsRecipe">
 	<property name="Extends" value="schematicMaster" />
 	<property name="EconomicValue" value="500" />
-	<property name="CustomIcon" value="schematicMaster" />
+	<property name="CustomIcon" value="herbalAntibioticsRecipe" />
 	<property class="Action1">
 		<property name="Recipes_to_learn" value="herbalAntibiotics" />
 		<property name="Skills_to_gain" value="Science" />
@@ -9489,7 +9502,7 @@ which does not exist, yet. -->
     <property name="CustomIcon" value="Remington8Schematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="Remington8,Remington8Scoped,Remington8ExtendedMag,Remington8ScopedExtendedMag,Remington8_Stock,Remington8_Receiver,Remington8_Barrel,Remington8_Parts" />
+		<!-- <property name="Recipes_to_learn" value="Remington8,Remington8Scoped,Remington8ExtendedMag,Remington8ScopedExtendedMag,Remington8_Stock,Remington8_Receiver,Remington8_Barrel,Remington8_Parts" /> -->
 		<property name="Skills_to_gain" value="Gun Smithing,Remington8 Recipe,Remington8 Parts Recipe,Remington8 Attachments Recipes" />
     </property>
 </item>
@@ -9607,7 +9620,7 @@ which does not exist, yet. -->
     <property name="CustomIcon" value="DesertEagleSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="DesertEagle,DesertEagle_Grip,DesertEagle_Receiver,DesertEagle_Barrel,DesertEagle_Parts" />
+		<!-- <property name="Recipes_to_learn" value="DesertEagle,DesertEagle_Grip,DesertEagle_Receiver,DesertEagle_Barrel,DesertEagle_Parts" /> -->
 		<property name="Skills_to_gain" value="Gun Smithing,Desert Eagle Recipe,Desert Eagle Parts Recipe" />
     </property>
 </item>
@@ -9769,7 +9782,7 @@ which does not exist, yet. -->
     <property name="CustomIcon" value="FAMASSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="FAMAS,FAMASExtendedMag,FAMASSilenced,FAMASExtendedMagSilenced,FAMAS_Stock,FAMAS_Receiver,FAMAS_Barrel,FAMAS_Parts" />
+		<!-- <property name="Recipes_to_learn" value="FAMAS,FAMASExtendedMag,FAMASSilenced,FAMASExtendedMagSilenced,FAMAS_Stock,FAMAS_Receiver,FAMAS_Barrel,FAMAS_Parts" /> -->
 		<property name="Skills_to_gain" value="Heavy Gun Smithing,FAMAS Recipe, FAMAS Parts Recipe, FAMAS Attachments Recipes" />
     </property>
 </item>
@@ -9931,7 +9944,7 @@ which does not exist, yet. -->
     <property name="CustomIcon" value="M25SniperRifleSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="M25SniperRifle,M25SniperRifleLongScoped,M25SniperRifleExtendedMagazine,M25SniperRifleLongScopedExtendedMagazine,M25SniperRifle_Stock,M25SniperRifle_Receiver,M25SniperRifle_Barrel,M25SniperRifle_Parts" />
+		<!-- <property name="Recipes_to_learn" value="M25SniperRifle,M25SniperRifleLongScoped,M25SniperRifleExtendedMagazine,M25SniperRifleLongScopedExtendedMagazine,M25SniperRifle_Stock,M25SniperRifle_Receiver,M25SniperRifle_Barrel,M25SniperRifle_Parts" /> -->
 		<property name="Skills_to_gain" value="Heavy Gun Smithing,M25 Sniper Rifle Recipe,M25 Sniper Rifle Parts Recipe,M25 Sniper Rifle Attachments Recipes" />
     </property>
 </item>
@@ -10157,7 +10170,7 @@ which does not exist, yet. -->
 	<property name="CustomIcon" value="BarettaShotgunSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="BarettaShotgun,BarettaShotgun_Stock,BarettaShotgun_Receiver,BarettaShotgun_Barrel,BarettaShotgun_Parts" />
+		<!-- <property name="Recipes_to_learn" value="BarettaShotgun,BarettaShotgun_Stock,BarettaShotgun_Receiver,BarettaShotgun_Barrel,BarettaShotgun_Parts" /> -->
 		<property name="Skills_to_gain" value="Gun Smithing,Baretta Shotgun Recipe, Baretta Shotgun Parts Recipe" />
     </property>
 </item>
@@ -10448,7 +10461,7 @@ which does not exist, yet. -->
 	<property name="CustomIcon" value="LongbowSchematic" />
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="Longbow" />
+		<!-- <property name="Recipes_to_learn" value="Longbow" /> -->
 		<property name="Skills_to_gain" value="Weapon Smithing" />
 	</property>
 </item>
@@ -11169,7 +11182,7 @@ which does not exist, yet. -->
     <property name="CustomIcon" value="BlueprintStationSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Recipes_to_learn" value="BlueprintWorkStation" />
+      <!-- <property name="Recipes_to_learn" value="BlueprintWorkStation" /> -->
 	  <property name="Skills_to_gain" value="Science" />
     </property>
 	<property name="EconomicValue" value="850" />
@@ -11199,7 +11212,7 @@ which does not exist, yet. -->
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
       <property name="Class" value="LearnRecipe" />
-      <property name="Recipes_to_learn" value="WeaponSmithStation" />
+      <!-- <property name="Recipes_to_learn" value="WeaponSmithStation" /> -->
       <property name="Skills_to_gain" value="Science" />
     </property>
 	<property name="EconomicValue" value="1250" />
@@ -11210,7 +11223,7 @@ which does not exist, yet. -->
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
       <property name="Class" value="LearnRecipe" />
-      <property name="Recipes_to_learn" value="TailorsWorkStation" />
+      <!-- <property name="Recipes_to_learn" value="TailorsWorkStation" /> -->
       <property name="Skills_to_gain" value="Science" />
     </property>
 	<property name="EconomicValue" value="750" />
@@ -11846,7 +11859,7 @@ which does not exist, yet. -->
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
 		<property name="Recipes_to_learn" value="KevlarBoots" />
-		<property name="Skills_to_gain" value="Leatherworking,Kevlar Armor" />
+		<property name="Skills_to_gain" value="Leatherworking" />
     </property>
 	<property name="DescriptionKey" value="KevlarArmorSchematicDesc" />
 	<property name="EconomicValue" value="250" />
@@ -11857,8 +11870,8 @@ which does not exist, yet. -->
     <property name="CustomIconTint" value="B96D2D" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="KevlarGloves" />
-		<property name="Skills_to_gain" value="Leatherworking,Kevlar Armor" />
+		<!-- <property name="Recipes_to_learn" value="KevlarGloves" /> -->
+		<property name="Skills_to_gain" value="Leatherworking" />
     </property>
 	<property name="DescriptionKey" value="KevlarArmorSchematicDesc" />
 	<property name="EconomicValue" value="250" />
@@ -12339,7 +12352,7 @@ which does not exist, yet. -->
 	<property name="CustomIcon" value="TungstenMacheteSchematic" />
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="TungstenMachete" />
+		<!-- <property name="Recipes_to_learn" value="TungstenMachete" /> -->
 		<property name="Skills_to_gain" value="Weapon Smithing" />
 	</property>
 	<property name="EconomicValue" value="750" />
@@ -12434,7 +12447,7 @@ which does not exist, yet. -->
 	<property name="CustomIcon" value="ClubTungstenSchematic" />
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="ClubTungsten" />
+		<!-- <property name="Recipes_to_learn" value="ClubTungsten" /> -->
 		<property name="Skills_to_gain" value="Weapon Smithing" />
 	</property>
 	<property name="EconomicValue" value="600" />
@@ -12544,7 +12557,7 @@ which does not exist, yet. -->
 	<property name="CustomIcon" value="GoldTippedMacheteSchematic" />
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="GoldTippedMachete" />
+		<!-- <property name="Recipes_to_learn" value="GoldTippedMachete" /> -->
 		<property name="Skills_to_gain" value="Weapon Smithing" />
 	</property>
 	<property name="EconomicValue" value="1275" />
@@ -12594,7 +12607,7 @@ which does not exist, yet. -->
 	<property name="Extends" value="schematicMaster" />
 	<property name="CustomIcon" value="GoldTippedKnifeBook" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="GoldTippedKnife" />
+		<!-- <property name="Recipes_to_learn" value="GoldTippedKnife" /> -->
 		<property name="Skills_to_gain" value="Weapon Smithing" />
 	</property>
 	<property name="EconomicValue" value="1025" />
@@ -13331,13 +13344,13 @@ which does not exist, yet. -->
     <property class="Action1">  <!-- UseAction -->
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="5" />
 		<property name="Gain_water" value="1" />
 		<property name="Gain_stamina" value="5" />
 		<property name="Gain_health" value="5" />
 		<property name="Gain_wellness" value="0.25" />
-		<property name="Buff" value="eatFood_1_Trigger" />
+		<property name="Buff" value="eatFood_1_Trigger,gainImmunity_xsmall_Trigger" />
 		<property name="Sound_start" value="UseActions/player_eating" />
     </property>
     <property name="DropScale" value="4" />
@@ -13358,13 +13371,13 @@ which does not exist, yet. -->
     <property class="Action1">  <!-- UseAction -->
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="14" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="10" />
 		<property name="Gain_health" value="10" />
 		<property name="Gain_wellness" value="1.2" />
-		<property name="Buff" value="PieBuff,eatFood_17_Trigger" />
+		<property name="Buff" value="PieBuff,eatFood_17_Trigger,gainImmunity_medium_Trigger" />
 		<property name="Sound_start" value="UseActions/player_eating" />
     </property>
     <property name="Group" value="Food/Cooking" />
@@ -13383,13 +13396,14 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="30" />
 		<property name="Gain_stamina" value="30" />
 		<property name="Gain_health" value="5" />
 		<property name="Gain_wellness" value="0.75" />
 		<property name="Sound_start" value="UseActions/player_drinking" />
+		<property name="Buff" value="gainImmunity_small_Trigger" />
 		<property name="Create_item" value="emptyJar" />
     </property>
     <property name="Group" value="Food/Cooking" />
@@ -13434,7 +13448,7 @@ which does not exist, yet. -->
     <property class="Action1">  <!-- UseAction -->
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="10" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="5" />
@@ -13469,13 +13483,13 @@ which does not exist, yet. -->
     <property class="Action1">  <!-- UseAction -->
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="22" />
 		<property name="Gain_water" value="-3" />
 		<property name="Gain_stamina" value="15" />
 		<property name="Gain_health" value="8" />
 		<property name="Gain_wellness" value="1.3" />
-		<property name="Buff" value="PieBuff,eatFood_26_Trigger" />
+		<property name="Buff" value="PieBuff,eatFood_26_Trigger,gainImmunity_medium_Trigger" />
 		<property name="Sound_start" value="UseActions/player_eating" />
     </property>
     <property name="Group" value="Food/Cooking" />
@@ -13503,13 +13517,13 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="0" />
 		<property name="Gain_health" value="5" />
 		<property name="Gain_wellness" value="1.5" />
-		<property name="Buff" value="Vitamins" />
+		<property name="Buff" value="Vitamins,gainImmunity_medium_Trigger" />
 		<property name="Debuff" value="dysentery,foodPoisoning" />
 		<property name="Sound_start" value="UseActions/player_painkillers" />
     </property>
@@ -13528,25 +13542,25 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="UseOther" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="-6" />
 		<property name="Gain_health" value="4" />
 		<property name="Gain_wellness" value="0.25" />
-		<property name="Buff" value="ImmunizationShot" />
+		<property name="Buff" value="ImmunizationShot,gainImmunity_small_Trigger" />
 		<property name="Sound_start" value="UseActions/player_blooddraw" />
     </property>
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="-6" />
 		<property name="Gain_health" value="4" />
 		<property name="Gain_wellness" value="0.25" />
-		<property name="Buff" value="ImmunizationShot" />
+		<property name="Buff" value="ImmunizationShot,gainImmunity_small_Trigger" />
 		<property name="Sound_start" value="UseActions/player_blooddraw" />
     </property>
     <property name="Group" value="Medicine" />
@@ -13565,13 +13579,13 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="35" />
 		<property name="Gain_stamina" value="45" />
 		<property name="Gain_health" value="6" />
 		<property name="Gain_wellness" value="1.25" />
-		<property name="Buff" value="MossyBrewBoost,MetabolizeBeer" />
+		<property name="Buff" value="MossyBrewBoost,MetabolizeBeer,gainImmunity_small_Trigger" />
 		<property name="Sound_start" value="UseActions/player_drinking" />
 		<property name="Create_item" value="emptyJar" />
     </property>
@@ -13589,13 +13603,13 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="26" />
 		<property name="Gain_water" value="-1" />
 		<property name="Gain_stamina" value="15" />
 		<property name="Gain_health" value="9" />
 		<property name="Gain_wellness" value="1.6" />
-		<property name="Buff" value="MeatPieBoost,eatFood_30_Trigger" />
+		<property name="Buff" value="MeatPieBoost,eatFood_30_Trigger,gainImmunity_large_Trigger" />
 		<property name="Sound_start" value="UseActions/player_drinking" />
     </property>
     <property name="Smell" value="exLargeSmell" />
@@ -13626,10 +13640,10 @@ which does not exist, yet. -->
 	<property class="Action1">  <!-- UseAction -->
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_stamina" value="5" />
 		<property name="Gain_wellness" value="0.4" />
-		<property name="Buff" value="Soberizing" />
+		<property name="Buff" value="Soberizing,gainImmunity_xsmall_Trigger" />
     </property>
     <property name="CraftingIngredientTime" value="15" />
     <property name="Group" value="Food/Cooking" />
@@ -13645,14 +13659,14 @@ which does not exist, yet. -->
       <!-- UseAction -->
       <property name="Class" value="Eat" />
       <property name="Delay" value="1.0" />
-      <property name="Use_time" value="..." />
+      <property name="Use_time" value="0" />
 	  <property name="Gain_health" value="4" />
       <property name="Gain_food" value="0" />
       <property name="Gain_water" value="24" />
       <property name="Gain_stamina" value="40" />
       <property name="Sound_start" value="UseActions/player_drinking" />
       <property name="Gain_wellness" value="1.1" />
-	  <property name="Buff" value="GreenTea,Soberizing" />
+	  <property name="Buff" value="GreenTea,Soberizing,gainImmunity_xsmall_Trigger" />
       <property name="Debuff" value="dysentery" />
 	  <property name="Create_item" value="emptyJar" />
     </property>
@@ -13668,13 +13682,13 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="0" />
 		<property name="Gain_health" value="2" />
 		<property name="Gain_wellness" value="0.75" />
-		<property name="Buff" value="Vitamins" />
+		<property name="Buff" value="Vitamins,gainImmunity_medium_Trigger" />
 		<property name="Debuff" value="dysentery,foodPoisoning" />
 		<property name="Sound_start" value="UseActions/player_painkillers" />
     </property>
@@ -13693,13 +13707,13 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="0" />
 		<property name="Gain_health" value="3" />
 		<property name="Gain_wellness" value="1" />
-		<property name="Buff" value="Vitamins" />
+		<property name="Buff" value="Vitamins,gainImmunity_small_Trigger" />
 		<property name="Debuff" value="dysentery,foodPoisoning" />
 		<property name="Sound_start" value="UseActions/player_painkillers" />
     </property>
@@ -13718,13 +13732,13 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="0" />
 		<property name="Gain_health" value="4" />
 		<property name="Gain_wellness" value="1.25" />
-		<property name="Buff" value="Vitamins" />
+		<property name="Buff" value="Vitamins,gainImmunity_xlarge_Trigger" />
 		<property name="Debuff" value="dysentery,foodPoisoning" />
 		<property name="Sound_start" value="UseActions/player_painkillers" />
     </property>
@@ -13745,7 +13759,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="UseOther" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="-4" />
 		<property name="Gain_stamina" value="0" />
@@ -13757,7 +13771,7 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="-4" />
 		<property name="Gain_stamina" value="0" />
@@ -13828,7 +13842,7 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="1" />
 		<property name="Gain_water" value="-1" />
 		<property name="Gain_stamina" value="5" />
@@ -13848,7 +13862,7 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="4" />
 		<property name="Gain_water" value="2" />
 		<property name="Gain_stamina" value="5" />
@@ -13873,13 +13887,13 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="10" />
 		<property name="Gain_water" value="-4" />
 		<property name="Gain_stamina" value="5" />
 		<property name="Gain_health" value="7" />
 		<property name="Gain_wellness" value="1" />
-		<property name="Buff" value="eatFood_10_Trigger" />
+		<property name="Buff" value="eatFood_10_Trigger,gainImmunity_small_Trigger" />
 		<property name="Sound_start" value="UseActions/player_eating" />
     </property>
     <property name="Smell" value="mediumSmell" />
@@ -13897,13 +13911,13 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="16" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="10" />
 		<property name="Gain_health" value="12" />
 		<property name="Gain_wellness" value="1.25" />
-		<property name="Buff" value="stewWarming,eatFood_20_Trigger" />
+		<property name="Buff" value="stewWarming,eatFood_20_Trigger,gainImmunity_medium_Trigger" />
 		<property name="Sound_start" value="UseActions/player_drinking" />
     </property>
     <property name="Smell" value="mediumSmell" />
@@ -13966,13 +13980,13 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="10" />
 		<property name="Gain_water" value="-2" />
 		<property name="Gain_stamina" value="5" />
 		<property name="Gain_health" value="4" />
 		<property name="Gain_wellness" value="0.55" />
-		<property name="Buff" value="eatFood_5_Trigger" />
+		<property name="Buff" value="eatFood_5_Trigger,gainImmunity_small_Trigger" />
 		<property name="Sound_start" value="UseActions/player_eating" />
     </property>
     <property name="Group" value="Food/Cooking" />
@@ -13989,13 +14003,13 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="24" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="15" />
 		<property name="Gain_health" value="11" />
 		<property name="Gain_wellness" value="1.8" />
-		<property name="Buff" value="stewWarming,eatFood_30_Trigger" />
+		<property name="Buff" value="stewWarming,eatFood_30_Trigger,gainImmunity_medium_Trigger" />
 		<property name="Sound_start" value="UseActions/player_drinking" />
     </property>
     <property name="Smell" value="exLargeSmell" />
@@ -14013,13 +14027,13 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="14" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="10" />
 		<property name="Gain_health" value="8" />
 		<property name="Gain_wellness" value="1.4" />
-		<property name="Buff" value="eatFood_19_Trigger" />
+		<property name="Buff" value="eatFood_19_Trigger,gainImmunity_small_Trigger" />
 		<property name="Sound_start" value="UseActions/player_eating" />
     </property>
     <property name="Group" value="Food/Cooking" />
@@ -14036,13 +14050,13 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="11" />
 		<property name="Gain_water" value="-2" />
 		<property name="Gain_stamina" value="5" />
 		<property name="Gain_health" value="3" />
 		<property name="Gain_wellness" value="0.45" />
-		<property name="Buff" value="eatFood_5_Trigger" />
+		<property name="Buff" value="eatFood_5_Trigger,gainImmunity_xsmall_Trigger" />
 		<property name="Sound_start" value="UseActions/player_eating" />
     </property>
     <property name="Group" value="Food/Cooking" />
@@ -14063,7 +14077,7 @@ which does not exist, yet. -->
 	<property class="Action0">
 		<property name="Class" value="UseOther" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="0" />
@@ -14075,7 +14089,7 @@ which does not exist, yet. -->
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="0" />
@@ -14099,8 +14113,8 @@ which does not exist, yet. -->
 		<property name="Gain_stamina" value="0" />
 		<property name="Gain_health" value="10" />
 		<property name="Gain_wellness" value="0" />
-		<property name="Buff" value="TraumaFirstAid" />
-		<property name="Debuff" value="bleeding,arrowCriticalBleedout" />
+		<property name="Buff" value="TraumaFirstAid,gainImmunity_small_Trigger,lossInjuryBuff" />
+		<property name="Debuff" value="bleeding,bleeding2,bleeding3,bleeding4,arrowCriticalBleedout,biteMark" />
 	</property>
 	<property class="Action1">
 		<property name="Gain_food" value="0" />
@@ -14108,8 +14122,8 @@ which does not exist, yet. -->
 		<property name="Gain_stamina" value="0" />
 		<property name="Gain_health" value="10" />
 		<property name="Gain_wellness" value="0" />
-		<property name="Buff" value="TraumaFirstAid" />
-		<property name="Debuff" value="bleeding,arrowCriticalBleedout" />
+		<property name="Buff" value="TraumaFirstAid,gainImmunity_small_Trigger,lossInjuryBuff" />
+		<property name="Debuff" value="bleeding,bleeding2,bleeding3,bleeding4,arrowCriticalBleedout,biteMark" />
 	</property>
 	<property name="DescriptionKey" value="TraumaFirstAidBandageDesc"/>
 </item>
@@ -14124,8 +14138,8 @@ which does not exist, yet. -->
 		<property name="Gain_health" value="60" />
 		<property name="Gain_wellness" value="0.3" />
 		<property name="Sound_start" value="UseActions/player_firstAidKit" />
-		<property name="Buff" value="TraumaFirstAidKit" />
-		<property name="Debuff" value="bleeding,arrowCriticalBleedout" />
+		<property name="Buff" value="TraumaFirstAidKit,gainImmunity_medium_Trigger,lossInjuryBuff" />
+		<property name="Debuff" value="bleeding,bleeding2,bleeding3,bleeding4,arrowCriticalBleedout,biteMark" />
 	</property>
 	<property class="Action1">
 		<property name="Gain_food" value="0" />
@@ -14134,8 +14148,8 @@ which does not exist, yet. -->
 		<property name="Gain_health" value="60" />
 		<property name="Gain_wellness" value="0.3" />
 		<property name="Sound_start" value="UseActions/player_firstAidKit" />
-		<property name="Buff" value="TraumaFirstAidKit" />
-		<property name="Debuff" value="bleeding,arrowCriticalBleedout" />
+		<property name="Buff" value="TraumaFirstAidKit,gainImmunity_medium_Trigger,lossInjuryBuff" />
+		<property name="Debuff" value="bleeding,bleeding2,bleeding3,bleeding4,arrowCriticalBleedout,biteMark" />
 	</property>
 	<property name="DescriptionKey" value="TraumaFirstAidKitDesc"/>
 </item>
@@ -14149,25 +14163,25 @@ which does not exist, yet. -->
 	<property class="Action0">
 		<property name="Class" value="UseOther" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="-6" />
 		<property name="Gain_stamina" value="0" />
 		<property name="Gain_health" value="6" />
 		<property name="Gain_wellness" value="0.1" />
-		<property name="Buff" value="ExtraStrengthPainKillers" />
+		<property name="Buff" value="ExtraStrengthPainKillers,lossImmunity_small_Trigger" />
 		<property name="Sound_start" value="UseActions/player_painkillers" />
 	</property>
 	<property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="-6" />
 		<property name="Gain_stamina" value="0" />
 		<property name="Gain_health" value="6" />
 		<property name="Gain_wellness" value="0.1" />
-		<property name="Buff" value="ExtraStrengthPainKillers" />
+		<property name="Buff" value="ExtraStrengthPainKillers,lossImmunity_small_Trigger" />
 		<property name="Sound_start" value="UseActions/player_painkillers" />
 	</property>
 	<property name="ActionSkillGroup" value="Medicine"/>
@@ -14651,7 +14665,7 @@ which does not exist, yet. -->
 	<property name="Extends" value="schematicMaster" />
 	<property name="CustomIcon" value="ECOAugerSchematic" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="ECOAuger,ECOAuger_Blade,ECOAuger_Parts" />
+		<!-- <property name="Recipes_to_learn" value="ECOAuger,ECOAuger_Blade,ECOAuger_Parts" /> -->
 		<property name="Skills_to_gain" value="Advanced Tool Smithing,ECO Auger Recipe" />
 	</property>
 </item>
@@ -14717,7 +14731,7 @@ which does not exist, yet. -->
 	<property name="Extends" value="schematicMaster" />
 	<property name="CustomIcon" value="HDAugerSchematic" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="HDAuger,HDAuger_Blade,HDAuger_Parts" />
+		<!-- <property name="Recipes_to_learn" value="HDAuger,HDAuger_Blade,HDAuger_Parts" /> -->
 		<property name="Skills_to_gain" value="Advanced Tool Smithing,HD Auger Recipe" />
 	</property>
 </item>
@@ -14778,7 +14792,7 @@ which does not exist, yet. -->
 	<property name="Extends" value="schematicMaster" />
 	<property name="CustomIcon" value="ECOChainsawSchematic" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="ECOChainsaw,ECOChainsaw_Blade,ECOChainsaw_Parts" />
+		<!-- <property name="Recipes_to_learn" value="ECOChainsaw,ECOChainsaw_Blade,ECOChainsaw_Parts" /> -->
 		<property name="Skills_to_gain" value="Advanced Tool Smithing,ECO Chainsaw Recipe" />
 	</property>
 </item>
@@ -14840,7 +14854,7 @@ which does not exist, yet. -->
 	<property name="Extends" value="schematicMaster" />
 	<property name="CustomIcon" value="HDChainsawSchematic" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="HDChainsaw,HDChainsaw_Blade,HDChainsaw_Parts" />
+		<!-- <property name="Recipes_to_learn" value="HDChainsaw,HDChainsaw_Blade,HDChainsaw_Parts" /> -->
 		<property name="Skills_to_gain" value="Advanced Tool Smithing,HD Chainsaw Recipe" />
 	</property>
 </item>
@@ -15029,7 +15043,8 @@ which does not exist, yet. -->
 <item id="1873" name="ClassPaper">
 	<property name="CustomIcon" value="ClassPaper" />
 	<property name="Extends" value="paper" />
-	<property name="EconomicValue" value="500" />
+	<property name="Material" value="ClassPaper" />
+	<property name="EconomicValue" value="1000" />
 	<property name="EconomicBundleSize" value="1" />
 	<!-- <property name="PickupJournalEntry" value="modinfo01_Tip,modinfo2Tip,modinfo3Tip" /> -->
 </item>
@@ -15116,7 +15131,7 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="0" />
@@ -15140,7 +15155,7 @@ which does not exist, yet. -->
     <property class="Action1">
 		<property name="Class" value="Eat" />
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_food" value="0" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="0" />
@@ -15185,11 +15200,11 @@ which does not exist, yet. -->
 	<property name="CraftingIngredientTime" value="15" />
 	<property class="Action1">
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="6" />
-		<property name="Buff" value="foodPoisoning" />
-		<property name="Buff_chance" value="0.5" />
+		<property name="Buff" value="foodPoisoning,lossImmunity_medium_Trigger" />
+		<property name="Buff_chance" value="0.5,1" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="0" />
 		<property name="Gain_sickness" value="20" />
@@ -15204,7 +15219,7 @@ which does not exist, yet. -->
 	<property name="EconomicValue" value="20" />
 	<property class="Action1">
 		<property name="Delay" value="2.1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="8" />
 		<property name="Buff" value="eatFood_5_Trigger" />
@@ -15221,10 +15236,10 @@ which does not exist, yet. -->
 	<property name="EconomicValue" value="22" />
 	<property class="Action1">
 		<property name="Delay" value="2.1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="8" />
-		<property name="Buff" value="eatFood_6_Trigger" />
+		<property name="Buff" value="eatFood_6_Trigger,gainImmunity_xsmall_Trigger" />
 		<property name="Gain_water" value="-1" />
 		<property name="Gain_wellness" value="0.7" />
 	</property>
@@ -15238,12 +15253,12 @@ which does not exist, yet. -->
 	<property name="EconomicValue" value="50" />
 	<property class="Action1">
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="4" />
 		<property name="Gain_food" value="18" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_wellness" value="1.3" />
-		<property name="Buff" value="stewWarming,eatFood_23_Trigger" />
+		<property name="Buff" value="stewWarming,eatFood_23_Trigger,gainImmunity_small_Trigger" />
 	</property>
 	<property name="Smell" value="exLargeSmell" />
 	<property name="Group" value="Food/Cooking" />
@@ -15256,11 +15271,11 @@ which does not exist, yet. -->
 	<property name="CraftingIngredientTime" value="15" />
 	<property class="Action1">
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="10" />
-		<property name="Buff" value="foodPoisoning" />
-		<property name="Buff_chance" value="0.5" />
+		<property name="Buff" value="foodPoisoning,lossImmunity_large_Trigger" />
+		<property name="Buff_chance" value="0.5,1" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="0" />
 		<property name="Gain_sickness" value="30" />
@@ -15275,7 +15290,7 @@ which does not exist, yet. -->
 	<property name="EconomicValue" value="30" />
 	<property class="Action1">
 		<property name="Delay" value="2.1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="10" />
 		<property name="Buff" value="eatFood_9_Trigger" />
@@ -15292,10 +15307,10 @@ which does not exist, yet. -->
 	<property name="EconomicValue" value="35" />
 	<property class="Action1">
 		<property name="Delay" value="2.1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="10" />
-		<property name="Buff" value="eatFood_9_Trigger" />
+		<property name="Buff" value="eatFood_9_Trigger,gainImmunity_xsmall_Trigger" />
 		<property name="Gain_water" value="-2" />
 		<property name="Gain_wellness" value="0.8" />
 	</property>
@@ -15309,12 +15324,12 @@ which does not exist, yet. -->
 	<property name="EconomicValue" value="60" />
 	<property class="Action1">
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="20" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_wellness" value="1.6" />
-		<property name="Buff" value="stewWarming,eatFood_26_Trigger" />
+		<property name="Buff" value="stewWarming,eatFood_26_Trigger,gainImmunity_small_Trigger" />
 	</property>
 	<property name="Smell" value="exLargeSmell" />
 	<property name="Group" value="Food/Cooking" />
@@ -15327,11 +15342,11 @@ which does not exist, yet. -->
 	<property name="CraftingIngredientTime" value="15" />
 	<property class="Action1">
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="9" />
-		<property name="Buff" value="foodPoisoning" />
-		<property name="Buff_chance" value="0.5" />
+		<property name="Buff" value="foodPoisoning,lossImmunity_large_Trigger" />
+		<property name="Buff_chance" value="0.5,1" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="0" />
 		<property name="Gain_sickness" value="30" />
@@ -15346,7 +15361,7 @@ which does not exist, yet. -->
 	<property name="EconomicValue" value="18" />
 	<property class="Action1">
 		<property name="Delay" value="2.1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="9" />
 		<property name="Buff" value="eatFood_6_Trigger" />
@@ -15363,10 +15378,10 @@ which does not exist, yet. -->
 	<property name="EconomicValue" value="20" />
 	<property class="Action1">
 		<property name="Delay" value="2.1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="11" />
-		<property name="Buff" value="eatFood_9_Trigger" />
+		<property name="Buff" value="eatFood_9_Trigger,gainImmunity_xsmall_Trigger" />
 		<property name="Gain_water" value="-2" />
 		<property name="Gain_wellness" value="0.8" />
 	</property>
@@ -15381,11 +15396,11 @@ which does not exist, yet. -->
 	<property name="CraftingIngredientTime" value="15" />
 	<property class="Action1">
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="10" />
-		<property name="Buff" value="foodPoisoning" />
-		<property name="Buff_chance" value="0.5" />
+		<property name="Buff" value="foodPoisoning,lossImmunity_medium_Trigger" />
+		<property name="Buff_chance" value="0.5,1" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="0" />
 		<property name="Gain_sickness" value="30" />
@@ -15400,7 +15415,7 @@ which does not exist, yet. -->
 	<property name="EconomicValue" value="15" />
 	<property class="Action1">
 		<property name="Delay" value="2.1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="10" />
 		<property name="Buff" value="eatFood_9_Trigger" />
@@ -15417,10 +15432,10 @@ which does not exist, yet. -->
 	<property name="EconomicValue" value="20" />
 	<property class="Action1">
 		<property name="Delay" value="2.1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="10" />
-		<property name="Buff" value="eatFood_9_Trigger" />
+		<property name="Buff" value="eatFood_9_Trigger,gainImmunity_xsmall_Trigger" />
 		<property name="Gain_water" value="-2" />
 		<property name="Gain_wellness" value="0.8" />
 	</property>
@@ -15434,10 +15449,10 @@ which does not exist, yet. -->
 	<property name="EconomicValue" value="25" />
 	<property class="Action1">
 		<property name="Delay" value="2.1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="10" />
-		<property name="Buff" value="eatFood_9_Trigger" />
+		<property name="Buff" value="eatFood_9_Trigger,gainImmunity_xsmall_Trigger" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_wellness" value="0.8" />
 	</property>
@@ -15452,11 +15467,11 @@ which does not exist, yet. -->
 	<property name="CraftingIngredientTime" value="15" />
 	<property class="Action1">
 		<property name="Delay" value="1.0" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="14" />
-		<property name="Buff" value="foodPoisoning" />
-		<property name="Buff_chance" value="0.5" />
+		<property name="Buff" value="foodPoisoning,lossImmunity_xlarge_Trigger" />
+		<property name="Buff_chance" value="0.5,1" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_stamina" value="0" />
 		<property name="Gain_sickness" value="30" />
@@ -15471,10 +15486,10 @@ which does not exist, yet. -->
 	<property name="EconomicValue" value="64" />
 	<property class="Action1">
 		<property name="Delay" value="2.1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="14" />
-		<property name="Buff" value="eatFood_14_Trigger" />
+		<property name="Buff" value="eatFood_14_Trigger,gainImmunity_small_Trigger" />
 		<property name="Gain_water" value="-2" />
 		<property name="Gain_wellness" value="1" />
 	</property>
@@ -15488,10 +15503,10 @@ which does not exist, yet. -->
 	<property name="EconomicValue" value="75" />
 	<property class="Action1">
 		<property name="Delay" value="2.1" />
-		<property name="Use_time" value="..." />
+		<property name="Use_time" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_food" value="14" />
-		<property name="Buff" value="eatFood_15_Trigger" />
+		<property name="Buff" value="eatFood_15_Trigger,gainImmunity_small_Trigger" />
 		<property name="Gain_water" value="0" />
 		<property name="Gain_wellness" value="1.1" />
 	</property>
@@ -15508,8 +15523,8 @@ which does not exist, yet. -->
 	<property name="Degradation" value="99999" param1="true"/>
 	<property class="Action0">
 		<property name="Delay" value="1.15" />
-		<property name="Buff" value="bleeding,criticalBlunt" />
-		<property name="Buff_chance" value=".3,.3" />
+		<property name="Buff" value="gainInjury_mediumattack_Trigger,criticalBlunt" />
+		<property name="Buff_chance" value=".55,.3" />
 		<property name="DamageBonus.head" value="5" />
 	</property>
 	<property class="Attributes">
@@ -15994,8 +16009,146 @@ which does not exist, yet. -->
 		<property name="Sphere" value="0.4" />
 		<property name="DamageEntity" value="10" />
 		<property name="DamageBlock" value="10" />
-		<property name="Buff" value="bleeding,stunned" />
-		<property name="Buff_chance" value="0.1,0.15" />
+		<property name="Buff" value="gainInjury_mediumattack_Trigger,stunned,biteMark" />
+		<property name="Buff_chance" value="0.8,0.15,0.45" />
+	</property>
+</item>
+
+<item id="1915" name="ironBlocksSchematic">
+    <property name="CustomIcon" value="ironBlocksSchematic" />
+	<property name="Extends" value="schematicMaster" />
+    <property class="Action1">
+      <property name="Class" value="LearnRecipe" />
+      <property name="Recipes_to_learn" value="IronFrameBlock,IronFrameCNRFull,IronFrameCNRInside,IronFrameRamp" />
+      <property name="Skills_to_gain" value="Construction" />
+    </property>
+</item>
+
+<item id="1916" name="tungstenBlocksSchematic">
+    <property name="CustomIcon" value="tungstenBlocksSchematic" />
+	<property name="Extends" value="schematicMaster" />
+    <property class="Action1">
+      <property name="Class" value="LearnRecipe" />
+      <property name="Recipes_to_learn" value="TungstenFrameBlock,TungstenFrameCNRFull,TungstenFrameCNRInside,TungstenFrameRamp" />
+      <property name="Skills_to_gain" value="Construction" />
+    </property>
+</item>
+
+<!-- Class System -->
+<item id="1917" name="ClassPaperMaster">
+    <property name="IsDeveloper" value="true" />
+	<property name="Meshfile" value="Items/Misc/Book" />
+	<property name="Material" value="ClassPaper" />
+	<property name="HoldType" value="21" />
+	<property name="Weight" value="1" />
+	<property name="FuelValue" value="1" />
+	<property name="Stacknumber" value="10" />
+	<property name="Group" value="Books" />
+	<property name="EconomicValue" value="750" />
+	<property name="EconomicBundleSize" value="1" />
+	<property name="DescriptionKey" value="ClassPaperItemDesc" />
+</item>
+
+<item id="1918" name="ClassPaperBuilder">
+	<property name="Extends" value="ClassPaperMaster" />
+	<property name="CustomIcon" value="ClassPaperBuilder" />
+	<property class="Action1">
+		<property name="Class" value="Quest" />
+		<property name="QuestGiven" value="classtrainingbuilder1" />
+	</property>
+</item>
+
+<item id="1919" name="ClassPaperSurvivalist">
+	<property name="Extends" value="ClassPaperMaster" />
+	<property name="CustomIcon" value="ClassPaperSurvivalist" />
+	<property class="Action1">
+		<property name="Class" value="Quest" />
+		<property name="QuestGiven" value="classtrainingsurvivalist1" />
+	</property>
+</item>
+
+<item id="1920" name="ClassPaperScholar">
+	<property name="Extends" value="ClassPaperMaster" />
+	<property name="CustomIcon" value="ClassPaperScholar" />
+	<property class="Action1">
+		<property name="Class" value="Quest" />
+		<property name="QuestGiven" value="classtrainingscholar1" />
+	</property>
+</item>
+
+<item id="1921" name="ClassPaperMarksman">
+	<property name="Extends" value="ClassPaperMaster" />
+	<property name="CustomIcon" value="ClassPaperMarksman" />
+	<property class="Action1">
+		<property name="Class" value="Quest" />
+		<property name="QuestGiven" value="classtrainingmarksman1" />
+	</property>
+</item>
+
+<item id="1922" name="ClassPaperFighter">
+	<property name="Extends" value="ClassPaperMaster" />
+	<property name="CustomIcon" value="ClassPaperFighter" />
+	<property class="Action1">
+		<property name="Class" value="Quest" />
+		<property name="QuestGiven" value="classtrainingfighter1" />
+	</property>
+</item>
+
+<item id="1923" name="ClassPaperTradesman">
+	<property name="Extends" value="ClassPaperMaster" />
+	<property name="CustomIcon" value="ClassPaperTradesman" />
+	<property class="Action1">
+		<property name="Class" value="Quest" />
+		<property name="QuestGiven" value="classtrainingtradesman1" />
+	</property>
+</item>
+
+<item id="1924" name="ClassPaperProtection">
+	<property name="Extends" value="ClassPaperMaster" />
+	<property name="CustomIcon" value="ClassPaperProtection" />
+	<property class="Action1">
+		<property name="Class" value="Quest" />
+		<property name="QuestGiven" value="classtrainingprotection1" />
+	</property>
+</item>
+
+<item id="1925" name="classKey">
+	<property name="CustomIcon" value="classKey" />
+	<property name="Meshfile" value="Items/Tools/wrenchPrefab" />
+	<property name="Material" value="metal" />
+	<property name="RepairTools" value="forgedSteel" />
+	<property name="HoldType" value="29" />
+	<property name="DegradationBreaksAfter" value="false" />
+	<property name="SoundJammed" value="ItemNeedsRepair" />
+	<property name="SoundDestroy" value="metaldestroy1" />
+	<property name="EconomicValue" value="240" />
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="Repair" />
+		<property name="Delay" value="0.4" />
+		<property name="Repair_amount" value="350" />
+		<property name="Upgrade_hit_offset" value="-2" />
+		<property name="Sound_start" value="UseActions/repair_block" />
+		<property name="Allowed_upgrade_items" value="classKey,wood" />
+	</property>
+	<property class="Attributes">
+		<property name="EntityDamage" value="1" />
+		<property name="BlockDamage" value="1" />
+		<property name="DegradationMax" value="5000" />
+		<property name="DegradationRate" value="1" />
+	</property>
+	<property name="Group" value="Tools/Traps" />
+	<property name="ActionSkillGroup" value=""/>
+	<property name="CraftingSkillGroup" value="Tool Smithing"/>
+</item>
+
+<item id="1926" name="handBossZombie">
+	<property name="Extends" value="handMaster" />
+	<property name="IsDeveloper" value="true" />
+	<property class="Action0">
+		<property name="DamageEntity" value="25" />
+		<property name="DamageBlock" value="60" />
+		<property name="Buff" value="gainInjury_bossattack_Trigger,infection,stunned,biteMark" />
+		<property name="Buff_chance" value="0.8,0.15,0.55,0.75" />
 	</property>
 </item>
 

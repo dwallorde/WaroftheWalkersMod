@@ -1132,4 +1132,25 @@ Do not rename "basic" materials like cloth, metal, or stone. These auto-generate
 	<property name="MaxDamage" value="250" />
 </material>
 
+<material id="classBlock">
+	<property name="damage_category" value="metal" />
+	<property name="surface_category" value="metal" />
+	<property name="Hardness" type="float" value="10000" />
+	<property name="stepsound" value="metal" />
+	<property name="stability_glue" value="110" />
+	<property name="Mass" type="int" value="15" />
+	<property name="MaxDamage" value="50000" />
+</material>
+
+<material id="ClassPaper">
+	<property name="damage_category" value="cloth" />
+	<property name="surface_category" value="cloth" />
+	<property name="forge_category" value="ClassPaper" />
+	<property name="Hardness" type="float" value="1" />
+	<property name="stepsound" value="wood" />
+	<property name="stability_glue" value="24" />
+	<property name="Mass" type="int" value="6" />
+	<property name="MaxDamage" value="1" />
+</material>
+
 </materials>

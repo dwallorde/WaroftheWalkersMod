@@ -530,9 +530,6 @@ quality_mod: adjusts the price range of all items with a quality level.
 			<item name="RoastedMeatPieRecipe"/>
 			<item name="MossyBrewPieRecipe"/>
 			<item name="MushroomStewRecipe"/>
-			<item name="LongbowSchematic"/>
-			<item name="Remington8Schematics"/>
-			<item name="DesertEagleSchematic"/>
 			<item name="HollowPointAmmunitionBook"/>
 			<item name="32mmBulletSchematic"/>
 			<item name="44HollowPointMagBulletSchematics"/>
@@ -546,17 +543,8 @@ quality_mod: adjusts the price range of all items with a quality level.
 			<item name="TailoringSkullCap"/>
 			<item name="TailoringBallCap"/>
 			<item name="TailoringCowboyHat"/>
-			<item name="KevlarGlovesSchematic"/>
-			<item name="KevlarHelmetSchematic"/>
-			<item name="KevlarVestSchematic"/>
-			<item name="KevlarLegArmorSchematic"/>
-			<item name="KevlarBootsSchematic"/>
 			<item name="augerSchematic"/>
-			<item name="ECOAugerSchematic"/>
-			<item name="HDAugerSchematic"/>
 			<item name="chainsawSchematic"/>
-			<item name="ECOChainsawSchematic"/>
-			<item name="HDChainsawSchematic"/>
 			<item name="minibikesForDumbshits"/>
 		</trader_item_group>
 
@@ -579,7 +567,6 @@ quality_mod: adjusts the price range of all items with a quality level.
 			<item name="smgSchematics"/>
 			<item name="sniperRifleSchematic"/>
 			<item name="theEnforcerMagazine"/>
-			<item name="herbalAntibioticsRecipe"/>
 			<item name="TailoringSweatShirt"/>
 			<item name="TailoringFlannelPants"/>
 			<item name="TailoringFaceMask"/>
@@ -593,28 +580,14 @@ quality_mod: adjusts the price range of all items with a quality level.
 			<item name="TungstenLegArmorSchematic"/>
 			<item name="TungstenChestArmorSchematic"/>
 			<item name="TungstenHelmetSchematic"/>
-			<item name="TNTBook"/>
-			<item name="FAMASSchematics"/>
-			<item name="BarettaShotgunSchematic"/>
 			<item name="SteelCrossbowSchematic"/>
-			<item name="M25SniperRifleSchematic"/>
 			<item name="FlamingTungstenCrossbowBoltSchematic"/>
 			<item name="556mmNATOBulletSchematic"/>
 			<item name="IncendiaryShotgunSlugSchematic"/>
 			<item name="762mmHollowPointBulletSchematic"/>
-			<item name="nailgunSchematic"/>
-			<item name="ClubTungstenSchematic"/>
-			<item name="HDNailgunSchematic"/>
 			<item name="SteelMacheteSchematic"/>
-			<item name="TungstenMacheteSchematic"/>
-			<item name="GoldTippedKnifeBook"/>
-			<item name="GoldTippedMacheteSchematic"/>
 			<item name="FishingBook"/>
-			<item name="AppleJuiceRecipe"/>
 			<item name="FishStewRecipe"/>
-			<item name="ApplePieRecipe"/>
-			<item name="MinibikesForSmartshits"/>
-			<item name="MinibikesForToughshits"/>
 		</trader_item_group>
 
 		<trader_item_group name="books" count="1">
@@ -1066,6 +1039,7 @@ quality_mod: adjusts the price range of all items with a quality level.
 			<item group="rareTools" count="1" prob="0.2"/>
 			<item group="heavyArmor" count="1" prob="0.3"/>
 			<item name="miningHelmet" prob="0.2"/>
+			<item name="ClassPaper" prob="0.155"/>
 		</tier_items>
 		
 		<tier_items level="25,50" count="2,6">
@@ -1078,6 +1052,7 @@ quality_mod: adjusts the price range of all items with a quality level.
 			<item group="minibikeParts" count="1,2" prob="0.2"/>
 			<item group="Armor" count="1" prob="0.3"/>
 			<item name="miningHelmet" prob="0.35"/>
+			<item name="ClassPaper" prob="0.275"/>
 		</tier_items>
 		
 		<tier_items level="50,-1" count="3,8">
@@ -1089,6 +1064,7 @@ quality_mod: adjusts the price range of all items with a quality level.
 			<item group="workstations" count="1,2" prob="0.5"/>
 			<item group="minibikeParts" count="1,2" prob="0.4"/>
 			<item name="miningHelmet" prob="0.475"/>
+			<item name="ClassPaper" prob="0.375"/>
 		</tier_items>
 	</trader_info>
 	
@@ -1360,7 +1336,6 @@ quality_mod: adjusts the price range of all items with a quality level.
 			<item name="heavyBanditGloves"/>
 			<item name="heavyBanditLegArmor"/>
 			<item name="herbalAntibiotics"/>
-			<item name="herbalAntibioticsRecipe"/>
 			<item name="hoeIron"/>
 			<item name="houseFrontDoor2_v1"/>
 			<item name="hubcap"/>

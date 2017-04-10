@@ -392,7 +392,16 @@
 		<entity name="animalPig" />
 		<entity name="animalBoar" prob="0.15" />
 		<entity name="animalBear" prob="0.095" />
-	</entitygroup>	
+	</entitygroup>
+	
+	<entitygroup name="AnimalsAllSnow" >		
+		<entity name="animalRabbit" />
+		<entity name="animalChicken" />
+		<entity name="animalStag" />
+		<entity name="animalPig" />
+		<entity name="animalBoar" prob="0.175" />
+		<entity name="animalBear" prob="0.115" />
+	</entitygroup>
 	
 	<entitygroup name="HornetGroup">
 		<entity name="hornet" />
@@ -452,7 +461,14 @@
 	<entitygroup name="ZombieUtilityWorkerGroup">
 		<entity name="ZombieUtilityWorker" />
 		<entity name="ZombieMiner" />
-	</entitygroup>	
+	</entitygroup>
+	
+	<entitygroup name="SpiderZombieHordeGroup">
+		<entity name="spiderzombie" />
+		<entity name="ZombieSpiderUMAFreddy" />
+		<entity name="ZombieSpiderUMADylan" />
+		<entity name="ZombieSpiderUMABane" />
+	</entitygroup>
 
 	<entitygroup name="ZombieGhostTownGroup"> <!-- old west town -->
 		<entity name="zombieOldTimer" prob="3"/>
@@ -503,7 +519,7 @@
 		<entity name="banditLeader" prob="0.2"/>
 		<entity name="BanditKane" prob="0.1"/>
 		<entity name="BanditShahala" prob="0.05"/>
-	</entitygroup>		
+	</entitygroup>
 
 	<entitygroup name="SupplyCrates_General">
 		<entity name="sc_General" />		

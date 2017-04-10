@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prefab>
+    <property name="CopyAirBlocks" value="True" />
+    <property name="AllowTopSoilDecorations" value="False" />
+    <property name="StaticSpawner.Class" value="SpawnSmall" />
+    <property name="StaticSpawner.Size" value="3,2,3" />
+    <property name="StaticSpawner.Trigger" value="48" />
+    <property name="TraderArea" value="False" />
+</prefab>

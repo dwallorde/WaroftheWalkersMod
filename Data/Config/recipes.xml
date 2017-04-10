@@ -44,7 +44,7 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<wildcard_forge_category />
 </recipe>
 
-<recipe name="brokenGlass" count="1" craft_area="forge" material_based="true" craft_time = "1" craft_exp_gain="0">
+<recipe name="brokenGlass" count="1" craft_area="forge" material_based="true" craft_time="1" craft_exp_gain="0">
 	<ingredient name="unit_glass" count="5"/>
 </recipe>
 
@@ -64,7 +64,11 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<wildcard_forge_category />
 </recipe>
 
-<recipe name="rockSmall" count="1" craft_area="forge" material_based="true" craft_time = "1" craft_exp_gain="0">
+<recipe name="ClassPaper" count="1" tooltip="ttScrapMetalBrass">
+	<wildcard_forge_category />
+</recipe>
+
+<recipe name="rockSmall" count="1" craft_area="forge" material_based="true" craft_time="1" craft_exp_gain="0">
 	<ingredient name="unit_stone" count="5"/>
 </recipe>
 
@@ -76,7 +80,7 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<wildcard_forge_category />
 </recipe>
 
-<recipe name="scrapBrass" count="1" craft_area="forge" material_based="true" craft_time = "1" craft_exp_gain="0">
+<recipe name="scrapBrass" count="1" craft_area="forge" material_based="true" craft_time="1" craft_exp_gain="0">
 	<ingredient name="unit_brass" count="1"/>
 </recipe>
 
@@ -88,7 +92,7 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<wildcard_forge_category />
 </recipe>
 
-<recipe name="scrapIron" count="1" craft_area="forge" material_based="true" craft_time = "1" craft_exp_gain="0">
+<recipe name="scrapIron" count="1" craft_area="forge" material_based="true" craft_time="1" craft_exp_gain="0">
 	<ingredient name="unit_iron" count="1"/>
 </recipe>
 
@@ -250,13 +254,13 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="paper" count="2"/>
 </recipe>
 
-<recipe name="arrow" count="1">
+<recipe name="arrow" count="1" craft_exp_gain="10">
 	<ingredient name="rockSmall" count="1"/>
 	<ingredient name="wood" count="1"/>
 	<ingredient name="feather" count="1"/>
 </recipe>
 
-<recipe name="ironArrow" count="1">
+<recipe name="ironArrow" count="1" craft_exp_gain="15">
 	<ingredient name="ironArrowHead" count="1"/>
 	<ingredient name="wood" count="1"/>
 	<ingredient name="feather" count="1"/>
@@ -267,7 +271,7 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="unit_clay" count="1"/>
 </recipe>
 
-<recipe name="steelArrow" count="1">
+<recipe name="steelArrow" count="1" craft_exp_gain="15">
 	<ingredient name="steelArrowHead" count="1"/>
 	<ingredient name="wood" count="1"/>
 	<ingredient name="feather" count="1"/>
@@ -278,14 +282,14 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="unit_clay" count="1"/>
 </recipe>
 
-<recipe name="flamingArrow" count="1" craft_area="workbench">
+<recipe name="flamingArrow" count="1" craft_area="workbench" craft_exp_gain="15">
 	<ingredient name="steelArrow" count="1"/>
 	<ingredient name="gunPowder" count="2"/>
 	<ingredient name="cloth" count="1"/>
 	<ingredient name="tallow" count="1"/>
 </recipe>
 
-<recipe name="TungstenArrow" count="1">
+<recipe name="TungstenArrow" count="1" craft_exp_gain="15">
     <ingredient name="TungstenArrowHead" count="1"/>
     <ingredient name="wood" count="1"/>
     <ingredient name="feather" count="1"/>
@@ -296,7 +300,7 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="unit_clay" count="2"/>
 </recipe>
 
-<recipe name="ExplodingTungstenArrow" count="1">
+<recipe name="ExplodingTungstenArrow" count="1" craft_exp_gain="15">
     <ingredient name="TungstenArrowHead" count="1"/>
 	<ingredient name="gunPowder" count="25"/>
 	<ingredient name="ductTape" count="1"/>
@@ -304,19 +308,19 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
     <ingredient name="feather" count="1"/>
 </recipe>
 
-<recipe name="ironCrossbowBolt" count="1">
+<recipe name="ironCrossbowBolt" count="1" craft_exp_gain="10">
 	<ingredient name="ironArrowHead" count="1"/>
 	<ingredient name="wood" count="1"/>
 	<ingredient name="feather" count="1"/>
 </recipe>
 
-<recipe name="steelCrossbowBolt" count="1">
+<recipe name="steelCrossbowBolt" count="1" craft_exp_gain="15">
 	<ingredient name="steelArrowHead" count="1"/>
 	<ingredient name="wood" count="1"/>
 	<ingredient name="feather" count="1"/>
 </recipe>
 
-<recipe name="explodingCrossbowBolt" count="1" craft_area="workbench">
+<recipe name="explodingCrossbowBolt" count="1" craft_area="workbench" craft_exp_gain="15">
 	<ingredient name="steelArrowHead" count="1"/>
 	<ingredient name="gunPowder" count="8"/>
 	<ingredient name="ductTape" count="1"/>
@@ -324,13 +328,13 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="feather" count="1"/>
 </recipe>
 
-<recipe name="TungstenCrossbowBolt" count="1">
+<recipe name="TungstenCrossbowBolt" count="1" craft_exp_gain="15">
     <ingredient name="TungstenArrowHead" count="1"/>
     <ingredient name="wood" count="1"/>
     <ingredient name="feather" count="1"/>
 </recipe>
 
-<recipe name="FlamingTungstenCrossbowBolt" count="1">
+<recipe name="FlamingTungstenCrossbowBolt" count="1" craft_exp_gain="15">
     <ingredient name="TungstenCrossbowBolt" count="1"/>
     <ingredient name="gunPowder" count="2"/>
 	<ingredient name="cloth" count="1"/>
@@ -375,12 +379,12 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="unit_clay" count="1"/>
 </recipe>
 
-<recipe name="gunPowder" count="1" craft_area="chemistryStation" craft_exp_gain="10">
+<recipe name="gunPowder" count="1" craft_area="chemistryStation" craft_exp_gain="5">
 	<ingredient name="coal" count="1"/>
 	<ingredient name="potassiumNitratePowder" count="1"/>
 </recipe>
 
-<recipe name="gunPowder" count="1" craft_exp_gain="10">
+<recipe name="gunPowder" count="1" craft_area="MortarandPestle" craft_exp_gain="5">
 	<ingredient name="coal" count="2"/>
 	<ingredient name="potassiumNitratePowder" count="2"/>
 </recipe>
@@ -822,6 +826,11 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="mechanicalParts" count="4"/>
 </recipe>
 
+<recipe name="HDWrench" count="1" craft_area="workbench" craft_exp_gain="75">
+	<ingredient name="ForgedTungsten" count="20"/>
+	<ingredient name="mechanicalParts" count="6"/>
+</recipe>
+
 <recipe name="clawHammer" count="1" craft_exp_gain="50">
 	<ingredient name="forgedIron" count="12"/>
 	<ingredient name="wood" count="12"/>
@@ -1003,7 +1012,7 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="gasCan" count="10"/>
 </recipe>
 
-<recipe name="RabbitTrap(Bated)" count="1">
+<recipe name="RabbitTrap(Baited)" count="1">
 	<ingredient name="RabbitTrap(Unbaited)" count="1"/>
 	<ingredient name="corn" count="2"/>
 </recipe>
@@ -1379,11 +1388,24 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="cloth" count="2"/>
 </recipe>
 
+<recipe name="TraumaFirstAidBandage" count="1">
+	<ingredient name="aloeCream" count="1"/>
+	<ingredient name="leather" count="2"/>
+	<ingredient name="HouseholdChemicals" count="1"/>
+</recipe>
+
 <recipe name="firstAidKit" count="1" craft_exp_gain="50">
 	<ingredient name="bloodBag" count="1"/>
 	<ingredient name="grainAlcohol" count="1"/>
 	<ingredient name="bandage" count="1"/>
 	<ingredient name="ductTape" count="1"/>
+</recipe>
+
+<recipe name="TraumaFirstAidKit" count="1" craft_exp_gain="50">
+	<ingredient name="bloodBag" count="2"/>
+	<ingredient name="grainAlcohol" count="1"/>
+	<ingredient name="leather" count="2"/>
+	<ingredient name="HouseholdChemicals" count="1"/>
 </recipe>
 
 <recipe name="antibiotics" count="1" craft_area="chemistryStation" craft_exp_gain="75">
@@ -1422,6 +1444,7 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 <recipe name="AdvancedSplint" count="1">
 	<ingredient name="cloth" count="10"/>
 	<ingredient name="wood" count="10"/>
+	<ingredient name="HouseholdChemicals" count="1"/>
 </recipe>
 
 <recipe name="vitamins" count="1" craft_area="MortarandPestle" craft_tool="beaker">
@@ -1624,6 +1647,14 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="bottledWater" count="1"/>
 </recipe>
 
+<recipe name="oilShale" count="10" craft_area="oilPump" craft_exp_gain="25" craft_time="15">
+	<ingredient name="wood" count="50"/>
+</recipe>
+
+<recipe name="oilShale" count="10" craft_area="oilPump" craft_exp_gain="25" craft_time="15">
+	<ingredient name="coal" count="10"/>
+</recipe>
+
 <recipe name="gasCan" count="100" craft_area="chemistryStation" craft_exp_gain="25">
 	<ingredient name="oilShale" count="8"/>
 </recipe>
@@ -1767,17 +1798,39 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="CopperFragment" count="4"/>
 </recipe>
 
-<recipe name="StarterClassBuilder" count="1" craft_exp_gain="50">
+<recipe name="ClassPaperBuilder" count="1" craft_exp_gain="50">
 	<ingredient name="ClassPaper" count="1"/>
 </recipe>
 
-<recipe name="StarterClassSurvivalist" count="1" craft_exp_gain="50">
+<recipe name="ClassPaperSurvivalist" count="1" craft_exp_gain="50">
 	<ingredient name="ClassPaper" count="1"/>
 </recipe>
 
-<recipe name="StarterClassScholar" count="1" craft_exp_gain="50">
+<recipe name="ClassPaperScholar" count="1" craft_exp_gain="50">
 	<ingredient name="ClassPaper" count="1"/>
 </recipe>
+
+<recipe name="ClassPaperMarksman" count="1" craft_exp_gain="50">
+	<ingredient name="ClassPaper" count="1"/>
+</recipe>
+
+<recipe name="ClassPaperFighter" count="1" craft_exp_gain="50">
+	<ingredient name="ClassPaper" count="1"/>
+</recipe>
+
+<recipe name="ClassPaperTradesman" count="1" craft_exp_gain="50">
+	<ingredient name="ClassPaper" count="1"/>
+</recipe>
+
+<recipe name="ClassPaperProtection" count="1" craft_exp_gain="50">
+	<ingredient name="ClassPaper" count="1"/>
+</recipe>
+
+<recipe name="classKey" count="1" craft_exp_gain="50">
+	<ingredient name="forgedIron" count="2"/>
+</recipe>
+
+
 
 <!-- * * * * * * * * * * * * Clothing/Tailoring Recipes * * * * * * * * * * * * -->
 
@@ -2495,6 +2548,15 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="wood" count="5"/>
 </recipe>
 
+<recipe name="oilPump" count="1" craft_area="workbench" craft_exp_gain="250">
+	<ingredient name="oilBarrel" count="2"/>
+	<ingredient name="mechanicalParts" count="10"/>
+	<ingredient name="electricParts" count="4"/>
+	<ingredient name="electronicParts" count="2"/>
+	<ingredient name="shortMetalPipe" count="10"/>
+	<ingredient name="rockSmall" count="40"/>
+</recipe>
+
 <!-- * * * * * * * * * * * * Bike/Part Recipes * * * * * * * * * * * * -->
 
 <recipe name="minibikeChassis" count="1" craft_area="forge" craft_tool="anvil" material_based="true" craft_exp_gain="200">
@@ -3125,59 +3187,59 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="wood" count="10"/>
 </recipe>
 
-<recipe name="cobblestoneFrameBlock" count="2" craft_area="WoodWorkingWorkbench">
-	<ingredient name="wood" count="8"/>
-	<ingredient name="yuccaFibers" count="2"/>
+<recipe name="cobblestoneFrameBlock" count="1" craft_area="WoodWorkingWorkbench">
+	<ingredient name="wood" count="4"/>
+	<ingredient name="yuccaFibers" count="1"/>
 </recipe>
 
-<recipe name="cobblestoneFrameRamp" count="2" craft_area="WoodWorkingWorkbench">
-	<ingredient name="wood" count="8"/>
-	<ingredient name="yuccaFibers" count="2"/>
+<recipe name="cobblestoneFrameRamp" count="1" craft_area="WoodWorkingWorkbench">
+	<ingredient name="wood" count="4"/>
+	<ingredient name="yuccaFibers" count="1"/>
 </recipe>
 
-<recipe name="cobblestoneFrameWedge" count="2" craft_area="WoodWorkingWorkbench">
-	<ingredient name="wood" count="8"/>
-	<ingredient name="yuccaFibers" count="2"/>
+<recipe name="cobblestoneFrameWedge" count="1" craft_area="WoodWorkingWorkbench">
+	<ingredient name="wood" count="4"/>
+	<ingredient name="yuccaFibers" count="1"/>
 </recipe>
 
-<recipe name="cobblestoneFrameWedgeTip" count="2" craft_area="WoodWorkingWorkbench">
-	<ingredient name="wood" count="8"/>
-	<ingredient name="yuccaFibers" count="2"/>
+<recipe name="cobblestoneFrameWedgeTip" count="1" craft_area="WoodWorkingWorkbench">
+	<ingredient name="wood" count="4"/>
+	<ingredient name="yuccaFibers" count="1"/>
 </recipe>
 
-<recipe name="cobblestoneFramePlate" count="2" craft_area="WoodWorkingWorkbench">
-	<ingredient name="wood" count="8"/>
-	<ingredient name="yuccaFibers" count="2"/>
+<recipe name="cobblestoneFramePlate" count="1" craft_area="WoodWorkingWorkbench">
+	<ingredient name="wood" count="4"/>
+	<ingredient name="yuccaFibers" count="1"/>
 </recipe>
 
-<recipe name="cobblestoneFrameCNRFull" count="2" craft_area="WoodWorkingWorkbench">
-	<ingredient name="wood" count="8"/>
-	<ingredient name="yuccaFibers" count="2"/>
+<recipe name="cobblestoneFrameCNRFull" count="1" craft_area="WoodWorkingWorkbench">
+	<ingredient name="wood" count="4"/>
+	<ingredient name="yuccaFibers" count="1"/>
 </recipe>
 
-<recipe name="cobblestoneFrameCNRInside" count="2" craft_area="WoodWorkingWorkbench">
-	<ingredient name="wood" count="8"/>
-	<ingredient name="yuccaFibers" count="2"/>
+<recipe name="cobblestoneFrameCNRInside" count="1" craft_area="WoodWorkingWorkbench">
+	<ingredient name="wood" count="4"/>
+	<ingredient name="yuccaFibers" count="1"/>
 </recipe>
 
-<recipe name="cobblestoneFramePillar100" count="2" craft_area="WoodWorkingWorkbench">
-	<ingredient name="wood" count="8"/>
-	<ingredient name="yuccaFibers" count="2"/>
+<recipe name="cobblestoneFramePillar100" count="1" craft_area="WoodWorkingWorkbench">
+	<ingredient name="wood" count="4"/>
+	<ingredient name="yuccaFibers" count="1"/>
 </recipe>
 
-<recipe name="cobblestoneFramePillar50" count="2" craft_area="WoodWorkingWorkbench">
-	<ingredient name="wood" count="8"/>
-	<ingredient name="yuccaFibers" count="2"/>
+<recipe name="cobblestoneFramePillar50" count="1" craft_area="WoodWorkingWorkbench">
+	<ingredient name="wood" count="4"/>
+	<ingredient name="yuccaFibers" count="1"/>
 </recipe>
 
-<recipe name="cobblestoneFramePole" count="2" craft_area="WoodWorkingWorkbench">
-	<ingredient name="wood" count="8"/>
-	<ingredient name="yuccaFibers" count="2"/>
+<recipe name="cobblestoneFramePole" count="1" craft_area="WoodWorkingWorkbench">
+	<ingredient name="wood" count="4"/>
+	<ingredient name="yuccaFibers" count="1"/>
 </recipe>
 
-<recipe name="cobblestoneFrameStairs25" count="2" craft_area="WoodWorkingWorkbench">
-	<ingredient name="wood" count="8"/>
-	<ingredient name="yuccaFibers" count="2"/>
+<recipe name="cobblestoneFrameStairs25" count="1" craft_area="WoodWorkingWorkbench">
+	<ingredient name="wood" count="4"/>
+	<ingredient name="yuccaFibers" count="1"/>
 </recipe>
 
 <recipe name="cobblestoneArrowSlitHalf" count="1" craft_area="WoodWorkingWorkbench">
@@ -3350,39 +3412,39 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="scrapIron" count="40"/>
 </recipe>
 
-<!-- <recipe name="ScrapIronStairsBoard" craft_area="WoodWorkingWorkbench">
+<recipe name="ScrapIronStairsBoard" craft_area="WoodWorkingWorkbench">
 	<ingredient name="scrapIron" count="5"/>
-</recipe> -->
+</recipe>
 
 <recipe name="IronStairs" count="1" craft_area="BuildersForge" craft_tool="anvil" material_based="true">
 	<ingredient name="unit_iron" count="5"/>
 	<ingredient name="unit_clay" count="1"/>
 </recipe>
 
-<!-- <recipe name="IronStairsBoard" craft_area="forge" craft_tool="anvil" material_based="true">
+<recipe name="IronStairsBoard" craft_area="BuildersForge" craft_tool="anvil" material_based="true">
 	<ingredient name="unit_iron" count="5"/>
 	<ingredient name="unit_clay" count="1"/>
-</recipe> -->
+</recipe>
 
 <recipe name="concreteStairs25" count="1" craft_area="WoodWorkingWorkbench">
 	<ingredient name="concreteMix" count="10"/>
 </recipe>
 
-<!-- <recipe name="ConcreteStairsBoard" craft_area="WoodWorkingWorkbench">
+<recipe name="ConcreteStairsBoard" craft_area="WoodWorkingWorkbench">
 	<ingredient name="concreteMix" count="5"/>
 </recipe>
 
 <recipe name="SteelStairsBoard" craft_area="WoodWorkingWorkbench">
 	<ingredient name="forgedSteel" count="5"/>
-</recipe> -->
+</recipe>
 
 <recipe name="TungstenStairs" count="1" craft_area="WoodWorkingWorkbench">
 	<ingredient name="ForgedTungsten" count="5"/>
 </recipe>
 
-<!-- <recipe name="TungstenStairsBoard" craft_area="WoodWorkingWorkbench">
+<recipe name="TungstenStairsBoard" craft_area="WoodWorkingWorkbench">
 	<ingredient name="ForgedTungsten" count="5"/>
-</recipe> -->
+</recipe>
 
 <!-- * * * * * * * * * * * * Regular Building Blocks Recipes * * * * * * * * * * * * -->
 
@@ -4431,36 +4493,6 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="repairKit" count="1"/>
 	<ingredient name="BlueprintPaper" count="5"/>
 </recipe>
-	
-<recipe name="KevlarGlovesSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="KevlarGloves" count="1"/>
-	<ingredient name="repairKit" count="1"/>
-	<ingredient name="BlueprintPaper" count="6"/>
-</recipe>
-
-<recipe name="KevlarHelmetSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="KevlarHelmet" count="1"/>
-	<ingredient name="repairKit" count="1"/>
-	<ingredient name="BlueprintPaper" count="6"/>
-</recipe>
-
-<recipe name="KevlarVestSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="KevlarVest" count="1"/>
-	<ingredient name="repairKit" count="1"/>
-	<ingredient name="BlueprintPaper" count="6"/>
-</recipe>
-
-<recipe name="KevlarLegArmorSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="KevlarLegArmor" count="1"/>
-	<ingredient name="repairKit" count="1"/>
-	<ingredient name="BlueprintPaper" count="6"/>
-</recipe>
-
-<recipe name="KevlarBootsSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="KevlarBoots" count="1"/>
-	<ingredient name="repairKit" count="1"/>
-	<ingredient name="BlueprintPaper" count="6"/>
-</recipe>
 
 <recipe name="HollowPointAmmunitionBook" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
 	<ingredient name="HollowPointBulletTip" count="1"/>
@@ -4522,27 +4554,9 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="BlueprintPaper" count="6"/>
 </recipe>
 
-<recipe name="BarettaShotgunSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="BarettaShotgun" count="1"/>
-	<ingredient name="repairKit" count="1"/>
-	<ingredient name="BlueprintPaper" count="6"/>
-</recipe>
-
 <recipe name="huntingRifleSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
 	<ingredient name="gunHuntingRifle" count="1"/>
 	<ingredient name="repairKit" count="1"/>
-	<ingredient name="BlueprintPaper" count="6"/>
-</recipe>
-
-<recipe name="Remington8Schematics" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="Remington8" count="1"/>
-	<ingredient name="repairKit" count="2"/>
-	<ingredient name="BlueprintPaper" count="6"/>
-</recipe>
-
-<recipe name="DesertEagleSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="DesertEagle" count="1"/>
-	<ingredient name="repairKit" count="2"/>
 	<ingredient name="BlueprintPaper" count="6"/>
 </recipe>
 
@@ -4582,42 +4596,10 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="BlueprintPaper" count="8"/>
 </recipe>
 
-<recipe name="ClubTungstenSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="ClubTungsten" count="1"/>
-	<ingredient name="repairKit" count="2"/>
-	<ingredient name="BlueprintPaper" count="8"/>
-</recipe>
-
 <recipe name="sledgehammerSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
 	<ingredient name="sledgehammer" count="1"/>
 	<ingredient name="repairKit" count="2"/>
 	<ingredient name="BlueprintPaper" count="10"/>
-</recipe>
-
-<!-- <recipe name="TungstenToolsSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="PickaxeTungsten" count="1"/>
-	<ingredient name="FireaxeTungsten" count="1"/>
-	<ingredient name="ShovelTungsten" count="1"/>
-	<ingredient name="repairKit" count="1"/>
-	<ingredient name="BlueprintPaper" count="10"/>
-</recipe> -->
-
-<recipe name="HDNailgunSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="nailgun" count="1"/>
-	<ingredient name="repairKit" count="2"/>
-	<ingredient name="BlueprintPaper" count="12"/>
-</recipe>
-
-<recipe name="SteelMacheteSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="SteelMachete" count="1"/>
-	<ingredient name="repairKit" count="2"/>
-	<ingredient name="BlueprintPaper" count="12"/>
-</recipe>
-
-<recipe name="TungstenMacheteSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="TungstenMachete" count="1"/>
-	<ingredient name="repairKit" count="2"/>
-	<ingredient name="BlueprintPaper" count="14"/>
 </recipe>
 
 <recipe name="flamingArrowSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
@@ -4686,24 +4668,6 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="BlueprintPaper" count="15"/>
 </recipe>
 
-<recipe name="rocketLauncherSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="gunRocketLauncher" count="1"/>
-	<ingredient name="repairKit" count="2"/>
-	<ingredient name="BlueprintPaper" count="16"/>
-</recipe>
-
-<recipe name="FAMASSchematics" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="FAMAS" count="1"/>
-	<ingredient name="repairKit" count="2"/>
-	<ingredient name="BlueprintPaper" count="15"/>
-</recipe>
-
-<recipe name="M25SniperRifleSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="M25SniperRifle" count="1"/>
-	<ingredient name="repairKit" count="2"/>
-	<ingredient name="BlueprintPaper" count="20"/>
-</recipe>
-
 <recipe name="macDyverBook" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
 	<ingredient name="scrapChestArmor" count="1"/>
 	<ingredient name="repairKit" count="2"/>
@@ -4736,66 +4700,6 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 
 <recipe name="ironGlovesSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
 	<ingredient name="ironGloves" count="1"/>
-	<ingredient name="repairKit" count="2"/>
-	<ingredient name="BlueprintPaper" count="8"/>
-</recipe>
-
-<recipe name="TungstenHelmetSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="TungstenHelmet" count="1"/>
-	<ingredient name="repairKit" count="3"/>
-	<ingredient name="BlueprintPaper" count="8"/>
-</recipe>
-
-<recipe name="TungstenChestArmorSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="TungstenChestArmor" count="1"/>
-	<ingredient name="repairKit" count="3"/>
-	<ingredient name="BlueprintPaper" count="8"/>
-</recipe>
-
-<recipe name="TungstenLegArmorSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="TungstenLegArmor" count="1"/>
-	<ingredient name="repairKit" count="3"/>
-	<ingredient name="BlueprintPaper" count="8"/>
-</recipe>
-
-<recipe name="TungstenBootsSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="TungstenBoots" count="1"/>
-	<ingredient name="repairKit" count="3"/>
-	<ingredient name="BlueprintPaper" count="8"/>
-</recipe>
-
-<recipe name="TungstenGlovesSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="TungstenGloves" count="1"/>
-	<ingredient name="repairKit" count="3"/>
-	<ingredient name="BlueprintPaper" count="8"/>
-</recipe>
-
-<recipe name="SteelGlovesSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="SteelGloves" count="1"/>
-	<ingredient name="repairKit" count="2"/>
-	<ingredient name="BlueprintPaper" count="8"/>
-</recipe>
-
-<recipe name="SteelBootsSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="SteelBoots" count="1"/>
-	<ingredient name="repairKit" count="2"/>
-	<ingredient name="BlueprintPaper" count="8"/>
-</recipe>
-
-<recipe name="SteelLegArmorSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="SteelLegArmor" count="1"/>
-	<ingredient name="repairKit" count="2"/>
-	<ingredient name="BlueprintPaper" count="8"/>
-</recipe>
-
-<recipe name="SteelChestArmorSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="SteelChestArmor" count="1"/>
-	<ingredient name="repairKit" count="2"/>
-	<ingredient name="BlueprintPaper" count="8"/>
-</recipe>
-
-<recipe name="SteelHelmetSchematic" count="1" scrapable="False" craft_area="BlueprintWorkStation" craft_tool="calipers">
-	<ingredient name="SteelHelmet" count="1"/>
 	<ingredient name="repairKit" count="2"/>
 	<ingredient name="BlueprintPaper" count="8"/>
 </recipe>

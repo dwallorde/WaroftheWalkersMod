@@ -36,6 +36,7 @@ Forge weight: We have auto-scaling based on resources IF there is a recipe for t
 	<property name="Texture" value="1" />
 	<property name="DropScale" value="2" />
 	<property name="LPHardnessScale" value="2" />
+	<property name="Map.Color" value="128,128,128" />
 	<property name="Weight" value="125" />
 	<property class="RepairItems"> <property name="cobblestones" value="6" /> </property>
 	<drop event="Harvest" name="rockSmall" count="13" />
@@ -4035,24 +4036,28 @@ kind of free
 
 <block id="468" name="driftwood">
 	<property name="Material" value="wood_weak" />
+	<property name="MaxDamage" value="1" />
 	<property name="StabilitySupport" value="false" />
 	<property name="Shape" value="Ext3dModel" />
 	<property name="Mesh" value="models" />
 	<property name="Model" value="Plants/driftwood" param1="main_mesh" />
 	<property name="IsTerrainDecoration" value="true" />
 	<property name="Collide" value="melee,bullet,arrow,rocket" />
+	<property name="CanPickup" value="false"/>
 	<drop event="Harvest" name="wood" count="10" />
 	<drop event="Destroy" name="wood" count="5" prob="1" />
 </block>
 
 <block id="469" name="driftwood2">
 	<property name="Material" value="wood_weak" />
+	<property name="MaxDamage" value="1" />
 	<property name="StabilitySupport" value="false" />
 	<property name="Shape" value="Ext3dModel" />
 	<property name="Mesh" value="models" />
 	<property name="Model" value="Plants/driftwood2" param1="main_mesh" />
 	<property name="IsTerrainDecoration" value="true" />
 	<property name="Collide" value="melee,bullet,arrow,rocket" />
+	<property name="CanPickup" value="false"/>
 	<drop event="Harvest" name="wood" count="10" />
 	<drop event="Destroy" name="wood" count="5" prob="1" />
 </block>
@@ -7912,7 +7917,13 @@ kind of free
 	<property name="IsTerrainDecoration" value="true" />
 	<drop event="Destroy" count="0" />
 </block>
-	<!-- 3 Free -->
+
+<!-- WotW Mod -->
+<block id="904" name="lootSnow">
+	<property name="Extends" value="lootWasteland" />
+	<property name="IsDeveloper" value="true" />
+</block>
+	<!-- 2 Free -->
 
 <block id="907" name="painting02">
 	<property name="Material" value="glass" />
@@ -9704,7 +9715,44 @@ kind of free
 	<drop event="Destroy" count="0" />
 	<property name="CraftingSkillGroup" value="Construction"/>
 </block>
-	<!-- 3 Free -->
+
+<!-- WotW Mod -->
+<block id="1177" name="snowRockResource"> <!-- biome decoration -->
+	<property name="IsDeveloper" value="true" />
+	<property name="Material" value="Mboulder" />
+	<!--property name="StabilitySupport" value="false" NOT SUPPORTED FOR MULTIBLOCKS! /-->
+	<property name="Shape" value="ModelEntity" />
+	<property name="Texture" value="26" />
+	<property name="IsTerrainDecoration" value="true" />
+	<property name="BigDecorationRadius" value="2" />
+	<property name="Model" value="Entities/Resources/rock_resourcePrefab" />
+	<property name="MultiBlockDim" value="3,2,3" />
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+	<drop event="Harvest" name="rockSmall" count="25" prob="1" />
+	<drop event="Harvest" name="ironFragment" count="20" prob="1" />
+	<drop event="Destroy" name="rockSmall" count="14" prob="1" />
+	<drop event="Destroy" name="ironFragment" count="8" prob=".33" />
+	<drop event="Destroy" name="coal" count="12" prob=".33" />
+	<drop event="Destroy" name="potassiumNitratePowder" count="40" prob=".66" />
+	<drop event="Destroy" name="scrapLead" count="12" prob=".33" />
+	<drop event="Destroy" name="TungstenFragment" count="15" tool_category="ExpertMiner" />
+	<property name="DowngradeBlock" value="snowRockResource1" />
+</block>
+
+<!-- WotW Mod -->
+<block id="1178" name="snowRockResource1">
+	<property name="Extends" value="snowRockResource" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Model" value="Entities/Resources/rock_resource_broke1Prefab" />
+	<property name="DowngradeBlock" value="snowRockResource2" />
+</block>
+
+<!-- WotW Mod -->
+<block id="1179" name="snowRockResource2">
+	<property name="Extends" value="snowRockResource" param1="DowngradeBlock" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Model" value="Entities/Resources/rock_resource_broke2Prefab" />
+</block>
 
 <block id="1180" name="houseFrontDoor1_v2">
 	<property name="Extends" value="houseFrontDoor1_v1" />
@@ -9843,7 +9891,40 @@ kind of free
 	<drop event="Harvest" name="animalFat" count="2" prob=".33" tool_category="Butcher"/>
 	<drop event="Destroy" count="0" />
 </block>
-	<!-- 3 Free -->
+
+<!-- WOTW MOD -->
+<block id="1188" name="snowRockResource02"> <!-- biome decoration -->
+	<property name="Extends" value="rockResource" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Model" value="Entities/Resources/rock_resource02Prefab" />
+	<property name="MultiBlockDim" value="3,2,3" />
+	<drop event="Harvest" name="rockSmall" count="22" prob="1" />
+	<drop event="Harvest" name="ironFragment" count="10" prob="1" />
+	<drop event="Destroy" name="rockSmall" count="11" prob="1" />
+	<drop event="Destroy" name="ironFragment" count="5" prob=".33" />
+	<drop event="Destroy" name="coal" count="10" prob=".33" />
+	<drop event="Destroy" name="potassiumNitratePowder" count="10" prob=".33" />
+	<drop event="Destroy" name="scrapLead" count="10" prob=".33" />
+	<drop event="Destroy" name="CopperFragment" count="10" tool_category="ExpertMiner" />
+	<drop event="Destroy" name="ZincFragment" count="10" tool_category="ExpertMiner" />
+	<property name="DowngradeBlock" value="snowRockResource02Broke1" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1189" name="snowRockResource02Broke1">
+	<property name="Extends" value="snowRockResource02" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Model" value="Entities/Resources/rock_resource02_broke1Prefab" />
+	<property name="DowngradeBlock" value="snowRockResource02Broke2" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1190" name="snowRockResource02Broke2">
+	<property name="Extends" value="snowRockResource02" param1="DowngradeBlock" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Model" value="Entities/Resources/rock_resource02_broke2Prefab" />
+	<property name="MultiBlockDim" value="1,2,1" />
+</block>
 
 <block id="1191" name="sidingWhiteBurntCTRPlate">
 	<property name="Material" value="wood" />
@@ -10415,7 +10496,46 @@ kind of free
 		<property name="UpgradeHitCount" value="4" />
 	</property>
 </block>
-	<!-- 3 Free -->
+
+<!-- WotW Mod -->
+<block id="1256" name="desertRockResource"> <!-- biome decoration -->
+	<property name="IsDeveloper" value="true" />
+	<property name="Material" value="Mboulder" />
+	<!--property name="StabilitySupport" value="false" NOT SUPPORTED FOR MULTIBLOCKS! /-->
+	<property name="Shape" value="ModelEntity" />
+	<property name="Texture" value="26" />
+	<property name="IsTerrainDecoration" value="true" />
+	<property name="BigDecorationRadius" value="2" />
+	<property name="Model" value="Entities/Resources/rock_resourcePrefab" />
+	<property name="MultiBlockDim" value="3,2,3" />
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+	<drop event="Harvest" name="rockSmall" count="25" prob="1" />
+	<drop event="Harvest" name="ironFragment" count="20" prob="1" />
+	<drop event="Harvest" name="oilShale" count="20" prob="1" />
+	<drop event="Destroy" name="rockSmall" count="14" prob="1" />
+	<drop event="Destroy" name="ironFragment" count="8" prob=".33" />
+	<drop event="Destroy" name="coal" count="12" prob=".33" />
+	<drop event="Destroy" name="potassiumNitratePowder" count="20" prob=".33" />
+	<drop event="Destroy" name="oilShale" count="40" prob=".77" />
+	<drop event="Destroy" name="scrapLead" count="12" prob=".33" />
+	<drop event="Destroy" name="TungstenFragment" count="15" tool_category="ExpertMiner" />
+	<property name="DowngradeBlock" value="desertRockResource1" />
+</block>
+
+<!-- WotW Mod -->
+<block id="1257" name="desertRockResource1">
+	<property name="Extends" value="desertRockResource" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Model" value="Entities/Resources/rock_resource_broke1Prefab" />
+	<property name="DowngradeBlock" value="desertRockResource2" />
+</block>
+
+<!-- WotW Mod -->
+<block id="1258" name="desertRockResource2">
+	<property name="Extends" value="desertRockResource" param1="DowngradeBlock" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Model" value="Entities/Resources/rock_resource_broke2Prefab" />
+</block>
 
 <block id="1259" name="cobblestoneFrameBlock">
 	<property name="Extends" value="cobblestoneFrameMaster" />
@@ -10703,6 +10823,7 @@ kind of free
     <property name="Group" value="Building" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1289" name="HouseDoor">
 	<property name="CustomIcon" value="houseFrontDoor2_v1"/>
 	<property name="CustomIconTint" value="776256"/>
@@ -10735,6 +10856,7 @@ kind of free
 	<property name="CraftingSkillGroup" value="Construction"/>
 </block>
 
+<!-- WOTW MOD -->
 <block id="1290" name="HouseDoor_v2">
 	<property name="Extends" value="HouseDoor" />
     <property name="Material" value="playerwood" />
@@ -10750,6 +10872,7 @@ kind of free
     <property name="Group" value="Building" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1291" name="HouseDoor_v3">
 	<property name="Extends" value="HouseDoor" />
     <property name="Material" value="metalplayer" />
@@ -10761,6 +10884,7 @@ kind of free
     <property name="Group" value="Building" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1292" name="TungstenDoor">
 	<property name="CustomIcon" value="commercialDoor2_v1" />
     <property name="Class" value="DoorSecure" />
@@ -10793,6 +10917,7 @@ kind of free
 	<property name="CraftingSkillGroup" value="Construction"/>
 </block>
 
+<!-- WOTW MOD -->
 <block id="1293" name="TungstenDoor_v2">
 	<property name="Extends" value="TungstenDoor" />
 	<property name="CustomIcon" value="commercialDoor2_v2" />
@@ -10802,6 +10927,7 @@ kind of free
     <property class="UpgradeBlock"> <property name="ToBlock" value="TungstenDoor_v3" /> </property>
 </block>
 
+<!-- WOTW MOD -->
 <block id="1294" name="TungstenDoor_v3">
 	<property name="Extends" value="TungstenDoor" />
 	<property name="CustomIcon" value="commercialDoor2_v3" />
@@ -10810,7 +10936,42 @@ kind of free
     <property name="DowngradeBlock" value="TungstenDoor_v2" />
 	<property class="RepairItems"> <property name="ForgedTungsten" value="5" /> </property>
 </block>
-	<!-- 3 Free -->
+
+<!-- WOTW MOD -->
+<block id="1295" name="desertRockResource02"> <!-- biome decoration -->
+	<property name="Extends" value="rockResource" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Model" value="Entities/Resources/rock_resource02Prefab" />
+	<property name="MultiBlockDim" value="3,2,3" />
+	<drop event="Harvest" name="rockSmall" count="22" prob="1" />
+	<drop event="Harvest" name="ironFragment" count="10" prob="1" />
+	<drop event="Harvest" name="oilShale" count="20" prob="1" />
+	<drop event="Destroy" name="rockSmall" count="11" prob="1" />
+	<drop event="Destroy" name="ironFragment" count="5" prob=".33" />
+	<drop event="Destroy" name="coal" count="10" prob=".33" />
+	<drop event="Destroy" name="potassiumNitratePowder" count="10" prob=".33" />
+	<drop event="Destroy" name="scrapLead" count="10" prob=".33" />
+	<drop event="Destroy" name="oilShale" count="40" prob=".66" />
+	<drop event="Destroy" name="CopperFragment" count="10" tool_category="ExpertMiner" />
+	<drop event="Destroy" name="ZincFragment" count="10" tool_category="ExpertMiner" />
+	<property name="DowngradeBlock" value="desertRockResource02Broke1" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1296" name="desertRockResource02Broke1">
+	<property name="Extends" value="desertRockResource02" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Model" value="Entities/Resources/rock_resource02_broke1Prefab" />
+	<property name="DowngradeBlock" value="desertRockResource02Broke2" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1297" name="desertRockResource02Broke2">
+	<property name="Extends" value="desertRockResource02" param1="DowngradeBlock" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Model" value="Entities/Resources/rock_resource02_broke2Prefab" />
+	<property name="MultiBlockDim" value="1,2,1" />
+</block>
 
 <block id="1298" name="cobblestoneBlockHalf"> <!-- cobblestone duplicate -->
 	<property name="Extends" value="cobblestoneBlock" />
@@ -11588,7 +11749,80 @@ kind of free
 	<property name="Model" value="Entities/Buildings/artcube" />
 	<drop event="Destroy" count="0" />
 </block>
-	<!-- 6 Free -->
+
+<!-- WotW Mod -->
+<block id="1395" name="burntForestRockResource"> <!-- biome decoration -->
+	<property name="IsDeveloper" value="true" />
+	<property name="Material" value="Mboulder" />
+	<!--property name="StabilitySupport" value="false" NOT SUPPORTED FOR MULTIBLOCKS! /-->
+	<property name="Shape" value="ModelEntity" />
+	<property name="Texture" value="26" />
+	<property name="IsTerrainDecoration" value="true" />
+	<property name="BigDecorationRadius" value="2" />
+	<property name="Model" value="Entities/Resources/rock_resourcePrefab" />
+	<property name="MultiBlockDim" value="3,2,3" />
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+	<drop event="Harvest" name="rockSmall" count="25" prob="1" />
+	<drop event="Harvest" name="ironFragment" count="20" prob="1" />
+	<drop event="Harvest" name="coal" count="20" prob="1" />
+	<drop event="Destroy" name="rockSmall" count="14" prob="1" />
+	<drop event="Destroy" name="ironFragment" count="8" prob=".33" />
+	<drop event="Destroy" name="coal" count="30" prob=".66" />
+	<drop event="Destroy" name="potassiumNitratePowder" count="20" prob=".33" />
+	<drop event="Destroy" name="scrapLead" count="12" prob=".33" />
+	<drop event="Destroy" name="TungstenFragment" count="15" tool_category="ExpertMiner" />
+	<property name="DowngradeBlock" value="burntForestRockResource1" />
+</block>
+
+<!-- WotW Mod -->
+<block id="1396" name="burntForestRockResource1">
+	<property name="Extends" value="burntForestRockResource" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Model" value="Entities/Resources/rock_resource_broke1Prefab" />
+	<property name="DowngradeBlock" value="burntForestRockResource2" />
+</block>
+
+<!-- WotW Mod -->
+<block id="1397" name="burntForestRockResource2">
+	<property name="Extends" value="burntForestRockResource" param1="DowngradeBlock" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Model" value="Entities/Resources/rock_resource_broke2Prefab" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1398" name="burntForestRockResource02"> <!-- biome decoration -->
+	<property name="Extends" value="rockResource" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Model" value="Entities/Resources/rock_resource02Prefab" />
+	<property name="MultiBlockDim" value="3,2,3" />
+	<drop event="Harvest" name="rockSmall" count="22" prob="1" />
+	<drop event="Harvest" name="ironFragment" count="10" prob="1" />
+	<drop event="Harvest" name="coal" count="20" prob="1" />
+	<drop event="Destroy" name="rockSmall" count="11" prob="1" />
+	<drop event="Destroy" name="ironFragment" count="5" prob=".33" />
+	<drop event="Destroy" name="coal" count="40" prob=".66" />
+	<drop event="Destroy" name="potassiumNitratePowder" count="10" prob=".33" />
+	<drop event="Destroy" name="scrapLead" count="10" prob=".33" />
+	<drop event="Destroy" name="CopperFragment" count="10" tool_category="ExpertMiner" />
+	<drop event="Destroy" name="ZincFragment" count="10" tool_category="ExpertMiner" />
+	<property name="DowngradeBlock" value="burntForestRockResource02Broke1" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1399" name="burntForestRockResource02Broke1">
+	<property name="Extends" value="burntForestRockResource02" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Model" value="Entities/Resources/rock_resource02_broke1Prefab" />
+	<property name="DowngradeBlock" value="burntForestRockResource02Broke2" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1400" name="burntForestRockResource02Broke2">
+	<property name="Extends" value="burntForestRockResource02" param1="DowngradeBlock" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Model" value="Entities/Resources/rock_resource02_broke2Prefab" />
+	<property name="MultiBlockDim" value="1,2,1" />
+</block>
 
 <block id="1401" name="treeHauntedTreeWasteland42"> <!-- Duplicate 579 (not used in biomes.xml) -->
 	<property name="Extends" value="treeBurntPine03" />
@@ -12053,7 +12287,59 @@ kind of free
 	<property name="EconomicValue" value="160" />
 	<property name="Group" value="Tools/Traps" />
 </block>
-	<!-- 4 Free -->
+
+<!-- WOTW MOD -->
+<block id="1442" name="oilPump">
+	<property name="CustomIcon" value="oilPump" />
+	<property name="Class" value="Campfire" />
+	<property name="Material" value="metal" />
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity" />
+	<property name="Model" value="Entities/Crafting/forgePrefab" />
+	<property name="Place" value="TowardsPlacerInverted" />
+	<property name="ParticleName" value="forge" />
+	<property name="ParticleOffset" value="0.5,0,0.5" />
+	<property name="Stacknumber" value="1" />
+	<property name="HeatMapStrength" value="0.5"/>
+	<property name="HeatMapTime" value="1200"/>
+	<property name="HeatMapFrequency" value="25"/>
+	<property class="Workstation">
+		<property name="Modules" value="output"/>
+		<property name="CraftingAreaRecipes" value="oilPump" />
+	</property>
+	<property class="RepairItems"> <property name="forgedIron" value="35" /> <property name="wood" value="50" /> </property>
+	<drop event="Harvest" name="" count="0" tool_category="Disassemble" />
+	<drop event="Destroy" count="0" />
+	<drop event="Destroy" name="oilPump" count="1" tool_category="Disassemble" />
+	<property name="Group" value="Building" />
+	<property name="DescriptionKey" value="oilPumpDesc"/>
+	<property name="EconomicValue" value="776" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1443" name="wallTorchStation">
+	<property name="CustomIcon" value="wallTorch" />
+	<property name="Class" value="Torch" />
+	<property name="Material" value="wood_weak" />
+	<property name="MaxDamage" value="1" />
+	<property name="StabilitySupport" value="false" />
+	<property name="IsTerrainDecoration" value="true" />
+	<property name="Shape" value="Ext3dModel" />
+	<property name="Mesh" value="models" />
+	<property name="Model" value="Lighting/torch_wall" param1="main_mesh" />
+	<property name="Place" value="Torch" />
+	<property name="ParticleName" value="torch_wall" />
+	<property name="ParticleOffset" value="0.5,0.8,0.1" />
+	<property name="Class" value="Campfire" />
+	<property class="Workstation">
+		<property name="Modules" value="fuel"/>
+	</property>
+	<property name="CanPickup" value="false" param1="torch" />
+	<drop event="Destroy" name="torch" count="1" />
+	<property name="Group" value="Basics,Decor/Miscellaneous" />
+</block>
+
+	<!-- 3 Free -->
 
 <block id="1446" name="spotlight">
 	<property name="Class" value="Light" />
@@ -12524,9 +12810,10 @@ kind of free
 	<drop event="Destroy" name="brokenGlass" count="1" prob="1" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1485" name="IronFrameBlock">
 	<property name="Extends" value="scrapIronFrameMaster" />
-	<property name="CustomIcon" value="scrapIronFrameBlock" />
+	<property name="CustomIcon" value="IronFrameBlock" />
 	<property name="Group" value="Building" />
 	<property name="CanPickup" value="true" />
 	<property class="UpgradeBlock">
@@ -12535,17 +12822,20 @@ kind of free
 		<property name="ItemCount" value="5" />
 		<property name="UpgradeHitCount" value="4" />
 	</property>
+	<property name="DescriptionKey" value="IronBlocksGroupDesc" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1486" name="solidIronFrameBlock">
 	<property name="Extends" value="IronFrameBlock" />
-	<property name="CustomIcon" value="scrapIronFrameBlock" />
+	<property name="CustomIcon" value="IronFrameBlock" />
 	<property name="CanPickup" value="false" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1487" name="IronFrameRamp">
 	<property name="Extends" value="scrapIronFrameMaster" />
-	<property name="CustomIcon" value="scrapIronFrameRamp" />
+	<property name="CustomIcon" value="IronFrameRamp" />
 	<property name="Group" value="Building" />
 	<property name="Shape" value="WedgedBackFaces" /> <property name="Place" value="TowardsPlacer90" />
 	<property name="Texture" value="357" />
@@ -12556,17 +12846,20 @@ kind of free
 		<property name="UpgradeHitCount" value="4" />
 	</property>
 	<property name="CanPickup" value="true" />
+	<property name="DescriptionKey" value="IronBlocksGroupDesc" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1488" name="solidIronFrameRamp">
 	<property name="Extends" value="IronFrameRamp" />
-	<property name="CustomIcon" value="scrapIronFrameRamp" />
+	<property name="CustomIcon" value="IronFrameRamp" />
 	<property name="CanPickup" value="false" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1489" name="IronFrameCNRFull">
 	<property name="Extends" value="scrapIronFrameMaster" />
-	<property name="CustomIcon" value="scrapIronFrameCNRFull" />
+	<property name="CustomIcon" value="IronFrameCNRFull" />
 	<property name="Shape" value="WedgedCornerFull" />
 	<property name="Place" value="TowardsPlacerInverted" />
 	<property class="UpgradeBlock">
@@ -12576,17 +12869,20 @@ kind of free
 		<property name="UpgradeHitCount" value="4" />
 	</property>
 	<property name="CanPickup" value="true" />
+	<property name="DescriptionKey" value="IronBlocksGroupDesc" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1490" name="solidIronFrameCNRFull">
 	<property name="Extends" value="IronFrameCNRFull" />
-	<property name="CustomIcon" value="scrapIronFrameCNRFull" />
+	<property name="CustomIcon" value="IronFrameCNRFull" />
 	<property name="CanPickup" value="false" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1491" name="IronFrameCNRInside">
 	<property name="Extends" value="scrapIronFrameMaster" />
-	<property name="CustomIcon" value="scrapIronFrameCNRInside" />
+	<property name="CustomIcon" value="IronFrameCNRInside" />
 	<property name="Shape" value="WedgedInnerFull" />
 	<property name="Place" value="TowardsPlacerInverted" />
 	<property name="CanPickup" value="true" />
@@ -12596,18 +12892,23 @@ kind of free
 		<property name="ItemCount" value="5" />
 		<property name="UpgradeHitCount" value="4" />
 	</property>
+	<property name="DescriptionKey" value="IronBlocksGroupDesc" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1492" name="solidIronFrameCNRInside">
 	<property name="Extends" value="IronFrameCNRInside" />
-	<property name="CustomIcon" value="scrapIronFrameCNRInside" />
+	<property name="CustomIcon" value="IronFrameCNRInside" />
 	<property name="CanPickup" value="false" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1493" name="TungstenFrameBlock">
 	<property name="Extends" value="scrapIronFrameMaster" />
-	<property name="CustomIcon" value="scrapIronFrameBlock" />
-	<property name="Material" value="tungsten" />
+	<property name="CustomIcon" value="TungstenFrameBlock" />
+	<property name="material" value="tungsten" />
+	<property name="Texture" value="357" />
+	<property class="RepairItems"> <property name="ForgedTungsten" value="1" /> </property>
 	<property name="Group" value="Building" />
 	<property name="CanPickup" value="true" />
 	<property class="UpgradeBlock">
@@ -12616,20 +12917,25 @@ kind of free
 		<property name="ItemCount" value="5" />
 		<property name="UpgradeHitCount" value="4" />
 	</property>
+	<property name="DescriptionKey" value="TungstenBlocksGroupDesc" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1494" name="solidTungstenFrameBlock">
 	<property name="Extends" value="TungstenFrameBlock" />
-	<property name="CustomIcon" value="scrapIronFrameBlock" />
+	<property name="CustomIcon" value="TungstenFrameBlock" />
 	<property name="CanPickup" value="false" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1495" name="TungstenFrameRamp">
 	<property name="Extends" value="scrapIronFrameMaster" />
-	<property name="CustomIcon" value="scrapIronFrameRamp" />
+	<property name="CustomIcon" value="TungstenFrameRamp" />
 	<property name="Group" value="Building" />
-	<property name="Shape" value="WedgedBackFaces" /> <property name="Place" value="TowardsPlacer90" />
+	<property name="Shape" value="WedgedBackFaces" />
+	<property name="Place" value="TowardsPlacer90" />
 	<property name="Texture" value="357" />
+	<property class="RepairItems"> <property name="ForgedTungsten" value="1" /> </property>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="TungstenBlockRamp" />
 		<property name="Item" value="ForgedTungsten" />
@@ -12637,19 +12943,24 @@ kind of free
 		<property name="UpgradeHitCount" value="4" />
 	</property>
 	<property name="CanPickup" value="true" />
+	<property name="DescriptionKey" value="TungstenBlocksGroupDesc" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1496" name="solidTungstenFrameRamp">
 	<property name="Extends" value="TungstenFrameRamp" />
-	<property name="CustomIcon" value="scrapIronFrameRamp" />
+	<property name="CustomIcon" value="TungstenFrameRamp" />
 	<property name="CanPickup" value="false" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1497" name="TungstenFrameCNRFull">
 	<property name="Extends" value="scrapIronFrameMaster" />
-	<property name="CustomIcon" value="scrapIronFrameCNRFull" />
+	<property name="CustomIcon" value="TungstenFrameCNRFull" />
 	<property name="Shape" value="WedgedCornerFull" />
 	<property name="Place" value="TowardsPlacerInverted" />
+	<property name="Texture" value="357" />
+	<property class="RepairItems"> <property name="ForgedTungsten" value="1" /> </property>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="TungstenBlockOutsideCNR" />
 		<property name="Item" value="ForgedTungsten" />
@@ -12657,19 +12968,24 @@ kind of free
 		<property name="UpgradeHitCount" value="4" />
 	</property>
 	<property name="CanPickup" value="true" />
+	<property name="DescriptionKey" value="TungstenBlocksGroupDesc" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1498" name="solidTungstenFrameCNRFull">
 	<property name="Extends" value="TungstenFrameCNRFull" />
-	<property name="CustomIcon" value="scrapIronFrameCNRFull" />
+	<property name="CustomIcon" value="TungstenFrameCNRFull" />
 	<property name="CanPickup" value="false" />
 </block>
 
+<!-- WOTW MOD -->
 <block id="1499" name="TungstenFrameCNRInside">
 	<property name="Extends" value="scrapIronFrameMaster" />
-	<property name="CustomIcon" value="scrapIronFrameCNRInside" />
+	<property name="CustomIcon" value="TungstenFrameCNRInside" />
 	<property name="Shape" value="WedgedInnerFull" />
 	<property name="Place" value="TowardsPlacerInverted" />
+	<property name="Texture" value="357" />
+	<property class="RepairItems"> <property name="ForgedTungsten" value="1" /> </property>
 	<property name="CanPickup" value="true" />
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="TungstenBlockInsideCNR" />
@@ -12677,6 +12993,7 @@ kind of free
 		<property name="ItemCount" value="5" />
 		<property name="UpgradeHitCount" value="4" />
 	</property>
+	<property name="DescriptionKey" value="TungstenBlocksGroupDesc" />
 </block>
 
 <block id="1500" name="rebarFrameCNRInside">
@@ -12686,9 +13003,10 @@ kind of free
 	<property class="UpgradeBlock"> <property name="ToBlock" value="concreteFormCNRInside" /> </property>
 </block>
 
+<!-- WOTW MOD -->
 <block id="1501" name="solidTungstenFrameCNRInside">
 	<property name="Extends" value="TungstenFrameCNRInside" />
-	<property name="CustomIcon" value="scrapIronFrameCNRInside" />
+	<property name="CustomIcon" value="TungstenFrameCNRInside" />
 	<property name="CanPickup" value="false" />
 </block>
 
@@ -13849,7 +14167,748 @@ kind of free
 	<property name="LootList" value="111" />
 </block>
 
-	<!-- 117 Free -->
+<block id="1658" name="treeGrowthWinterPine1m">
+	<property name="Extends" value="treeMasterGrowing" />
+	<property name="CustomIcon" value="blueSpruceSeed" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Material" value="wood_weak" />
+	<property name="StabilitySupport" value="false" />
+	<property name="Collide" value="melee" />
+	<property name="Model" value="Entities/Trees/Prefabs/MountainPine1mPrefab" />
+	<property name="BigDecorationRadius" value="1" />
+	<property name="RotationAllowed" value="pivotOnFloor" />
+	<property name="PlantGrowing.Next" value="treeGrowthWinterPine6m" />
+	<property name="PlantGrowing.GrowthRate" value="75" />
+	<drop event="Destroy" name="blueSpruceSeed" count="1"/>
+	<property name="FallOver" value="false" />
+	<property name="DescriptionKey" value="blueSpruceSeedDesc"/>
+</block>
+
+<block id="1659" name="treeGrowthWinterPine6m">
+	<property name="Extends" value="treeMasterGrowing" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Model" value="Entities/Trees/MountainPine40mPrefab" />
+	<property name="ModelOffset" value="0,-0.3,0" />
+	<property name="MultiBlockDim" value="1,10,1" />
+	<property name="BigDecorationRadius" value="2" />
+	<property name="PlantGrowing.Next" value="treeGrowthWinterPine13m" />
+	<property name="PlantGrowing.GrowthRate" value="94" />
+	<drop event="Harvest" name="wood" count="100" />
+	<drop event="Destroy" name="wood" count="50" prob="1" />
+	<drop event="Destroy" name="blueSpruceSeed" count="1"/>
+</block>
+
+<block id="1660" name="treeGrowthWinterPine13m">
+	<property name="Extends" value="treeMasterGrowing" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Material" value="treeWoodMedium" />
+	<property name="Model" value="Entities/Trees/Blue_Spruce45Prefab" />
+	<property name="ModelOffset" value="0,-0.3,0" />
+	<property name="MultiBlockDim" value="1,12,1" />
+	<property name="BigDecorationRadius" value="2" />
+	<property name="PlantGrowing.Next" value="treeGrowthWinterPine16m" />
+	<property name="PlantGrowing.GrowthRate" value="94" />
+	<drop event="Harvest" name="wood" count="235" />
+	<drop event="Destroy" name="wood" count="115" prob="1" />
+	<drop event="Destroy" name="blueSpruceSeed" count="2"/>
+</block>
+
+<block id="1661" name="treeGrowthWinterPine16m">
+	<property name="Extends" value="treeMasterGrowing" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Material" value="treeWoodLarge" />
+	<property name="Model" value="Entities/Trees/Blue_Spruce55Prefab" />
+	<property name="ModelOffset" value="0,-0.3,0" />
+	<property name="MultiBlockDim" value="1,19,1" />
+	<property name="BigDecorationRadius" value="2" />
+	<property name="PlantGrowing.Next" value="treeGrowthWinterPine19m" />
+	<property name="PlantGrowing.GrowthRate" value="94" />
+	<property name="PlantGrowing.FertileLevel" value="3" />
+	<drop event="Harvest" name="wood" count="365" />
+	<drop event="Destroy" name="wood" count="185" prob="1" />
+	<drop event="Destroy" name="blueSpruceSeed" count="2"/>
+</block>
+
+<block id="1662" name="treeGrowthWinterPine19m">
+	<property name="Extends" value="treeMasterGrowing" />
+	<property name="IsDeveloper" value="true" />
+	<property name="CustomIcon" value="treeWinterPine03" />
+	<property name="Material" value="treeWoodFull" />
+	<property name="Model" value="Entities/Trees/Blue_Spruce66Prefab" />
+	<property name="ModelOffset" value="0,-0.3,0" />
+	<property name="MultiBlockDim" value="1,28,1" />
+	<property name="BigDecorationRadius" value="2" />
+	<property name="PlantGrowing.Next" value="treeGrowthWinterPine1m" />
+	<property name="PlantGrowing.FertileLevel" value="5" />
+	<property name="PlantGrowing.GrowthRate" value="105" />
+	<drop event="Harvest" name="wood" count="500" />
+	<drop event="Destroy" name="wood" count="250" prob="1" />
+	<drop event="Destroy" name="blueSpruceSeed" count="2"/>
+</block>
+
+<block id="1663" name="treeGrowthMaple1m">
+	<property name="Extends" value="treeMasterGrowing" />
+	<property name="CustomIcon" value="mapleSeed" />
+	<property name="StabilitySupport" value="false" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Material" value="wood_weak" />
+	<property name="Model" value="Entities/Trees/Prefabs/MountainPine1mPrefab" />
+	<property name="BigDecorationRadius" value="1" />
+	<property name="RotationAllowed" value="pivotOnFloor" />
+	<property name="PlantGrowing.Next" value="treeGrowthMaple6m" />
+	<property name="PlantGrowing.GrowthRate" value="75" />
+	<property name="Collide" value="melee" />
+	<drop event="Destroy" name="mapleSeed" count="1"/>
+	<property name="FallOver" value="false" />
+	<property name="DescriptionKey" value="mapleSeedDesc"/>
+</block>
+
+<block id="1664" name="treeGrowthMaple6m">
+	<property name="Extends" value="treeMasterGrowing" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Model" value="Entities/Trees/Maple20Prefab" />
+	<property name="ModelOffset" value="0,-0.3,0" />
+	<property name="MultiBlockDim" value="1,5,1" />
+	<property name="BigDecorationRadius" value="2" />
+	<property name="PlantGrowing.Next" value="treeGrowthMaple13m" />
+	<property name="PlantGrowing.GrowthRate" value="94" />
+	<property name="ParticleOnDeath" value="treeGib_birch_small" />
+	<drop event="Harvest" name="wood" count="100" />
+	<drop event="Destroy" name="wood" count="50" prob="1" />
+	<drop event="Destroy" name="mapleSeed" count="1"/>
+</block>
+
+<block id="1665" name="treeGrowthMaple13m">
+	<property name="Extends" value="treeMasterGrowing" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Material" value="treeWoodMedium" />
+	<property name="Model" value="Entities/Trees/Maple30Prefab" />
+	<property name="ModelOffset" value="0,-0.3,0" />
+	<property name="MultiBlockDim" value="1,7,1" />
+	<property name="BigDecorationRadius" value="3" />
+	<property name="PlantGrowing.Next" value="treeGrowthMaple15m" />
+	<property name="PlantGrowing.GrowthRate" value="94" />
+	<property name="ParticleOnDeath" value="treeGib_birch_small" />
+	<drop event="Harvest" name="wood" count="235" />
+	<drop event="Destroy" name="wood" count="115" prob="1" />
+	<drop event="Destroy" name="mapleSeed" count="2"/>
+</block>
+
+<block id="1666" name="treeGrowthMaple15m">
+	<property name="Extends" value="treeMasterGrowing" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Material" value="treeWoodLarge" />
+	<property name="Model" value="Entities/Trees/Maple33Prefab" />
+	<property name="ModelOffset" value="0,-0.3,0" />
+	<property name="MultiBlockDim" value="1,7,1" />
+	<property name="BigDecorationRadius" value="4" />
+	<property name="PlantGrowing.Next" value="treeGrowthMaple17m" />
+	<property name="PlantGrowing.GrowthRate" value="94" />
+	<property name="PlantGrowing.FertileLevel" value="3" />
+	<property name="ParticleOnDeath" value="treeGib_birch" />
+	<drop event="Harvest" name="wood" count="365" />
+	<drop event="Destroy" name="wood" count="185" prob="1" />
+	<drop event="Destroy" name="mapleSeed" count="2"/>
+</block>
+
+<block id="1667" name="treeGrowthMaple17m">
+	<property name="Extends" value="treeMasterGrowing" />
+	<property name="IsDeveloper" value="true" />
+	<property name="CustomIcon" value="treeMaple17m" />
+	<property name="Material" value="treeWoodFull" />
+	<property name="Model" value="Entities/Trees/Red_Maple80Prefab" />
+	<property name="ModelOffset" value="0,-0.3,0" />
+	<property name="MultiBlockDim" value="1,6,1" />
+	<property name="BigDecorationRadius" value="6" />
+	<property name="ParticleOnDeath" value="treeGib_birch" />
+	<property name="PlantGrowing.Next" value="treeGrowthMaple1m" />
+	<property name="PlantGrowing.GrowthRate" value="105" />
+	<property name="PlantGrowing.FertileLevel" value="5" />
+	<drop event="Harvest" name="wood" count="500" />
+	<drop event="Destroy" name="wood" count="250" prob="1" />
+	<drop event="Destroy" name="mapleSeed" count="2"/>
+</block>
+
+<block id="1668" name="treeGrowthMountainPine1m">
+	<property name="Extends" value="treeMasterGrowing" />
+	<property name="CustomIcon" value="pineSeed" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Material" value="wood_weak" />
+	<property name="Model" value="Entities/Trees/Prefabs/MountainPine1mPrefab" />
+	<property name="StabilitySupport" value="false" />
+	<property name="Collide" value="melee" />
+	<property name="BigDecorationRadius" value="1" />
+	<property name="RotationAllowed" value="pivotOnFloor" />
+	<property name="PlantGrowing.Next" value="treeGrowthMountainPine6m" />
+	<property name="PlantGrowing.GrowthRate" value="75" />
+	<drop event="Destroy" name="pineSeed" count="1"/>
+	<property name="FallOver" value="false" />
+	<property name="DescriptionKey" value="pineSeedDesc"/>
+</block>
+
+<block id="1669" name="treeGrowthMountainPine6m">
+	<property name="Extends" value="treeMasterGrowing" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Model" value="Entities/Trees/MountainPine40mPrefab" />
+	<property name="ModelOffset" value="0,-0.3,0" />
+	<property name="MultiBlockDim" value="1,10,1" />
+	<property name="BigDecorationRadius" value="2" />
+	<property name="PlantGrowing.Next" value="treeGrowthMountainPine8m" />
+	<property name="PlantGrowing.GrowthRate" value="94" />
+	<drop event="Harvest" name="wood" count="100" />
+	<drop event="Destroy" name="wood" count="50" prob="1" />
+	<drop event="Destroy" name="pineSeed" count="1"/>
+</block>
+
+<block id="1670" name="treeGrowthMountainPine8m">
+	<property name="Extends" value="treeMasterGrowing" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Material" value="treeWoodMedium" />
+	<property name="Model" value="Entities/Trees/MountainPine45mPrefab" />
+	<property name="ModelOffset" value="0,-0.3,0" />
+	<property name="MultiBlockDim" value="1,19,1" />
+	<property name="BigDecorationRadius" value="2" />
+	<property name="PlantGrowing.Next" value="treeGrowthMountainPine13m" />
+	<property name="PlantGrowing.GrowthRate" value="94" />
+	<drop event="Harvest" name="wood" count="235" />
+	<drop event="Destroy" name="wood" count="115" prob="1" />
+	<drop event="Destroy" name="pineSeed" count="2"/>
+</block>
+
+<block id="1671" name="treeGrowthMountainPine13m">
+	<property name="Extends" value="treeMasterGrowing" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Material" value="treeWoodLarge" />
+	<property name="Model" value="Entities/Trees/MountainPine55mPrefab" />
+	<property name="ModelOffset" value="0,-0.3,0" />
+	<property name="MultiBlockDim" value="1,24,1" />
+	<property name="BigDecorationRadius" value="3" />
+	<property name="PlantGrowing.Next" value="treeGrowthMountainPine16m" />
+	<property name="PlantGrowing.GrowthRate" value="94" />
+	<property name="PlantGrowing.FertileLevel" value="3" />
+	<drop event="Harvest" name="wood" count="365" />
+	<drop event="Destroy" name="wood" count="185" prob="1" />
+	<drop event="Destroy" name="pineSeed" count="2"/>
+</block>
+
+<block id="1672" name="treeGrowthMountainPine16m">
+	<property name="Extends" value="treeMasterGrowing" />
+	<property name="IsDeveloper" value="true" />
+	<property name="CustomIcon" value="treeMountainPine20m" />
+	<property name="Material" value="treeWoodFull" />
+	<property name="Model" value="Entities/Trees/MountainPine75Prefab" />
+	<property name="ModelOffset" value="0,-0.3,0" />
+	<property name="MultiBlockDim" value="1,28,1" />
+	<property name="BigDecorationRadius" value="4" />
+	<property name="PlantGrowing.Next" value="treeGrowthMountainPine19m" />
+	<property name="PlantGrowing.GrowthRate" value="94" />
+	<property name="PlantGrowing.GrowthRate" value="1" />
+	<property name="PlantGrowing.FertileLevel" value="5" />
+	<drop event="Harvest" name="wood" count="500" />
+	<drop event="Destroy" name="wood" count="250" prob="1" />
+	<drop event="Destroy" name="pineSeed" count="2"/>
+</block>
+
+<block id="1673" name="treeGrowthMountainPine19m">
+	<property name="Extends" value="treeMasterGrowing" />
+	<property name="IsDeveloper" value="true" />
+	<property name="CustomIcon" value="treeMountainPine20m" />
+	<property name="Material" value="treeWoodFull" />
+	<property name="Model" value="Entities/Trees/MountainPine75Prefab" />
+	<property name="ModelOffset" value="0,-0.3,0" />
+	<property name="MultiBlockDim" value="1,28,1" />
+	<property name="BigDecorationRadius" value="4" />
+	<property name="PlantGrowing.Next" value="treeGrowthMountainPine1m" />
+	<property name="PlantGrowing.GrowthRate" value="105" />
+	<property name="PlantGrowing.FertileLevel" value="5" />
+	<drop event="Harvest" name="wood" count="550" />
+	<drop event="Destroy" name="wood" count="250" prob="1" />
+	<drop event="Destroy" name="pineSeed" count="2"/>
+</block>
+
+<!-- WOTW MOD -->
+<block id="1674" name="ClassCrateBuilder">
+	<property name="CustomIcon" value="ClassCrateBuilder" />
+	<property name="Material" value="wood" />
+	<property name="MaxDamage" value="100" />
+	<property name="Texture" value="423" />
+	<drop event="Destroy" count="0" />
+	<property name="DowngradeBlock" value="ClassCrateBuilderLoot" />
+	<property name="DescriptionKey" value="ClassCrateDesc" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1675" name="ClassCrateBuilderLoot">
+	<property name="CustomIcon" value="ClassCrateBuilder" />
+	<property name="Class" value="Loot" />
+	<property name="Material" value="wood" />
+	<property name="Texture" value="419" />
+	<property name="LootList" value="115" />
+	<property class="RepairItems"> <property name="wood" value="10" /> </property>
+	<drop event="Destroy" name="wood" count="2,8" />
+	<property name="DescriptionKey" value="ClassCrateDesc" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1676" name="ClassCrateSurvivalist">
+	<property name="CustomIcon" value="ClassCrateSurvivalist" />
+	<property name="Material" value="wood" />
+	<property name="MaxDamage" value="100" />
+	<property name="Texture" value="423" />
+	<drop event="Destroy" count="0" />
+	<property name="DowngradeBlock" value="ClassCrateSurvivalistLoot" />
+	<property name="DescriptionKey" value="ClassCrateDesc" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1677" name="ClassCrateSurvivalistLoot">
+	<property name="CustomIcon" value="ClassCrateSurvivalist" />
+	<property name="Class" value="Loot" />
+	<property name="Material" value="wood" />
+	<property name="Texture" value="284" />
+	<property name="LootList" value="116" />
+	<property class="RepairItems"> <property name="wood" value="10" /> </property>
+	<drop event="Destroy" name="wood" count="2,8" />
+	<property name="DescriptionKey" value="ClassCrateDesc" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1678" name="ClassCrateScholar">
+	<property name="CustomIcon" value="ClassCrateScholar" />
+	<property name="Material" value="wood" />
+	<property name="MaxDamage" value="100" />
+	<property name="Texture" value="423" />
+	<drop event="Destroy" count="0" />
+	<property name="DowngradeBlock" value="ClassCrateScholarLoot" />
+	<property name="DescriptionKey" value="ClassCrateDesc" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1679" name="ClassCrateScholarLoot">
+	<property name="CustomIcon" value="ClassCrateScholar" />
+	<property name="Class" value="Loot" />
+	<property name="Material" value="wood" />
+	<property name="Texture" value="420" />
+	<property name="LootList" value="117" />
+	<property class="RepairItems"> <property name="wood" value="10" /> </property>
+	<drop event="Destroy" name="wood" count="2,8" />
+	<property name="DescriptionKey" value="ClassCrateDesc" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1680" name="ClassCrateMarksman">
+	<property name="CustomIcon" value="ClassCrateMarksman" />
+	<property name="Material" value="wood" />
+	<property name="MaxDamage" value="100" />
+	<property name="Texture" value="423" />
+	<drop event="Destroy" count="0" />
+	<property name="DowngradeBlock" value="ClassCrateMarksmanLoot" />
+	<property name="DescriptionKey" value="ClassCrateDesc" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1681" name="ClassCrateMarksmanLoot">
+	<property name="CustomIcon" value="ClassCrateMarksman" />
+	<property name="Class" value="Loot" />
+	<property name="Material" value="wood" />
+	<property name="Texture" value="422" />
+	<property name="LootList" value="118" />
+	<property class="RepairItems"> <property name="wood" value="10" /> </property>
+	<drop event="Destroy" name="wood" count="2,8" />
+	<property name="DescriptionKey" value="ClassCrateDesc" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1682" name="ClassCrateTradesman">
+	<property name="CustomIcon" value="ClassCrateTradesman" />
+	<property name="Material" value="wood" />
+	<property name="MaxDamage" value="100" />
+	<property name="Texture" value="423" />
+	<drop event="Destroy" count="0" />
+	<property name="DowngradeBlock" value="ClassCrateTradesmanLoot" />
+	<property name="DescriptionKey" value="ClassCrateDesc" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1683" name="ClassCrateTradesmanLoot">
+	<property name="CustomIcon" value="ClassCrateTradesman" />
+	<property name="Class" value="Loot" />
+	<property name="Material" value="wood" />
+	<property name="Texture" value="419" />
+	<property name="LootList" value="119" />
+	<property class="RepairItems"> <property name="wood" value="10" /> </property>
+	<drop event="Destroy" name="wood" count="2,8" />
+	<property name="DescriptionKey" value="ClassCrateDesc" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1684" name="ClassCrateProtection">
+	<property name="CustomIcon" value="ClassCrateProtection" />
+	<property name="Material" value="wood" />
+	<property name="MaxDamage" value="100" />
+	<property name="Texture" value="423" />
+	<drop event="Destroy" count="0" />
+	<property name="DowngradeBlock" value="ClassCrateProtectionLoot" />
+	<property name="DescriptionKey" value="ClassCrateDesc" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1685" name="ClassCrateProtectionLoot">
+	<property name="CustomIcon" value="ClassCrateProtection" />
+	<property name="Class" value="Loot" />
+	<property name="Material" value="metal" />
+	<property name="Model" value="Entities/LootContainers/lockersPrefab" />
+	<property name="Shape" value="ModelEntity" />
+	<property name="Texture" value="282" />
+	<property name="LootList" value="120" />
+	<property class="RepairItems"> <property name="scrapIron" value="10" /> </property>
+	<drop event="Destroy" name="scrapIron" count="2,8" />
+	<property name="DescriptionKey" value="ClassCrateDesc" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1686" name="cntMagazineRack">
+	<property name="Extends" value="cntBookStoreBookcase" />
+	<property name="CustomIcon" value="cntBookStoreBookcase" />
+	<property name="Class" value="Loot" />
+	<property name="Texture" value="67,214,214,214,214,214" />
+	<property name="LootList" value="121" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1687" name="cntScholarCrate">
+	<property name="CustomIcon" value="cntStorageFood" />
+	<property name="Material" value="wood" />
+	<property name="MaxDamage" value="100" />
+	<property name="Texture" value="241,423,423,423,423,423" />
+	<drop event="Destroy" count="0" />
+	<property name="DowngradeBlock" value="cntScholarCrateLoot" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1688" name="cntScholarCrateLoot">
+	<property name="CustomIcon" value="cntStorageFood" />
+	<property name="Class" value="Loot" />
+	<property name="Material" value="wood" />
+	<property name="Texture" value="241,421,421,421,421,421" />
+	<property name="LootList" value="122" />
+	<property class="RepairItems"> <property name="wood" value="10" /> </property>
+	<drop event="Destroy" name="wood" count="2,8" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1689" name="cntFighterCrate">
+	<property name="CustomIcon" value="cntStorageWeapons" />
+	<property name="Material" value="wood" />
+	<property name="MaxDamage" value="100" />
+	<property name="Texture" value="241,423,423,423,423,423" />
+	<drop event="Destroy" count="0" />
+	<property name="DowngradeBlock" value="cntFighterCrateLoot" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1690" name="cntFighterCrateLoot">
+	<property name="CustomIcon" value="cntStorageWeapons" />
+	<property name="Class" value="Loot" />
+	<property name="Material" value="wood" />
+	<property name="Texture" value="241,422,422,422,422,422" />
+	<property name="LootList" value="123" />
+	<property class="RepairItems"> <property name="wood" value="10" /> </property>
+	<drop event="Destroy" name="wood" count="2,8" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1691" name="cntTradesmanCrate">
+	<property name="CustomIcon" value="cntStorageBuilding" />
+	<property name="Material" value="wood" />
+	<property name="MaxDamage" value="100" />
+	<property name="Texture" value="241,423,423,423,423,423" />
+	<drop event="Destroy" count="0" />
+	<property name="DowngradeBlock" value="cntTradesmanCrateLoot" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1692" name="cntTradesmanCrateLoot">
+	<property name="CustomIcon" value="cntStorageBuilding" />
+	<property name="Class" value="Loot" />
+	<property name="Material" value="wood" />
+	<property name="Texture" value="241,419,419,419,419,419" />
+	<property name="LootList" value="124" />
+	<property class="RepairItems"> <property name="wood" value="10" /> </property>
+	<drop event="Destroy" name="wood" count="2,8" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1693" name="cntProtectionCrate">
+	<property name="CustomIcon" value="cntLockers" />
+	<property name="Material" value="wood" />
+	<property name="MaxDamage" value="100" />
+	<property name="Texture" value="241,423,423,423,423,423" />
+	<drop event="Destroy" count="0" />
+	<property name="DowngradeBlock" value="cntProtectionCrateLoot" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1694" name="cntProtectionCrateLoot">
+	<property name="CustomIcon" value="cntLockers" />
+	<property name="Class" value="Loot" />
+	<property name="Material" value="metal" />
+	<property name="Model" value="Entities/LootContainers/lockersPrefab" />
+	<property name="Shape" value="ModelEntity" />
+	<property name="Texture" value="282" />
+	<property name="LootList" value="125" />
+	<property class="RepairItems"> <property name="scrapIron" value="10" /> </property>
+	<drop event="Destroy" name="scrapIron" count="2,8" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1695" name="doorClassLocked">
+	<property name="CustomIcon" value="vaultDoor03" />
+	<property name="Class" value="DoorSecure" />
+	<property name="Material" value="classBlock" />
+	<property name="Shape" value="ModelEntity" />
+	<property name="Texture" value="357" />
+	<property name="Tag" value="Door" />
+	<property name="Place" value="Door" />
+	<property name="PlaceEverywhere" value="true" />
+	<property name="Model" value="Entities/Doors/steel_door_2_v3Prefab" />
+	<property name="MultiBlockDim" value="1,2,1" />
+	<property name="Mesh-Damage-1" value="Door/Door_DMG0" />
+	<property name="Mesh-Damage-2" value="Door/Door_DMG1" />
+	<property name="Mesh-Damage-3" value="Door/Door_DMG2" />
+	<property name="Mesh-Damage-4" value="Door/Door_DMG3" />
+	<property name="Mesh-Damage-5" value="Door/Door_DMG4" />
+	<property name="OpenSound" value="UseActions/open_door_vault" />
+	<property name="CloseSound" value="UseActions/close_door_vault" />
+	<property class="RepairItems"> <property name="wood" value="1" /> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="doorClassUnlocked" />
+		<property name="Item" value="classKey" />
+		<property name="ItemCount" value="1" />
+		<property name="UpgradeHitCount" value="1" />
+	</property>
+</block>
+
+<!-- WOTW MOD -->
+<block id="1696" name="doorClassUnlocked">
+	<property name="CustomIcon" value="vaultDoor03" />
+	<property name="Class" value="Door" />
+	<property name="Material" value="classBlock" />
+	<property name="Shape" value="ModelEntity" />
+	<property name="Texture" value="357" />
+	<property name="Tag" value="Door" />
+	<property name="Place" value="Door" />
+	<property name="PlaceEverywhere" value="true" />
+	<property name="Model" value="Entities/Doors/steel_door_2_v3Prefab" />
+	<property name="MultiBlockDim" value="1,2,1" />
+	<property name="Mesh-Damage-1" value="Door/Door_DMG0" />
+	<property name="Mesh-Damage-2" value="Door/Door_DMG1" />
+	<property name="Mesh-Damage-3" value="Door/Door_DMG2" />
+	<property name="Mesh-Damage-4" value="Door/Door_DMG3" />
+	<property name="Mesh-Damage-5" value="Door/Door_DMG4" />
+	<property name="OpenSound" value="UseActions/open_door_vault" />
+	<property name="CloseSound" value="UseActions/close_door_vault" />
+	<property class="RepairItems"> <property name="wood" value="1" /> </property>
+</block>
+
+<!-- WOTW MOD -->
+<block id="1697" name="classBlock">
+	<property name="CustomIcon" value="steelMaster" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Material" value="classBlock" />
+	<property name="Texture" value="355,356,267,267,267,267" />
+	<property class="RepairItems"> <property name="forgedSteel" value="10" /> </property>
+</block>
+
+<!-- WOTW MOD -->
+<block id="1698" name="lootCrates">
+	<property name="Extends" value="lootWasteland" />
+	<property name="IsDeveloper" value="true" />
+	<property name="Texture" value="423,423,277,277,277,277" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1699" name="ScrapIronStairsBoard">
+	<property name="CustomIcon" value="ScrapIronStairsBoard" />
+	<property name="Extends" value="scrapIronMaster" />
+	<property name="Texture" value="307" />
+	<property name="Shape" value="New" />
+	<property name="Model" value="Stairs" />
+	<property name="MultiBlockDim" value="1,2,1" />
+	<property name="Place" value="TowardsPlacerInverted" />
+	<property class="RepairItems"> <property name="scrapIron" value="5" /> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="rScrapIronStairsBoard" />
+		<property name="Item" value="scrapIron" />
+		<property name="ItemCount" value="4" />
+		<property name="UpgradeHitCount" value="4" />
+	</property>
+	<property name="Group" value="Building" />
+	<property name="CraftingSkillGroup" value="Construction"/>
+	<property name="DescriptionKey" value="ScrapIronStairsBoardDesc" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1700" name="rScrapIronStairsBoard">
+	<property name="CustomIcon" value="rScrapIronStairsBoard" />
+	<property name="Extends" value="rScrapIronMaster" />
+	<property name="Texture" value="352" />
+	<property name="Shape" value="New" />
+	<property name="Model" value="Stairs" />
+	<property name="MultiBlockDim" value="1,2,1" />
+	<property name="Place" value="TowardsPlacerInverted" />
+	<property class="RepairItems"> <property name="scrapIron" value="5" /> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="IronStairsBoard" />
+		<property name="Item" value="forgedIron" />
+		<property name="ItemCount" value="5" />
+		<property name="UpgradeHitCount" value="4" />
+	</property>
+	<property name="Group" value="Building" />
+	<property name="DescriptionKey" value="ScrapIronStairsBoardDesc" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1701" name="IronStairsBoard">
+	<property name="CustomIcon" value="IronStairsBoard" />
+	<property name="Extends" value="rScrapIronMaster" />
+	<property name="Material" value="metalplayer_weak" />
+	<property name="Texture" value="282" />
+	<property name="Shape" value="New" />
+	<property name="Model" value="Stairs" />
+	<property name="MultiBlockDim" value="1,2,1" />
+	<property name="Place" value="TowardsPlacerInverted" />
+	<property class="RepairItems"> <property name="forgedIron" value="5" /> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="rIronStairsBoard" />
+		<property name="Item" value="forgedIron" />
+		<property name="ItemCount" value="5" />
+		<property name="UpgradeHitCount" value="4" />
+	</property>
+	<property name="Group" value="Building" />
+	<property name="CraftingSkillGroup" value="Construction" />
+	<property name="DescriptionKey" value="IronStairsBoardDesc" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1702" name="rIronStairsBoard">
+	<property name="CustomIcon" value="rIronStairsBoard" />
+	<property name="Extends" value="rScrapIronMaster" />
+	<property name="Material" value="metalplayer" />
+	<property name="Texture" value="46" />
+	<property name="Shape" value="New" />
+	<property name="Model" value="Stairs" />
+	<property name="MultiBlockDim" value="1,2,1" />
+	<property name="Place" value="TowardsPlacerInverted" />
+	<property class="RepairItems"> <property name="forgedIron" value="5" /> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="ConcreteStairsBoard" />
+		<property name="Item" value="concreteMix" />
+		<property name="ItemCount" value="5" />
+		<property name="UpgradeHitCount" value="4" />
+	</property>
+	<property name="Group" value="Building" />
+	<property name="DescriptionKey" value="IronStairsBoardDesc" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1703" name="ConcreteStairsBoard">
+	<property name="CustomIcon" value="ConcreteStairsBoard" />
+	<property name="Extends" value="concreteMaster" />
+	<property name="Texture" value="8,8,8,8,8,8" />
+	<property name="Shape" value="New" />
+	<property name="Model" value="Stairs" />
+	<property name="MultiBlockDim" value="1,2,1" />
+	<property name="Place" value="TowardsPlacerInverted" />
+	<property class="RepairItems"> <property name="concreteMix" value="5" /> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="rConcreteStairsBoard" />
+		<property name="Item" value="concreteMix" />
+		<property name="ItemCount" value="5" />
+		<property name="UpgradeHitCount" value="4" />
+	</property>
+	<property name="Group" value="Building" />
+	<property name="DescriptionKey" value="concreteGroupDesc"/>
+</block>
+
+<!-- WOTW MOD -->
+<block id="1704" name="rConcreteStairsBoard">
+	<property name="CustomIcon" value="rConcreteStairsBoard" />
+	<property name="Extends" value="pouredConcreteMaster" />
+	<property name="DescriptionKey" value="concreteGroupDesc"/>
+	<property name="Texture" value="315" />
+	<property name="Shape" value="New" />
+	<property name="Model" value="Stairs" />
+	<property name="MultiBlockDim" value="1,2,1" />
+	<property name="Place" value="TowardsPlacerInverted" />
+	<property class="RepairItems"> <property name="concreteMix" value="5" /> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="SteelStairsBoard" />
+		<property name="Item" value="forgedSteel" />
+		<property name="ItemCount" value="5" />
+		<property name="UpgradeHitCount" value="4" />
+	</property>
+	<property name="Group" value="Building" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1705" name="SteelStairsBoard">
+	<property name="CustomIcon" value="SteelStairsBoard" />
+	<property name="Extends" value="steelMaster" />
+	<property name="Texture" value="355,355,356,356,356,356" />
+	<property name="Shape" value="New" />
+	<property name="Model" value="Stairs" />
+	<property name="MultiBlockDim" value="1,2,1" />
+	<property name="Place" value="TowardsPlacerInverted" />
+	<property class="RepairItems"> <property name="forgedSteel" value="5" /> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="TungstenStairsBoard" />
+		<property name="Item" value="forgedTungsten" />
+		<property name="ItemCount" value="5" />
+		<property name="UpgradeHitCount" value="4" />
+	</property>
+	<property name="Group" value="Building" />
+	<property name="DescriptionKey" value="SteelStairsBoardDesc" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1706" name="TungstenStairsBoard">
+	<property name="CustomIcon" value="TungstenStairsBoard" />
+	<property name="Extends" value="steelMaster" />
+	<property name="Material" value="tungsten_medium" />
+	<property name="Texture" value="519" />
+	<property name="Shape" value="New" />
+	<property name="Model" value="Stairs" />
+	<property name="MultiBlockDim" value="1,2,1" />
+	<property name="Place" value="TowardsPlacerInverted" />
+	<property class="RepairItems"> <property name="forgedTungsten" value="5" /> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="rTungstenStairsBoard" />
+		<property name="Item" value="forgedTungsten" />
+		<property name="ItemCount" value="5" />
+		<property name="UpgradeHitCount" value="4" />
+	</property>
+	<property name="Group" value="Building" />
+	<property name="CraftingSkillGroup" value="Construction"/>
+	<property name="DescriptionKey" value="TungstenBlocksGroupDesc" />
+</block>
+
+<!-- WOTW MOD -->
+<block id="1707" name="rTungstenStairsBoard">
+	<property name="CustomIcon" value="rTungstenStairsBoard" />
+	<property name="Extends" value="steelMaster" />
+	<property name="Material" value="tungsten_medium" />
+	<property name="Texture" value="267" />
+	<property name="Shape" value="New" />
+	<property name="Model" value="Stairs" />
+	<property name="MultiBlockDim" value="1,2,1" />
+	<property name="Place" value="TowardsPlacerInverted" />
+	<property class="RepairItems"> <property name="forgedTungsten" value="5" /> </property>
+	<property name="Group" value="Building" />
+	<property name="DescriptionKey" value="TungstenBlocksGroupDesc" />
+</block>
+
+	<!-- 69 Free -->
 
 <block id="1775" name="burningBarrel">
 	<property name="Extends" value="metalNoUpgradeMaster" />
@@ -14344,7 +15403,7 @@ kind of free
 <block id="1943" name="supplyCrateBuilding">
 	<property name="CustomIcon" value="cntSupplyCrateWorkingStiffs" />
     <property name="Material" value="wood_weak" />
-    <property name="Texture" value="423" />
+    <property name="Texture" value="419,419,423,423,423,423" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="4" />
     <property name="DowngradeBlock" value="lootCrateBuildingSupplies" />
@@ -14355,7 +15414,7 @@ kind of free
     <property name="Class" value="Loot" />
     <property name="LootList" value="88" />
     <property name="Material" value="wood+wood" />
-    <property name="Texture" value="431" />
+    <property name="Texture" value="419,419,408,408,408,408" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="4" />
 </block>
@@ -14363,7 +15422,7 @@ kind of free
 <block id="1945" name="supplyCrateHealthandArmor">
 	<property name="CustomIcon" value="cntSupplyCrateWorkingStiffs" />
     <property name="Material" value="wood_weak" />
-    <property name="Texture" value="423" />
+    <property name="Texture" value="284,284,423,423,423,423" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="4" />
     <property name="DowngradeBlock" value="lootCrateHealthandArmor" />
@@ -14374,7 +15433,7 @@ kind of free
     <property name="Class" value="Loot" />
     <property name="LootList" value="89" />
     <property name="Material" value="wood+wood" />
-    <property name="Texture" value="284" />
+    <property name="Texture" value="284,284,408,408,408,408" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
 	<drop event="Destroy" name="wood" count="4" />
 </block>
@@ -14382,7 +15441,7 @@ kind of free
 <block id="1947" name="supplyCrateAmmo">
 	<property name="CustomIcon" value="cntSupplyCrateWorkingStiffs" />
     <property name="Material" value="wood_weak" />
-    <property name="Texture" value="423" />
+    <property name="Texture" value="418,418,423,423,423,423" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="4" />
     <property name="DowngradeBlock" value="lootCrateAmmo" />
@@ -14393,7 +15452,7 @@ kind of free
   	<property name="Class" value="Loot" />
     <property name="LootList" value="95" />
     <property name="Material" value="wood+wood" />
-    <property name="Texture" value="418" />
+    <property name="Texture" value="418,418,408,408,408,408" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="4" />
 </block>
@@ -14401,7 +15460,7 @@ kind of free
 <block id="1949" name="supplyCrateFoodandDrink">
 	<property name="CustomIcon" value="cntSupplyCrateWorkingStiffs" />
     <property name="Material" value="wood_weak" />
-    <property name="Texture" value="423" />
+    <property name="Texture" value="421,421,423,423,423,423" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="4" />
     <property name="DowngradeBlock" value="lootCrateFoodandDrink" />
@@ -14412,7 +15471,7 @@ kind of free
     <property name="Class" value="Loot" />
     <property name="LootList" value="90" />
     <property name="Material" value="wood+wood" />
-    <property name="Texture" value="421" />
+    <property name="Texture" value="421,421,408,408,408,408" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="4" />
 </block>
@@ -14420,7 +15479,7 @@ kind of free
 <block id="1951" name="supplyCrateWeaponsDay5">
 	<property name="CustomIcon" value="cntSupplyCrateWorkingStiffs" />
     <property name="Material" value="wood_weak" />
-    <property name="Texture" value="423" />
+    <property name="Texture" value="422,422,423,423,423,423" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="4" />
     <property name="DowngradeBlock" value="lootCrateWeaponsDay5" />
@@ -14431,7 +15490,7 @@ kind of free
     <property name="Class" value="Loot" />
     <property name="LootList" value="92" />
     <property name="Material" value="wood+wood" />
-    <property name="Texture" value="422" />
+    <property name="Texture" value="422,422,408,408,408,408" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="4" />
 </block>
@@ -14439,7 +15498,7 @@ kind of free
 <block id="1953" name="supplyCrateWeaponsDay7">
 	<property name="CustomIcon" value="cntSupplyCrateWorkingStiffs" />
     <property name="Material" value="wood_weak" />
-    <property name="Texture" value="423" />
+    <property name="Texture" value="422,422,423,423,423,423" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="4" />
     <property name="DowngradeBlock" value="lootCrateWeaponsDay7" />
@@ -14450,7 +15509,7 @@ kind of free
     <property name="Class" value="Loot" />
     <property name="LootList" value="93" />
     <property name="Material" value="wood+wood" />
-    <property name="Texture" value="422" />
+    <property name="Texture" value="422,422,408,408,408,408" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="4" />
 </block>
@@ -14458,7 +15517,7 @@ kind of free
 <block id="1955" name="supplyCrateWeaponsDay3">
 	<property name="CustomIcon" value="cntSupplyCrateWorkingStiffs" />
     <property name="Material" value="wood_weak" />
-    <property name="Texture" value="423" />
+    <property name="Texture" value="422,422,423,423,423,423" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="4" />
     <property name="DowngradeBlock" value="lootCrateWeaponsDay3" />
@@ -14469,7 +15528,7 @@ kind of free
     <property name="Class" value="Loot" />
     <property name="LootList" value="91" />
     <property name="Material" value="wood+wood" />
-    <property name="Texture" value="422" />
+    <property name="Texture" value="422,422,408,408,408,408" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="4" />
 </block>
@@ -14477,7 +15536,7 @@ kind of free
 <block id="1957" name="supplyCrateGeneral">
 	<property name="CustomIcon" value="cntSupplyCrateWorkingStiffs" />
     <property name="Material" value="wood_weak" />
-    <property name="Texture" value="423" />
+    <property name="Texture" value="431,431,423,423,423,423" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="4" />
     <property name="DowngradeBlock" value="lootCrateGeneral" />
@@ -14488,7 +15547,7 @@ kind of free
     <property name="Class" value="Loot" />
     <property name="LootList" value="96" />
     <property name="Material" value="wood+wood" />
-    <property name="Texture" value="431" />
+    <property name="Texture" value="431,431,408,408,408,408" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="4" />
 </block>
@@ -15398,7 +16457,7 @@ kind of free
     <property name="Model" value="LootContainers/shopping_basket_empty" param1="main_mesh" />
     <property name="CanPickup" value="true" />
 	<property class="UpgradeBlock">
-		<property name="ToBlock" value="RabbitTrap(Bated)" />
+		<property name="ToBlock" value="RabbitTrap(Baited)" />
 		<property name="Item" value="corn" />
 		<property name="ItemCount" value="2" />
 		<property name="UpgradeHitCount" value="4" />
@@ -15408,8 +16467,13 @@ kind of free
 	<property name="CraftingSkillGroup" value="Construction"/>
 </block>
 
-<block id="2005" name="RabbitTrap(Bated)">
-	<property name="Extends" value="cropsGrowingMaster" />
+<block id="2005" name="RabbitTrap(Baited)">
+	<property name="Class" value="PlantGrowing" />
+	<property name="PlantGrowing.FertileLevel" value="1" />
+	<property name="PlantGrowing.GrowthRate" value="60" />
+	<property name="PlantGrowing.LightLevelStay" value="0" />
+	<property name="PlantGrowing.IsRandom" value="true" />
+	<property name="PlantGrowing.GrowIfAnythinOnTop" value="false" />
 	<property name="CustomIcon" value="RabbitTrap" />
     <property name="Material" value="wood" />
     <property name="Shape" value="Ext3dModel" />
@@ -15482,8 +16546,7 @@ kind of free
 </block>
 
 <block id="2010" name="HealthDeploy">
-	<property name="CustomIcon" value="cntStorageHealth" />
-	<property name="CustomIconTint" value="d4a00e" />
+	<property name="CustomIcon" value="HealthDeploy" />
 	<property name="Material" value="tungsten_medium" />
 	<property name="MaxDamage" value="150" />
 	<property name="Damage_received" value="25" />
@@ -15561,6 +16624,7 @@ kind of free
 	<drop event="Destroy" name="scrapIron" count="2,4" prob="1" />
 	<drop event="Fall" name="scrapMetalPile" count="1" prob=".75" stick_chance="1" />
 	<property name="CraftingSkillGroup" value="Construction"/>
+	<property name="DescriptionKey" value="IronBlocksGroupDesc" />
 </block>
 
 <block id="2014" name="IronBlockRamp">
@@ -15576,11 +16640,12 @@ kind of free
 		<property name="UpgradeHitCount" value="4" />
 	</property>
 	<property name="DowngradeBlock" value="solidIronFrameRamp" />
+	<property name="DescriptionKey" value="IronBlocksGroupDesc" />
 </block>
 
 <block id="2015" name="IronPillar100">
 	<property name="Extends" value="IronBlock" />
-	<property name="CustomIcon" value="scrapIronPillar100" />
+	<property name="CustomIcon" value="IronPillar100" />
 	<property name="Shape" value="New" />
 	<property name="Model" value="Pole1m" />
 	<property name="Texture" value="46" />
@@ -15590,11 +16655,12 @@ kind of free
 		<property name="ItemCount" value="5" />
 		<property name="UpgradeHitCount" value="4" />
 	</property>
+	<property name="DescriptionKey" value="IronBlocksGroupDesc" />
 </block>
 
 <block id="2016" name="IronPillar50">
 	<property name="Extends" value="IronBlock" />
-	<property name="CustomIcon" value="concretePillar50" />
+	<property name="CustomIcon" value="IronPillar50" />
 	<property name="Shape" value="New" />
 	<property name="Model" value="Pole0.5m" />
 	<property name="Texture" value="46" />
@@ -15604,11 +16670,12 @@ kind of free
 		<property name="ItemCount" value="5" />
 		<property name="UpgradeHitCount" value="4" />
 	</property>
+	<property name="DescriptionKey" value="IronBlocksGroupDesc" />
 </block>
 
 <block id="2017" name="IronPole">
 	<property name="Extends" value="IronBlock" />
-	<property name="CustomIcon" value="scrapIronPole" />
+	<property name="CustomIcon" value="IronPole" />
 	<property name="Shape" value="Pole" />
 	<property name="Texture" value="46" />
 	<property class="RepairItems"> <property name="forgedIron" value="2" /> </property>
@@ -15618,11 +16685,12 @@ kind of free
 		<property name="ItemCount" value="2" />
 		<property name="UpgradeHitCount" value="4" />
 	</property>
+	<property name="DescriptionKey" value="IronBlocksGroupDesc" />
 </block>
 
 <block id="2018" name="IronStairs">
 	<property name="Extends" value="IronBlock" />
-	<property name="CustomIcon" value="scrapIronStairs25" />
+	<property name="CustomIcon" value="IronStairs" />
 	<property name="Shape" value="New" />
 	<property name="Model" value="StairsFilled" />
 	<property name="Texture" value="46" />
@@ -15633,6 +16701,7 @@ kind of free
 		<property name="ItemCount" value="5" />
 		<property name="UpgradeHitCount" value="4" />
 	</property>
+	<property name="DescriptionKey" value="IronBlocksGroupDesc" />
 </block>
 
 <block id="2019" name="ReinforcedIronBlock">
@@ -15676,7 +16745,7 @@ kind of free
 
 <block id="2023" name="ReinforcedIronPole">
 	<property name="Extends" value="ReinforcedIronBlock" />
-	<property name="CustomIcon" value="concretePole" />
+	<property name="CustomIcon" value="ReinforcedIronPole" />
 	<property name="Shape" value="Pole" />
 	<property name="Texture" value="194" />
 	<property name="DowngradeBlock" value="IronPole" />
@@ -15684,7 +16753,7 @@ kind of free
 
 <block id="2024" name="ReinforcedIronStairs">
 	<property name="Extends" value="ReinforcedIronBlock" />
-	<property name="CustomIcon" value="metalRivetStairs25" />
+	<property name="CustomIcon" value="ReinforcedIronStairs" />
 	<property name="Material" value="metal" />
 	<property name="Shape" value="New" />
 	<property name="Model" value="StairsFilled" />
@@ -15694,9 +16763,9 @@ kind of free
 </block>
 
 <block id="2025" name="TungstenBlock">
-	<property name="CustomIcon" value="rustyIronBlock" />
+	<property name="CustomIcon" value="TungstenBlock" />
 	<property name="Material" value="tungsten_medium" />
-	<property name="Texture" value="282" />
+	<property name="Texture" value="519" />
 	<property class="RepairItems"> <property name="ForgedTungsten" value="5" /> </property>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="ReinforcedTungstenBlock" />
@@ -15708,15 +16777,15 @@ kind of free
 	<property name="Group" value="Building" />
 	<drop event="Harvest" name="scrapTungsten" count="4" />
 	<drop event="Destroy" name="scrapTungsten" count="2,4" prob="1" />
-	<!-- <drop event="Fall" name="scrapTungstenPile" count="1" prob=".75" stick_chance="1" /> -->
+	<drop event="Fall" name="scrapTungstenPile" count="1" prob=".75" stick_chance="1" />
 	<property name="CraftingSkillGroup" value="Construction"/>
+	<property name="DescriptionKey" value="TungstenBlocksGroupDesc" />
 </block>
 
 <block id="2026" name="TungstenBlockRamp">
 	<property name="Extends" value="TungstenBlock" />
-	<property name="CustomIcon" value="rustyIronRamp" />
+	<property name="CustomIcon" value="TungstenBlockRamp" />
 	<property name="Shape" value="Wedged" />
-	<property name="Texture" value="282" />
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="ReinforcedTungstenBlockRamp" />
 		<property name="Item" value="ForgedTungsten" />
@@ -15724,56 +16793,56 @@ kind of free
 		<property name="UpgradeHitCount" value="4" />
 	</property>
 	<property name="DowngradeBlock" value="solidTungstenFrameRamp" />
+	<property name="DescriptionKey" value="TungstenBlocksGroupDesc" />
 </block>
 
 <block id="2027" name="TungstenPillar100">
 	<property name="Extends" value="TungstenBlock" />
-	<property name="CustomIcon" value="rustyIronPillar100" />
+	<property name="CustomIcon" value="TungstenPillar100" />
 	<property name="Shape" value="New" />
 	<property name="Model" value="Pole1m" />
-	<property name="Texture" value="282" />
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="ReinforcedTungstenPillar100" />
 		<property name="Item" value="ForgedTungsten" />
 		<property name="ItemCount" value="5" />
 		<property name="UpgradeHitCount" value="4" />
 	</property>
+	<property name="DescriptionKey" value="TungstenBlocksGroupDesc" />
 </block>
 
 <block id="2028" name="TungstenPillar50">
 	<property name="Extends" value="TungstenBlock" />
-	<property name="CustomIcon" value="rustyIronPillar50" />
+	<property name="CustomIcon" value="TungstenPillar50" />
 	<property name="Shape" value="New" />
 	<property name="Model" value="Pole0.5m" />
-	<property name="Texture" value="282" />
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="ReinforcedTungstenPillar50" />
 		<property name="Item" value="ForgedTungsten" />
 		<property name="ItemCount" value="5" />
 		<property name="UpgradeHitCount" value="4" />
 	</property>
+	<property name="DescriptionKey" value="TungstenBlocksGroupDesc" />
 </block>
 
 <block id="2029" name="TungstenPole">
 	<property name="Extends" value="TungstenBlock" />
-	<property name="CustomIcon" value="rustyIronPole" />
+	<property name="CustomIcon" value="TungstenPole" />
 	<property name="Shape" value="Pole" />
-	<property name="Texture" value="282" />
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="ReinforcedTungstenPole" />
 		<property name="Item" value="ForgedTungsten" />
 		<property name="ItemCount" value="5" />
 		<property name="UpgradeHitCount" value="4" />
 	</property>
+	<property name="DescriptionKey" value="TungstenBlocksGroupDesc" />
 </block>
 
 <block id="2030" name="TungstenStairs">
 	<property name="Extends" value="TungstenBlock" />
-	<property name="CustomIcon" value="rustyIronStairs25" />
+	<property name="CustomIcon" value="TungstenStairs" />
 	<property name="Material" value="metal" />
 	<property name="Shape" value="New" />
 	<property name="Model" value="StairsFilled" />
-	<property name="Texture" value="282" />
 	<property name="Place" value="TowardsPlacerInverted" />
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="ReinforcedTungstenStairs" />
@@ -15781,10 +16850,11 @@ kind of free
 		<property name="ItemCount" value="5" />
 		<property name="UpgradeHitCount" value="4" />
 	</property>
+	<property name="DescriptionKey" value="TungstenBlocksGroupDesc" />
 </block>
 
 <block id="2031" name="ReinforcedTungstenBlock">
-	<property name="CustomIcon" value="stainlessSteelMaster" />
+	<property name="CustomIcon" value="ReinforcedTungstenBlock" />
 	<property name="Material" value="tungsten_hard" />
 	<property name="Texture" value="267" />
 	<property class="RepairItems"> <property name="ForgedTungsten" value="5" /> </property>
@@ -15792,58 +16862,64 @@ kind of free
 	<property name="Group" value="Building" />
 	<drop event="Harvest" name="scrapTungsten" count="4" />
 	<drop event="Destroy" name="scrapTungsten" count="2,4" prob="1" />
-	<!-- <drop event="Fall" name="scrapTungstenPile" count="1" prob=".75" stick_chance="1" /> -->
+	<drop event="Fall" name="scrapTungstenPile" count="1" prob=".75" stick_chance="1" />
 	<property name="CraftingSkillGroup" value="Construction"/>
+	<property name="DescriptionKey" value="ReinforcedTungstenBlocksGroupDesc" />
 </block>
 
 <block id="2032" name="ReinforcedTungstenBlockRamp">
 	<property name="Extends" value="ReinforcedTungstenBlock" />
-	<property name="CustomIcon" value="whiteMetalRamp" />
+	<property name="CustomIcon" value="ReinforcedTungstenBlockRamp" />
 	<property name="Shape" value="Wedged" />
 	<property name="Texture" value="267" />
 	<property name="DowngradeBlock" value="TungstenBlockRamp" />
+	<property name="DescriptionKey" value="ReinforcedTungstenBlocksGroupDesc" />
 </block>
 
 <block id="2033" name="ReinforcedTungstenPillar100">
 	<property name="Extends" value="ReinforcedTungstenBlock" />
-	<property name="CustomIcon" value="whiteMetalPillar100" />
+	<property name="CustomIcon" value="ReinforcedTungstenPillar100" />
 	<property name="Shape" value="New" />
 	<property name="Model" value="Pole1m" />
 	<property name="Texture" value="267" />
 	<property name="DowngradeBlock" value="TungstenPillar100" />
+	<property name="DescriptionKey" value="ReinforcedTungstenBlocksGroupDesc" />
 </block>
 
 <block id="2034" name="ReinforcedTungstenPillar50">
 	<property name="Extends" value="ReinforcedTungstenBlock" />
-	<property name="CustomIcon" value="corrugatedMetalPillar50" />
+	<property name="CustomIcon" value="ReinforcedTungstenPillar50" />
 	<property name="Shape" value="New" />
 	<property name="Model" value="Pole0.5m" />
 	<property name="Texture" value="267" />
 	<property name="DowngradeBlock" value="TungstenPillar50" />
+	<property name="DescriptionKey" value="ReinforcedTungstenBlocksGroupDesc" />
 </block>
 
 <block id="2035" name="ReinforcedTungstenPole">
 	<property name="Extends" value="ReinforcedTungstenBlock" />
-	<property name="CustomIcon" value="steelPole" />
+	<property name="CustomIcon" value="ReinforcedTungstenPole" />
 	<property name="Shape" value="Pole" />
 	<property name="Texture" value="267" />
 	<property name="DowngradeBlock" value="TungstenPole" />
+	<property name="DescriptionKey" value="ReinforcedTungstenBlocksGroupDesc" />
 </block>
 
 <block id="2036" name="ReinforcedTungstenStairs">
 	<property name="Extends" value="ReinforcedTungstenBlock" />
-	<property name="CustomIcon" value="steelStairs25" />
+	<property name="CustomIcon" value="ReinforcedTungstenStairs" />
 	<property name="Material" value="metal" />
 	<property name="Shape" value="New" />
 	<property name="Model" value="StairsFilled" />
 	<property name="Texture" value="267" />
 	<property name="Place" value="TowardsPlacerInverted" />
 	<property name="DowngradeBlock" value="TungstenStairs" />
+	<property name="DescriptionKey" value="ReinforcedTungstenBlocksGroupDesc" />
 </block>
 
 <block id="2037" name="IronBlockInsideCNR">
 	<property name="Extends" value="IronBlock" />
-	<property name="CustomIcon" value="rustyIronPole" />
+	<property name="CustomIcon" value="IronBlockInsideCNR" />
 	<property name="Shape" value="WedgedInnerFull" />
 	<property name="Texture" value="46" />
 	<property class="RepairItems"> <property name="forgedIron" value="5" /> </property>
@@ -15854,11 +16930,12 @@ kind of free
 		<property name="UpgradeHitCount" value="4" />
 	</property>
 	<property name="DowngradeBlock" value="solidIronFrameCNRInside" />
+	<property name="DescriptionKey" value="IronBlocksGroupDesc" />
 </block>
 
 <block id="2038" name="ReinforcedIronBlockInsideCNR">
 	<property name="Extends" value="ReinforcedIronBlock" />
-	<property name="CustomIcon" value="rScrapIronCNRInside" />
+	<property name="CustomIcon" value="ReinforcedIronBlockInsideCNR" />
 	<property name="Shape" value="WedgedInnerFull" />
 	<property name="Texture" value="194" />
 	<property name="DowngradeBlock" value="IronBlockInsideCNR" />
@@ -15866,9 +16943,8 @@ kind of free
 
 <block id="2039" name="TungstenBlockInsideCNR">
 	<property name="Extends" value="TungstenBlock" />
-	<property name="CustomIcon" value="steelCNRInside" />
+	<property name="CustomIcon" value="TungstenBlockInsideCNR" />
 	<property name="Shape" value="WedgedInnerFull" />
-	<property name="Texture" value="282" />
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="ReinforcedTungstenBlockInsideCNR" />
 		<property name="Item" value="ForgedTungsten" />
@@ -15876,19 +16952,21 @@ kind of free
 		<property name="UpgradeHitCount" value="4" />
 	</property>
 	<property name="DowngradeBlock" value="solidTungstenFrameCNRInside" />
+	<property name="DescriptionKey" value="TungstenBlocksGroupDesc" />
 </block>
 
 <block id="2040" name="ReinforcedTungstenBlockInsideCNR">
 	<property name="Extends" value="ReinforcedTungstenBlock" />
-	<property name="CustomIcon" value="steelCNRInside" />
+	<property name="CustomIcon" value="ReinforcedTungstenBlockInsideCNR" />
 	<property name="Shape" value="WedgedInnerFull" />
 	<property name="Texture" value="267" />
 	<property name="DowngradeBlock" value="TungstenBlockInsideCNR" />
+	<property name="DescriptionKey" value="ReinforcedTungstenBlocksGroupDesc" />
 </block>
 
 <block id="2041" name="IronBlockOutsideCNR">
 	<property name="Extends" value="IronBlock" />
-	<property name="CustomIcon" value="rScrapIronCNRFull" />
+	<property name="CustomIcon" value="IronBlockOutsideCNR" />
 	<property name="Shape" value="WedgedCornerFull" />
 	<property name="Texture" value="46" />
 	<property class="RepairItems"> <property name="forgedIron" value="5" /> </property>
@@ -15899,11 +16977,12 @@ kind of free
 		<property name="UpgradeHitCount" value="4" />
 	</property>
 	<property name="DowngradeBlock" value="solidIronFrameCNRFull" />
+	<property name="DescriptionKey" value="IronBlocksGroupDesc" />
 </block>
 
 <block id="2042" name="ReinforcedIronBlockOutsideCNR">
 	<property name="Extends" value="ReinforcedIronBlock" />
-	<property name="CustomIcon" value="rScrapIronCNRFull" />
+	<property name="CustomIcon" value="ReinforcedIronBlockOutsideCNR" />
 	<property name="Shape" value="WedgedCornerFull" />
 	<property name="Texture" value="194" />
 	<property name="DowngradeBlock" value="IronBlockOutsideCNR" />
@@ -15911,9 +16990,8 @@ kind of free
 
 <block id="2043" name="TungstenBlockOutsideCNR">
 	<property name="Extends" value="TungstenBlock" />
-	<property name="CustomIcon" value="steelCNRFull" />
+	<property name="CustomIcon" value="TungstenBlockOutsideCNR" />
 	<property name="Shape" value="WedgedCornerFull" />
-	<property name="Texture" value="282" />
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="ReinforcedTungstenBlockOutsideCNR" />
 		<property name="Item" value="ForgedTungsten" />
@@ -15921,14 +16999,31 @@ kind of free
 		<property name="UpgradeHitCount" value="4" />
 	</property>
 	<property name="DowngradeBlock" value="solidTungstenFrameCNRFull" />
+	<property name="DescriptionKey" value="TungstenBlocksGroupDesc" />
 </block>
 
 <block id="2044" name="ReinforcedTungstenBlockOutsideCNR">
 	<property name="Extends" value="ReinforcedTungstenBlock" />
-	<property name="CustomIcon" value="steelCNRFull" />
+	<property name="CustomIcon" value="ReinforcedTungstenBlockOutsideCNR" />
 	<property name="Shape" value="WedgedCornerFull" />
 	<property name="Texture" value="267" />
 	<property name="DowngradeBlock" value="TungstenBlockOutsideCNR" />
+	<property name="DescriptionKey" value="ReinforcedTungstenBlocksGroupDesc" />
+</block>
+
+<block id="2045" name="scrapTungstenPile">
+	<property name="CustomIcon" value="scrapMetalPile" />
+    <property name="Material" value="tungsten" />
+	<property name="MaxDamage" value="100" />
+	<property name="StabilitySupport" value="false" />
+    <property name="Shape" value="Ext3dModel" />
+    <property name="Mesh" value="models" />
+    <property name="Model" value="OutdoorDecor/scrapmetalblock" param1="main_mesh" />
+    <property name="IsTerrainDecoration" value="true" />
+    <property name="Collide" value="melee,bullet,rocket" />
+	<drop event="Harvest" name="scrapTungsten" count="4" />
+	<drop event="Destroy" name="scrapTungsten" count="2" />    
+	<property name="Group" value="Resources" />
 </block>
 
 </blocks>

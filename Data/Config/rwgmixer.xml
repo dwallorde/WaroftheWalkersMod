@@ -450,7 +450,8 @@
 			<prefab name="xvanilla_church_graveyard1" min_count="1" max_count="1" />
 			<prefab name="xvanilla_house_new_mansion_02" min_count="1" max_count="1" />
 			<prefab name="xvanilla_house_new_mansion_03" min_count="1" max_count="1" />
-			<prefab name="xvanilla_police_station1_city" min_count="1" max_count="1" />			
+			<prefab name="xvanilla_police_station1_city" min_count="1" max_count="1" />
+			<prefab name="police_DwallsStation" max_count="1" />
 			<prefab name="xvanilla_store_book_lg" max_count="1" />
 			<prefab name="xvanilla_store_grocery_lg_city" min_count="1" max_count="1" />
 			<prefab name="xvanilla_store_gun_lg" max_count="1" />			
@@ -971,6 +972,9 @@
 			<prefab name="campsite_06a" />
 			<prefab name="campsite_07" />
 			<prefab name="campsite_07a" />
+			<prefab name="campsite_Dwalls_01" />
+			<prefab name="campsite_Dwalls_02" />
+			<prefab name="campsite_Dwalls_03" />
 		</prefab_rule>
 
 		<prefab_rule name="CarDealerships">
@@ -1082,6 +1086,7 @@
 		<prefab_rule name="governmentOffices">
 			<prefab name="mp_waste_bldg_governer_08" max_count="1"/>
 			<prefab name="police_station1" max_count="1"/>
+			<prefab name="police_DwallsStation" max_count="1"/>
 			<prefab name="prison_01" max_count="1"/>
 			<prefab name="prison_HighSecurity" max_count="1"/>
 			<prefab name="installation_red_mesa" max_count="1" />
@@ -1097,7 +1102,9 @@
 			<prefab name="store_grocery_lg_01" prob="0.4" />
 			<prefab name="store_grocery_sm_01" prob="0.6" />
 			<prefab name="xcostum_Bavarian_Bowse_Shop(by_magoli)" prob="0.5" />
-			<prefab name="xcostum_kwikemart(by_magoli)"  prob="0.3" />			
+			<prefab name="xcostum_kwikemart(by_magoli)"  prob="0.3" />
+			<prefab name="store_DwallsConvenience" prob="0.5" />
+			<prefab name="store_DwallsFoods" prob="0.45" />
 		</prefab_rule>
 
 		<prefab_rule name="gunStores">
@@ -1189,6 +1196,7 @@
 		<prefab_rule name="pharmacies">
 			<prefab name="store_pharmacy_sm_01" />
 			<prefab name="store_DwallsPharmacy" />
+			<prefab name="store_DwallsPharmacy2" />
 		</prefab_rule>
 
 		<prefab_rule name="restaurants_and_bars">
@@ -1251,6 +1259,7 @@
 			<prefab name="xcostum_Haulier_md(by_Limodor)" />
 			<!--	<prefab name="xcostum_Household_Storage_sm(by_Devilhunter)" />  -->
 			<prefab name="xcostum_Info_Center(by_LuckyStar)" />
+			<prefab name="store_DwallsClass"/>
 		</prefab_rule>
 		
 		<prefab_rule name="trader_settlements">
@@ -1352,6 +1361,7 @@
 			<prefab name="xcostum_Pawnshop(by_magoli)" />
 			<prefab name="xcostum_Wooden_Store(by_Guppycur)" />
 			<prefab name="xcostum_zombiepack01(10by10)" />
+			<prefab name="store_DwallsClass"/>
 		</prefab_rule>		
 		
 		<prefab_rule name="Custom_Town_POIs">
@@ -1389,9 +1399,12 @@
 			<prefab name="xcostum_house2(by_Curbolt)" />
 			<prefab name="xvanilla_cabin_03_lg" />
 			<prefab name="xvanilla_police_station1" />
+			<prefab name="police_DwallsStation" />
 			<prefab name="xvanilla_farm_shed3(ctownhub)" />
 			<prefab name="xvanilla_abandoned_house_01" />
-			<prefab name="xvanilla_houseburnt3b(ctownhub)" />			
+			<prefab name="xvanilla_houseburnt3b(ctownhub)" />	
+			<prefab name="store_DwallsClass"/>
+			<prefab name="store_DwallsConvenience"/>
 		</prefab_rule>
 		
 		<prefab_rule name="AsiaPOIs">
@@ -1427,6 +1440,7 @@
 			<prefab name="xcostum_Prison(by_Limodur)"/>
 			<prefab name="xcostum_basketball_arena(by_LowfDog)"/>
 			<prefab name="prison_HighSecurity"/>
+			<prefab name="store_DwallsClass"/>
 			<!--  <prefab name="hospital_01"/>  -->
 			<!--  <prefab name="sawmill_01_snow"/>  -->
 			<!--  <prefab name="school_01"/>  -->
@@ -1820,10 +1834,10 @@
 	<terrain_generators>
 		<terrain_generator name="vanilla" use_old_final="false">
 			<module name="fastContinents" type="FastNoise">
-				<property name="frequency" value="0.5"/>
+				<property name="frequency" value="0.45"/>
 			</module>
 			<module name="fastLowlands" type="FastBillow" no_seed="true">
-				<property name="frequency" value="0.1"/>
+				<property name="frequency" value="0.15"/>
 			</module>
 			<module name="fastLowlandsScaled" type="ScaleBiasOutput">
 				<property name="sourceModule" value="fastLowlands"/>
@@ -1835,14 +1849,14 @@
 			</module>
 			<module name="fastMountainsScaled" type="ScaleBiasOutput">
 				<property name="sourceModule" value="fastMountainsBase"/>
-				<property name="scale" value="1.1"/>
+				<property name="scale" value="1.15"/>
 				<property name="bias" value="0.5"/>
 			</module>
 			<module name="fastMountains" type="FastTurbulence">
 				<property name="sourceModule" value="fastMountainsScaled"/>
-				<property name="power" value="100"/>
-				<property name="frequency" value="0.5"/>
-				<property name="roughness" value="5"/>
+				<property name="power" value="105"/>
+				<property name="frequency" value="0.45"/>
+				<property name="roughness" value="6"/>
 			</module>
 			<module name="fastLandFilter" type="FastNoise" seed_additive="1">
 				<property name="frequency" value="0.5"/>

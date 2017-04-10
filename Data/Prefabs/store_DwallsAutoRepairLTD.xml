@@ -4,7 +4,6 @@
     <property name="AllowTopSoilDecorations" value="False" />
     <property name="TraderArea" value="False" />
     <property name="Zoning" value="Commercial" />
-	<property name="RotationToFaceNorth" value="1" />
     <property name="AllowedTownships" value="city,town,rural" />
     <property name="MaxPerHub" value="1" />
     <property name="YOffset" value="-1" />

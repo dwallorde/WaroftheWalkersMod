@@ -11,8 +11,5 @@
     <property name="StaticSpawner.Size" value="32,2,32" />
     <property name="StaticSpawner.Trigger" value="160" />
     <property name="RotationToFaceNorth" value="2" />
-    <property name="TraderAreaProtect" value="20,0,20" />
-    <property name="TraderAreaTeleportSize" value="36, 20, 36" />
-    <property name="TraderAreaTeleportCenter" value="1, 1, 1" />
     <property name="Condition" value="New" />
 </prefab>
