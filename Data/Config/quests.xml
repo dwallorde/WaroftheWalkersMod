@@ -2212,8 +2212,8 @@
 		<objective type="FetchKeep" id="scrapIron" value="75" />
 		<objective type="FetchKeep" id="yuccaFibers" value="11" />
 		<objective type="FetchKeep" id="wood" value="11" />
-		<objective type="Craft" id="scrapIronAxe" value="1" />
-		<objective type="Craft" id="scrapIronShovel" value="1" />
+		<objective type="Craft" id="ScrapIronAxe" value="1" />
+		<objective type="Craft" id="ScrapIronShovel" value="1" />
 		<reward type="Exp" value="1500" />
 		<reward type="SkillPoints" value="1" />
 		<reward type="Skill" id="Iron Tool Crafting" value="1" />
@@ -2236,8 +2236,8 @@
 	category_key="Quest"
 	difficulty="easy">
 		<objective type="Repair" id="wrench" value="1" />
-		<objective type="Scrap" id="scrapIronAxe" value="1" />
-		<objective type="Scrap" id="scrapIronShovel" value="1" />
+		<objective type="Scrap" id="ScrapIronAxe" value="1" />
+		<objective type="Scrap" id="ScrapIronShovel" value="1" />
 		<reward type="Exp" value="2000" />
 		<reward type="SkillPoints" value="2" />
 		<reward type="Skill" id="The Fixer" value="1" />
@@ -2373,7 +2373,7 @@
 		<reward type="Skill" id="Armor Smithing" value="15" />
 		<reward type="Skill" id="Heavy Armor Smithing" value="15" />
 		<reward type="Skill" id="ProtectionClassLevel3" />
-		<reward type="Quest" id="classtrainingprotection3" />
+		<reward type="Quest" id="classtrainingprotection4" />
 	</quest>
 	
 	<quest id="classtrainingprotection4"

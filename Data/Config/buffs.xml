@@ -722,25 +722,25 @@ The "MetabolizeBeer" buff will slowly reduce the beer variable.
 <!-- Rest System Buffs -->
 
 
-<buff id="sleepingBagTrigger" duration="1" actions="setvar(CTRbedroll, 12)" />
+<buff id="sleepingBagTrigger" duration="1" actions="setvar(CTRbedroll, 12)" requires="isPlayer"/>
 
-<buff id="sleepingBagEffect" duration="0" buffif="CTRbedroll greater 0" debuffif="CTRbedroll less 1" actions="increment(CTRbedroll, -4, 1, 0, 0)"
+<buff id="sleepingBagEffect" duration="0" buffif="CTRbedroll greater 0" debuffif="CTRbedroll less 1" actions="increment(CTRbedroll, -4, 1, 0, 0)" requires="isPlayer"
 	icon="SleepingBagTriggerIcon" name_key="sleepingAwesome" description_key="sleepingAwesomeDesc" tooltip_key="sleepingAwesomeTooltip">
 	<modify id="0" stat="health" amount="1" rate="30" />
 	<modify id="0" stat="stamina" amount="1" rate="3" />
 </buff>
 
-<buff id="sleepingBedTrigger" duration="1" actions="setvar(CTRbed, 12)" />
+<buff id="sleepingBedTrigger" duration="1" actions="setvar(CTRbed, 12)" requires="isPlayer"/>
 
-<buff id="sleepingBedEffect" duration="0" buffif="CTRbed greater 0" debuffif="CTRbed less 1" actions="increment(CTRbed, -4, 1, 0, 0)"
+<buff id="sleepingBedEffect" duration="0" buffif="CTRbed greater 0" debuffif="CTRbed less 1" actions="increment(CTRbed, -4, 1, 0, 0)" requires="isPlayer"
 	icon="SleepingBedTriggerIcon" name_key="sleepingAwesome" description_key="sleepingAwesomeDesc" tooltip_key="sleepingAwesomeTooltip">
 	<modify id="0" stat="health" amount="1" rate="15" />
 	<modify id="0" stat="stamina" amount="1" rate="3" />
 </buff>
 
-<buff id="sleepingBigBedTrigger" duration="1" actions="setvar(CTRbigbed, 12)" />
+<buff id="sleepingBigBedTrigger" duration="1" actions="setvar(CTRbigbed, 12)" requires="isPlayer"/>
 
-<buff id="sleepingBigBedEffect" duration="0" buffif="CTRbigbed greater 0" debuffif="CTRbigbed less 1" actions="increment(CTRbigbed, -4, 1, 0, 0)"
+<buff id="sleepingBigBedEffect" duration="0" buffif="CTRbigbed greater 0" debuffif="CTRbigbed less 1" actions="increment(CTRbigbed, -4, 1, 0, 0)" requires="isPlayer"
 	icon="SleepingBedTriggerIcon" name_key="sleepingAwesome" description_key="sleepingAwesomeDesc" tooltip_key="sleepingAwesomeTooltip">
 	<modify id="0" stat="health" amount="1" rate="5" />
 	<modify id="0" stat="stamina" amount="1" rate="3" />
@@ -844,11 +844,11 @@ The "MetabolizeBeer" buff will slowly reduce the beer variable.
 
 <!-- Immune System Buffs -->
 
-<buff id="ActiveImmunity" buffif="immune gequal 1" debuffif="immune lequal 0" type="speedmodifier"/>
+<buff id="ActiveImmunity" buffif="immune gequal 1" debuffif="immune lequal 0" type="speedmodifier" requires="isPlayer"/>
 
-<buff id="GainImmunity" duration="1" actions="increment(immune, 2, 1t, 0, 0);max(immune, 200)" type="speedmodifier"/>
+<buff id="GainImmunity" duration="1" actions="increment(immune, 2, 1t, 0, 0);max(immune, 200)" type="speedmodifier" requires="isPlayer"/>
 
-<buff id="ImmunityReset" duration="1" actions="setvar(immune, 1)" type="speedmodifier"/>
+<buff id="ImmunityReset" duration="1" actions="setvar(immune, 1)" type="speedmodifier" requires="isPlayer"/>
 
 <buff id="gainImmunity_xsmall_Trigger" duration="1" actions="increment(immune, 1, 0, 0, 1);max(immune, 200)"/>
 <buff id="gainImmunity_small_Trigger" duration="1" actions="increment(immune, 2, 0, 0, 1);max(immune, 200)"/>
