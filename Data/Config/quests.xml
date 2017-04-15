@@ -2236,8 +2236,6 @@
 	category_key="Quest"
 	difficulty="easy">
 		<objective type="Repair" id="wrench" value="1" />
-		<objective type="Scrap" id="ScrapIronAxe" value="1" />
-		<objective type="Scrap" id="ScrapIronShovel" value="1" />
 		<reward type="Exp" value="2000" />
 		<reward type="SkillPoints" value="2" />
 		<reward type="Skill" id="The Fixer" value="1" />
